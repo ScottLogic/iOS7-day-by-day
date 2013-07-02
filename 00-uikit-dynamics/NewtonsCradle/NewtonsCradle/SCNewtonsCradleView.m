@@ -13,6 +13,7 @@
     NSArray *_ballBearings;
     UIDynamicAnimator *_animator;
     UIPushBehavior *_userDragBehaviour;
+    NSArray *_attachmentBehaviours;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -51,17 +52,21 @@
     _ballBearings = [NSArray arrayWithArray:bbArray];
 }
 
+
 - (void)handleBallBearingPan:(UIPanGestureRecognizer *)recogniser
 {
-    if(recogniser.state == UIGestureRecognizerStateBegan) {
+    if (recogniser.state == UIGestureRecognizerStateBegan) {
+        if(_userDragBehaviour) {
+            [_animator removeBehavior:_userDragBehaviour];
+        }
         _userDragBehaviour = [[UIPushBehavior alloc] initWithItems:@[recogniser.view] mode:UIPushBehaviorModeContinuous];
-        
-    } else if(recogniser.state == UIGestureRecognizerStateEnded) {
-        
+        [_animator addBehavior:_userDragBehaviour];
     }
-    recogniser.view.center = [recogniser locationInView:self];
-    if(_animator) {
-        [_animator updateItemFromCurrentState:recogniser.view];
+    _userDragBehaviour.xComponent = [recogniser translationInView:self].x / 3.f;
+    
+    if (recogniser.state == UIGestureRecognizerStateEnded) {
+        [_animator removeBehavior:_userDragBehaviour];
+        _userDragBehaviour = nil;
     }
 }
 
@@ -70,10 +75,15 @@
     // Create the composite behaviour
     UIDynamicBehavior *behaviour = [[UIDynamicBehavior alloc] init];
     
+    
+    NSMutableArray *attachmentBehaviours = [NSMutableArray array];
     for(id<UIDynamicItem> ballBearing in _ballBearings)
     {
-        [behaviour addChildBehavior:[self createAttachmentBehaviourForBallBearing:ballBearing]];
+        UIDynamicBehavior *attachmentBehavior = [self createAttachmentBehaviourForBallBearing:ballBearing];
+        [behaviour addChildBehavior:attachmentBehavior];
+        [attachmentBehaviours addObject:behaviour];
     }
+    _attachmentBehaviours = [NSArray arrayWithArray:attachmentBehaviours];
     
     [behaviour addChildBehavior:[self createGravityBehaviourForObjects:_ballBearings]];
     
