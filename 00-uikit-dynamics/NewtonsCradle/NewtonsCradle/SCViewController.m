@@ -7,8 +7,11 @@
 //
 
 #import "SCViewController.h"
+#import "SCNewtonsCradleView.h"
 
-@interface SCViewController ()
+@interface SCViewController () {
+    SCNewtonsCradleView *_newtonsCradle;
+}
 
 @end
 
@@ -18,6 +21,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    _newtonsCradle = [[SCNewtonsCradleView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:_newtonsCradle];
 }
 
 - (void)didReceiveMemoryWarning

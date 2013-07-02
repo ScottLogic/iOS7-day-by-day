@@ -22,6 +22,8 @@
 		F48AAE091782D32000A59F4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48AADE81782D32000A59F4A /* UIKit.framework */; };
 		F48AAE111782D32000A59F4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F48AAE0F1782D32000A59F4A /* InfoPlist.strings */; };
 		F48AAE131782D32000A59F4A /* NewtonsCradleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48AAE121782D32000A59F4A /* NewtonsCradleTests.m */; };
+		F4FB5E751782D50700C955A9 /* SCBallBearingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FB5E741782D50700C955A9 /* SCBallBearingView.m */; };
+		F4FB5E781782D7CB00C955A9 /* SCNewtonsCradleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FB5E771782D7CB00C955A9 /* SCNewtonsCradleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		F48AAE0E1782D32000A59F4A /* NewtonsCradleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewtonsCradleTests-Info.plist"; sourceTree = "<group>"; };
 		F48AAE101782D32000A59F4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F48AAE121782D32000A59F4A /* NewtonsCradleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewtonsCradleTests.m; sourceTree = "<group>"; };
+		F4FB5E731782D50700C955A9 /* SCBallBearingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBallBearingView.h; sourceTree = "<group>"; };
+		F4FB5E741782D50700C955A9 /* SCBallBearingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBallBearingView.m; sourceTree = "<group>"; };
+		F4FB5E761782D7CB00C955A9 /* SCNewtonsCradleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNewtonsCradleView.h; sourceTree = "<group>"; };
+		F4FB5E771782D7CB00C955A9 /* SCNewtonsCradleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNewtonsCradleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 		F48AADEA1782D32000A59F4A /* NewtonsCradle */ = {
 			isa = PBXGroup;
 			children = (
+				F4FB5E721782D4EF00C955A9 /* Components */,
 				F48AADF31782D32000A59F4A /* SCAppDelegate.h */,
 				F48AADF41782D32000A59F4A /* SCAppDelegate.m */,
 				F48AADF61782D32000A59F4A /* Main_iPhone.storyboard */,
@@ -153,6 +160,17 @@
 				F48AAE0F1782D32000A59F4A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4FB5E721782D4EF00C955A9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F4FB5E731782D50700C955A9 /* SCBallBearingView.h */,
+				F4FB5E741782D50700C955A9 /* SCBallBearingView.m */,
+				F4FB5E761782D7CB00C955A9 /* SCNewtonsCradleView.h */,
+				F4FB5E771782D7CB00C955A9 /* SCNewtonsCradleView.m */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +274,8 @@
 			files = (
 				F48AADF51782D32000A59F4A /* SCAppDelegate.m in Sources */,
 				F48AADFE1782D32000A59F4A /* SCViewController.m in Sources */,
+				F4FB5E781782D7CB00C955A9 /* SCNewtonsCradleView.m in Sources */,
+				F4FB5E751782D50700C955A9 /* SCBallBearingView.m in Sources */,
 				F48AADF11782D32000A59F4A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +489,7 @@
 				F48AAE181782D32000A59F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F48AAE191782D32000A59F4A /* Build configuration list for PBXNativeTarget "NewtonsCradleTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +498,7 @@
 				F48AAE1B1782D32000A59F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
