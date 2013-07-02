@@ -23,8 +23,8 @@
         [self createBallBearings];
         [self applyDynamicBehaviours];
         
-        _userDragBehaviour = [[UIPushBehavior alloc] initWithItems:@[_ballBearings[0]] mode:UIPushBehaviorModeContinuous];
-        _userDragBehaviour.xComponent = -100;
+        _userDragBehaviour = [[UIPushBehavior alloc] initWithItems:@[_ballBearings[0]] mode:UIPushBehaviorModeInstantaneous];
+        _userDragBehaviour.xComponent = -10;
         [_animator addBehavior:_userDragBehaviour];
     }
     return self;
@@ -37,7 +37,7 @@
     CGFloat ballSize = CGRectGetWidth(self.bounds) / (3.0 * (numberBalls - 1));
     
     for (NSUInteger i=0; i<numberBalls; i++) {
-        SCBallBearingView *bb = [[SCBallBearingView alloc] initWithFrame:CGRectMake(0, 0, ballSize, ballSize)];
+        SCBallBearingView *bb = [[SCBallBearingView alloc] initWithFrame:CGRectMake(0, 0, ballSize - 1, ballSize - 1)];
         
         CGFloat x = CGRectGetWidth(self.bounds) / 3.0 + i * ballSize;
         CGFloat y = CGRectGetHeight(self.bounds) * 3 / 4.0;
@@ -81,8 +81,9 @@
     
     // Apply correct dynamic item behaviour
     UIDynamicItemBehavior *itemBehaviour = [[UIDynamicItemBehavior alloc] initWithItems:_ballBearings];
-    itemBehaviour.elasticity = 1;
-    itemBehaviour.density = 100;
+    itemBehaviour.elasticity = 1.0;
+    itemBehaviour.allowsRotation = NO;
+    itemBehaviour.resistance = 2.0;
     [behaviour addChildBehavior:itemBehaviour];
     
     // Create the animator
