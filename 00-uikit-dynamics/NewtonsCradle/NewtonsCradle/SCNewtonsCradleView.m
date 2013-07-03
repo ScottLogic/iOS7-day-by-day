@@ -59,22 +59,22 @@
 }
 
 #pragma mark - UIGestureRecognizer target method
-- (void)handleBallBearingPan:(UIPanGestureRecognizer *)recogniser
+- (void)handleBallBearingPan:(UIPanGestureRecognizer *)recognizer
 {
-    // If we're starting the gesure then create a drag force
-    if (recogniser.state == UIGestureRecognizerStateBegan) {
+    // If we're starting the gesture then create a drag force
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
         if(_userDragBehavior) {
             [_animator removeBehavior:_userDragBehavior];
         }
-        _userDragBehavior = [[UIPushBehavior alloc] initWithItems:@[recogniser.view] mode:UIPushBehaviorModeContinuous];
+        _userDragBehavior = [[UIPushBehavior alloc] initWithItems:@[recognizer.view] mode:UIPushBehaviorModeContinuous];
         [_animator addBehavior:_userDragBehavior];
     }
     
     // Set the force to be proportional to distance the gesture has moved
-    _userDragBehavior.xComponent = [recogniser translationInView:self].x / 3.f;
+    _userDragBehavior.xComponent = [recognizer translationInView:self].x / 3.f;
     
     // If we're finishing then cancel the behavior to 'let-go' of the ball
-    if (recogniser.state == UIGestureRecognizerStateEnded) {
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
         [_animator removeBehavior:_userDragBehavior];
         _userDragBehavior = nil;
     }
@@ -104,7 +104,7 @@
     // Elasticity governs the efficiency of the collisions
     itemBehavior.elasticity = 1.0;
     itemBehavior.allowsRotation = NO;
-    itemBehavior.resistance = 1.5;
+    itemBehavior.resistance = 0.5;
     [behavior addChildBehavior:itemBehavior];
     
     // Create the animator
