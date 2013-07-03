@@ -12,7 +12,6 @@
 @interface SCViewController () {
     SCNewtonsCradleView *_newtonsCradle;
 }
-
 @end
 
 @implementation SCViewController
