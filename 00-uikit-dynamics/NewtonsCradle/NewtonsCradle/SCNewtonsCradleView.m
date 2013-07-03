@@ -41,7 +41,7 @@
         SCBallBearingView *bb = [[SCBallBearingView alloc] initWithFrame:CGRectMake(0, 0, ballSize - 1, ballSize - 1)];
         
         CGFloat x = CGRectGetWidth(self.bounds) / 3.0 + i * ballSize;
-        CGFloat y = CGRectGetHeight(self.bounds) * 3 / 4.0;
+        CGFloat y = CGRectGetHeight(self.bounds) / 2.0;
         bb.center = CGPointMake(x, y);
         
         UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleBallBearingPan:)];
@@ -105,6 +105,11 @@
 {
     CGPoint anchor = ballBearing.center;
     anchor.y -= CGRectGetHeight(self.bounds) / 4.0;
+    // Draw a box at the anchor
+    UIView *blueBox = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+    blueBox.backgroundColor = [UIColor blueColor];
+    blueBox.center = anchor;
+    [self addSubview:blueBox];
     return [[UIAttachmentBehavior alloc] initWithItem:ballBearing attachedToAnchor:anchor];
 }
 
