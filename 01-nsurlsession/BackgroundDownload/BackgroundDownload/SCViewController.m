@@ -8,7 +8,9 @@
 
 #import "SCViewController.h"
 
-@interface SCViewController ()
+@interface SCViewController () {
+    NSURLSession *urlSession;
+}
 
 @end
 
@@ -20,10 +22,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+- (IBAction)startDownload:(id)sender {
+    if(!urlSession) {
+        // Create a 'private browsing' ses
+        NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+        urlSession = [NSURLSession sessionWithConfiguration:sessionConfig];
+    }
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://lorempixel.com/1920/1920/sports"]];
+    [urlSession downloadTaskWithRequest:request completionHandler:^(NSURL *targetPath, NSURLResponse *response, NSError *error) {
+        <#code#>
+    }];
+}
 @end

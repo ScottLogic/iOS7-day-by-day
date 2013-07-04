@@ -10,4 +10,8 @@
 
 @interface SCViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+- (IBAction)startDownload:(id)sender;
+
 @end
