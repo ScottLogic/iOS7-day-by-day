@@ -455,6 +455,7 @@
 				22E2F1B017860BB000D1270F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22E2F1B117860BB000D1270F /* Build configuration list for PBXNativeTarget "BackgroundDownloadTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +464,7 @@
 				22E2F1B317860BB000D1270F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

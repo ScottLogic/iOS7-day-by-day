@@ -10,8 +10,18 @@
 
 @interface SCViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) NSURLSessionDownloadTask *resumableTask;
+@property (strong, nonatomic) NSURLSessionDownloadTask *backgroundTask;
 
-- (IBAction)startDownload:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressIndicator;
+@property (strong, nonatomic) IBOutletCollection(UIBarButtonItem) NSArray *startButtons;
+
+- (IBAction)startCancellable:(id)sender;
+- (IBAction)cancelCancellable:(id)sender;
+- (IBAction)startResumable:(id)sender;
+- (IBAction)startBackground:(id)sender;
+
+
 
 @end
