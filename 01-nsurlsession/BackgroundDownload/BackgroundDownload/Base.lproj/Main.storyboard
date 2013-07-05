@@ -30,11 +30,6 @@
                                             <action selector="startCancellable:" destination="vXZ-lx-hvc" id="PgZ-ht-A74"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Cancel" id="zLw-0x-V2e">
-                                        <connections>
-                                            <action selector="cancelCancellable:" destination="vXZ-lx-hvc" id="xkS-Cx-5HG"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem title="Resumable" id="8p8-Df-msT">
                                         <connections>
                                             <action selector="startResumable:" destination="vXZ-lx-hvc" id="Sk4-Ej-ZV8"/>
@@ -43,6 +38,12 @@
                                     <barButtonItem title="BG" id="HLW-uN-kGX">
                                         <connections>
                                             <action selector="startBackground:" destination="vXZ-lx-hvc" id="9uL-At-c4g"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bnS-1T-Vhm"/>
+                                    <barButtonItem title="Cancel" id="zLw-0x-V2e">
+                                        <connections>
+                                            <action selector="cancelCancellable:" destination="vXZ-lx-hvc" id="xkS-Cx-5HG"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -84,7 +85,7 @@
             <relationships>
                 <relationship kind="action" name="cancelCancellable:"/>
                 <relationship kind="action" name="startBackground:"/>
-                <relationship kind="action" name="startDownload:"/>
+                <relationship kind="action" name="startCancellable:"/>
                 <relationship kind="action" name="startResumable:"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="progressIndicator" candidateClass="UIProgressView"/>
