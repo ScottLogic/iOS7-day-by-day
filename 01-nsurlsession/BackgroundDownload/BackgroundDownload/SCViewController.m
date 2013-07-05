@@ -7,6 +7,7 @@
 //
 
 #import "SCViewController.h"
+#import "SCAppDelegate.h"
 
 @interface SCViewController () <NSURLSessionDownloadDelegate> {
     NSURLSession *inProcessSession;
@@ -54,6 +55,9 @@
             partialDownload = resumeData;
             self.resumableTask = nil;
         }];
+    } else if(self.backgroundTask) {
+        [self.backgroundTask cancel];
+        self.backgroundTask = nil;
     }
 }
 
@@ -80,6 +84,11 @@
 }
 
 - (IBAction)startBackground:(id)sender {
+    NSString *url = @"http://www.hdwallpaperstop.com/wp-content/uploads/2013/05/Beautiful-Landscape-Pictures-of-nature.jpg";
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    self.backgroundTask = [self.backgroundSession downloadTaskWithRequest:request];
+    [self setDownloadButtonsAsEnabled:NO];
+    self.imageView.hidden = YES;
 }
 
 #pragma mark - Utility methods
@@ -88,6 +97,17 @@
     for(UIBarButtonItem *btn in self.startButtons) {
         btn.enabled = enabled;
     }
+}
+
+- (NSURLSession *)backgroundSession
+{
+    static NSURLSession *backgroundSession = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration backgroundSessionConfiguration:@"com.shinobicontrols.BackgroundDownload.BackgroundSession"];
+        backgroundSession = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
+    });
+    return backgroundSession;
 }
 
 #pragma mark - NSURLSessionDownloadDelegate methods
@@ -139,6 +159,16 @@
     } else if (downloadTask == self.resumableTask) {
         self.resumableTask = nil;
         partialDownload = nil;
+    } else if (session == self.backgroundSession) {
+        self.backgroundTask = nil;
+        // Get hold of the app delegate
+        SCAppDelegate *appDelegate = (SCAppDelegate *)[[UIApplication sharedApplication] delegate];
+        if(appDelegate.backgroundURLSessionCompletionHandler) {
+            // Need to copy the completion handler
+            void (^handler)() = appDelegate.backgroundURLSessionCompletionHandler;
+            appDelegate.backgroundURLSessionCompletionHandler = nil;
+            handler();
+        }
     }
 
 }

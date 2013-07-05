@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSURLSessionDownloadTask *resumableTask;
 @property (strong, nonatomic) NSURLSessionDownloadTask *backgroundTask;
+@property (strong, nonatomic, readonly) NSURLSession *backgroundSession;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressIndicator;
