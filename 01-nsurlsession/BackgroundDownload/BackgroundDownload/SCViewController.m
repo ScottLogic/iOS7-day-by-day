@@ -25,6 +25,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.progressIndicator.hidden = YES;
     self.progressIndicator.progress = 0;
+    
+    // Make sure that we've attached to the background session
+    self.backgroundSession.sessionDescription = @"Background session";
 }
 
 #pragma mark - Button Methods
