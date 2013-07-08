@@ -18,12 +18,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    CGFloat yPosition = 100;
+    for(UIImage *image in [self images]) {
+        UIImageView *iv = [[UIImageView alloc] initWithImage:image];
+        iv.center = CGPointMake(CGRectGetWidth(self.view.bounds) / 2, yPosition);
+        yPosition += 100;
+        [self.view addSubview:iv];
+    }
 }
 
-- (void)didReceiveMemoryWarning
+- (NSArray *)images
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return @[
+             [UIImage imageNamed:@"USA"],
+             [UIImage imageNamed:@"Australia"]
+             ];
 }
 
 @end
