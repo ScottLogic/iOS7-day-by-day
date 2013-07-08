@@ -25,6 +25,25 @@
         yPosition += 100;
         [self.view addSubview:iv];
     }
+    // Add the sliced images
+    [self createButtonImages];
+}
+
+- (void)createButtonImages
+{
+    UIImage *btnImage = [UIImage imageNamed:@"ButtonSlice"];
+    
+    // Let's make 2
+    UIImageView *iv = [[UIImageView alloc] initWithImage:btnImage];
+    iv.bounds = CGRectMake(0, 0, 150, CGRectGetHeight(iv.bounds));
+    iv.center = CGPointMake(CGRectGetWidth(self.view.bounds) / 2, 300);
+    [self.view addSubview:iv];
+    
+    // And a stretched version
+    iv = [[UIImageView alloc] initWithImage:btnImage];
+    iv.bounds = CGRectMake(0, 0, 300, CGRectGetHeight(iv.bounds));
+    iv.center = CGPointMake(CGRectGetWidth(self.view.bounds) / 2, 350);
+    [self.view addSubview:iv];
 }
 
 - (NSArray *)images
