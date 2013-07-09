@@ -21,6 +21,9 @@
 		F489D288178C489C00BFA028 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489D26A178C489C00BFA028 /* UIKit.framework */; };
 		F489D290178C489C00BFA028 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F489D28E178C489C00BFA028 /* InfoPlist.strings */; };
 		F489D292178C489C00BFA028 /* TrafficStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D291178C489C00BFA028 /* TrafficStatusTests.m */; };
+		F489D29E178C4C6900BFA028 /* SCTrafficStatusTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D29D178C4C6900BFA028 /* SCTrafficStatusTableCell.m */; };
+		F489D2A1178C4EE100BFA028 /* SCTrafficStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D2A0178C4EE100BFA028 /* SCTrafficStatus.m */; };
+		F489D2A7178C50F000BFA028 /* NSArray+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D2A6178C50F000BFA028 /* NSArray+Random.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		F489D28D178C489C00BFA028 /* TrafficStatusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrafficStatusTests-Info.plist"; sourceTree = "<group>"; };
 		F489D28F178C489C00BFA028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F489D291178C489C00BFA028 /* TrafficStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficStatusTests.m; sourceTree = "<group>"; };
+		F489D29C178C4C6900BFA028 /* SCTrafficStatusTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTrafficStatusTableCell.h; sourceTree = "<group>"; };
+		F489D29D178C4C6900BFA028 /* SCTrafficStatusTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTrafficStatusTableCell.m; sourceTree = "<group>"; };
+		F489D29F178C4EE100BFA028 /* SCTrafficStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTrafficStatus.h; sourceTree = "<group>"; };
+		F489D2A0178C4EE100BFA028 /* SCTrafficStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTrafficStatus.m; sourceTree = "<group>"; };
+		F489D2A5178C50F000BFA028 /* NSArray+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Random.h"; sourceTree = "<group>"; };
+		F489D2A6178C50F000BFA028 /* NSArray+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Random.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,7 @@
 		F489D26C178C489C00BFA028 /* TrafficStatus */ = {
 			isa = PBXGroup;
 			children = (
+				F489D29B178C4C3300BFA028 /* NotRelevantForDemo */,
 				F489D275178C489C00BFA028 /* SCAppDelegate.h */,
 				F489D276178C489C00BFA028 /* SCAppDelegate.m */,
 				F489D278178C489C00BFA028 /* Main.storyboard */,
@@ -150,6 +160,19 @@
 				F489D28E178C489C00BFA028 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F489D29B178C4C3300BFA028 /* NotRelevantForDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F489D29C178C4C6900BFA028 /* SCTrafficStatusTableCell.h */,
+				F489D29D178C4C6900BFA028 /* SCTrafficStatusTableCell.m */,
+				F489D29F178C4EE100BFA028 /* SCTrafficStatus.h */,
+				F489D2A0178C4EE100BFA028 /* SCTrafficStatus.m */,
+				F489D2A5178C50F000BFA028 /* NSArray+Random.h */,
+				F489D2A6178C50F000BFA028 /* NSArray+Random.m */,
+			);
+			name = NotRelevantForDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +282,9 @@
 			files = (
 				F489D277178C489C00BFA028 /* SCAppDelegate.m in Sources */,
 				F489D27D178C489C00BFA028 /* SCViewController.m in Sources */,
+				F489D29E178C4C6900BFA028 /* SCTrafficStatusTableCell.m in Sources */,
+				F489D2A7178C50F000BFA028 /* NSArray+Random.m in Sources */,
+				F489D2A1178C4EE100BFA028 /* SCTrafficStatus.m in Sources */,
 				F489D273178C489C00BFA028 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
