@@ -47,7 +47,7 @@ typedef void(^SCTrafficStatusCreationComplete)();
 
 - (NSUInteger)insertStatusObjectsForFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    NSUInteger numberCreated = [self createNewStatusUpdatesWithMin:1 max:3 completionBlock:NULL];
+    NSUInteger numberCreated = [self createNewStatusUpdatesWithMin:0 max:3 completionBlock:NULL];
     NSLog(@"Background fetch completed - %d new updates", numberCreated);
     UIBackgroundFetchResult result = UIBackgroundFetchResultNoData;
     if(numberCreated > 0) {
