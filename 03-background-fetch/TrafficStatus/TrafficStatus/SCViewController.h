@@ -10,4 +10,6 @@
 
 @interface SCViewController : UITableViewController
 
+- (NSUInteger)insertStatusObjectsForFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
+
 @end

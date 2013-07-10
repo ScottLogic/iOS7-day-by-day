@@ -10,6 +10,8 @@
 #import "SCTrafficStatusTableCell.h"
 #import "SCTrafficStatus.h"
 
+typedef void(^SCTrafficStatusCreationComplete)();
+
 @interface SCViewController () {
     UIRefreshControl *refreshControl;
 }
@@ -29,12 +31,11 @@
     [self.tableView addSubview:refreshControl];
     
     if(self.trafficStatusUpdates.count == 0) {
-        for(int i=0; i<4; i++) {
-            [self.trafficStatusUpdates insertObject:[SCTrafficStatus randomStatus] atIndex:0];
-        }
+        [self createNewStatusUpdatesWithMin:1 max:4 completionBlock:NULL];
     }
 }
 
+#pragma mark - API Methods
 
 - (NSMutableArray *)trafficStatusUpdates
 {
@@ -44,11 +45,43 @@
     return _trafficStatusUpdates;
 }
 
+- (NSUInteger)insertStatusObjectsForFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    NSUInteger numberCreated = [self createNewStatusUpdatesWithMin:1 max:3 completionBlock:NULL];
+    NSLog(@"Background fetch completed - %d new updates", numberCreated);
+    UIBackgroundFetchResult result = UIBackgroundFetchResultNoData;
+    if(numberCreated > 0) {
+        result = UIBackgroundFetchResultNewData;
+    }
+    completionHandler(result);
+    return numberCreated;
+}
+
+- (NSUInteger)createNewStatusUpdatesWithMin:(NSUInteger)min max:(NSUInteger)max completionBlock:(SCTrafficStatusCreationComplete)completionHandler
+{
+    NSUInteger numberToCreate = arc4random_uniform(max-min) + min;
+    NSMutableArray *indexPathsToUpdate = [NSMutableArray array];
+    
+    for(int i=0; i<numberToCreate; i++) {
+        [self.trafficStatusUpdates insertObject:[SCTrafficStatus randomStatus] atIndex:0];
+        [indexPathsToUpdate addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+    }
+    
+    [self.tableView insertRowsAtIndexPaths:indexPathsToUpdate withRowAnimation:UITableViewRowAnimationFade];
+    if(completionHandler) {
+        completionHandler();
+    }
+    
+    return numberToCreate;
+}
+
+#pragma mark - Utility methods
+
 - (void)refreshStatus:(id)sender
 {
-    [self.trafficStatusUpdates insertObject:[SCTrafficStatus randomStatus] atIndex:0];
-    [self.tableView insertRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-    [refreshControl endRefreshing];
+    [self createNewStatusUpdatesWithMin:0 max:3 completionBlock:^{
+        [refreshControl endRefreshing];
+    }];
 }
 
 #pragma mark - Datasource/delegate methods

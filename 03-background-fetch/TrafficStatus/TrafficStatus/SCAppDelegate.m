@@ -7,6 +7,7 @@
 //
 
 #import "SCAppDelegate.h"
+#import "SCViewController.h"
 
 @implementation SCAppDelegate
 
@@ -31,6 +32,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -41,6 +43,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    // Get hold of the view controller
+    SCViewController *vc = (SCViewController *)self.window.rootViewController;
+    // Insert status updates and pass in the completion handler block
+    NSUInteger numberInserted = [vc insertStatusObjectsForFetchWithCompletionHandler:completionHandler];
+    [UIApplication sharedApplication].applicationIconBadgeNumber += numberInserted;
 }
 
 @end
