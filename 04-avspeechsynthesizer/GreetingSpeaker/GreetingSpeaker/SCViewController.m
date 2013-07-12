@@ -8,9 +8,11 @@
 
 #import "SCViewController.h"
 #import "SCGreetingLanguage.h"
+@import AVFoundation;
 
 @interface SCViewController () <UIPickerViewDelegate, UIPickerViewDataSource> {
     NSArray *availableLanguages;
+    AVSpeechSynthesizer *speechSynthesizer;
 }
 
 @end
@@ -27,11 +29,19 @@
     self.languagePicker.delegate = self;
     self.languagePicker.dataSource = self;
     self.greetingLabel.text = [[availableLanguages firstObject] greeting];
+    
+    // Create the speech synthesizer
+    speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
+    
+    NSLog(@"%@", [AVSpeechSynthesisVoice speechVoices]);
 }
 
 - (IBAction)greetingButtonPressed:(id)sender {
-    NSLog(@"Speak now!");
+    SCGreetingLanguage *gl = availableLanguages[[self.languagePicker selectedRowInComponent:0]];
+    [speechSynthesizer speakUtterance:[gl greetingUtterance]];
 }
+
+
 
 
 #pragma mark - UIPickerViewDelegate methods
