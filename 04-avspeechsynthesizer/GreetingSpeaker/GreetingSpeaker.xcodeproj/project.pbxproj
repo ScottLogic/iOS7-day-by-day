@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4750083178FFAEE00E859CE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4750082178FFAEE00E859CE /* AVFoundation.framework */; };
+		F4750087178FFF3300E859CE /* SCGreetingLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4750086178FFF3300E859CE /* SCGreetingLanguage.m */; };
 		F485192C178FF8380000980D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485192B178FF8380000980D /* Foundation.framework */; };
 		F485192E178FF8380000980D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485192D178FF8380000980D /* CoreGraphics.framework */; };
 		F4851930178FF8380000980D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485192F178FF8380000980D /* UIKit.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4750082178FFAEE00E859CE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F4750085178FFF3300E859CE /* SCGreetingLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGreetingLanguage.h; sourceTree = "<group>"; };
+		F4750086178FFF3300E859CE /* SCGreetingLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGreetingLanguage.m; sourceTree = "<group>"; };
 		F4851928178FF8380000980D /* GreetingSpeaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreetingSpeaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F485192B178FF8380000980D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F485192D178FF8380000980D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4750083178FFAEE00E859CE /* AVFoundation.framework in Frameworks */,
 				F485192E178FF8380000980D /* CoreGraphics.framework in Frameworks */,
 				F4851930178FF8380000980D /* UIKit.framework in Frameworks */,
 				F485192C178FF8380000980D /* Foundation.framework in Frameworks */,
@@ -79,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4750084178FFF1200E859CE /* Utility Components */ = {
+			isa = PBXGroup;
+			children = (
+				F4750085178FFF3300E859CE /* SCGreetingLanguage.h */,
+				F4750086178FFF3300E859CE /* SCGreetingLanguage.m */,
+			);
+			name = "Utility Components";
+			sourceTree = "<group>";
+		};
 		F485191F178FF8380000980D = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,7 @@
 		F485192A178FF8380000980D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4750082178FFAEE00E859CE /* AVFoundation.framework */,
 				F485192B178FF8380000980D /* Foundation.framework */,
 				F485192D178FF8380000980D /* CoreGraphics.framework */,
 				F485192F178FF8380000980D /* UIKit.framework */,
@@ -112,6 +128,7 @@
 		F4851931178FF8380000980D /* GreetingSpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				F4750084178FFF1200E859CE /* Utility Components */,
 				F485193A178FF8380000980D /* SCAppDelegate.h */,
 				F485193B178FF8380000980D /* SCAppDelegate.m */,
 				F485193D178FF8380000980D /* Main.storyboard */,
@@ -252,6 +269,7 @@
 			files = (
 				F485193C178FF8380000980D /* SCAppDelegate.m in Sources */,
 				F4851942178FF8380000980D /* SCViewController.m in Sources */,
+				F4750087178FFF3300E859CE /* SCGreetingLanguage.m in Sources */,
 				F4851938178FF8380000980D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +473,7 @@
 				F485195C178FF8380000980D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F485195D178FF8380000980D /* Build configuration list for PBXNativeTarget "GreetingSpeakerTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +482,7 @@
 				F485195F178FF8380000980D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

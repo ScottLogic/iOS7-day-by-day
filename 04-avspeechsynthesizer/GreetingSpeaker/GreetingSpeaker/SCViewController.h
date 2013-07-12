@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SCViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIPickerView *languagePicker;
 @property (weak, nonatomic) IBOutlet UILabel *greetingLabel;
+
 - (IBAction)greetingButtonPressed:(id)sender;
 
 @end
