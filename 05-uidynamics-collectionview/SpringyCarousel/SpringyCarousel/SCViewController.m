@@ -13,6 +13,7 @@
 @interface SCViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
     UICollectionViewFlowLayout *_collectionViewLayout;
     NSMutableArray *_collectionViewCellContent;
+    CGSize itemSize;
 }
 
 @end
@@ -22,7 +23,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    itemSize = CGSizeMake(100, 100);
+    
+    // Do any additional setup after loading the view, typically from a nib.
     [self prepareSpringyCarousel];
     
     // Create the cells
@@ -32,7 +36,7 @@
 - (void)prepareSpringyCarousel
 {
     // Provide the layout
-    _collectionViewLayout = [[SCSpringyCarousel alloc] init];
+    _collectionViewLayout = [[SCSpringyCarousel alloc] initWithItemSize:itemSize];
     self.collectionView.collectionViewLayout = _collectionViewLayout;
     
     // Set datasource and delegate
@@ -71,7 +75,7 @@
 #pragma mark - UICollectionViewDelegate methods
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(100, 100);
+    return itemSize;
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface SCSpringyCarousel : UICollectionViewFlowLayout
 
+- (instancetype)initWithItemSize:(CGSize)size;
+
 @end
