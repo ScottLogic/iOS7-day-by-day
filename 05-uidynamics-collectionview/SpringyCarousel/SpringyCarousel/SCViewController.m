@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     
-    itemSize = CGSizeMake(100, 100);
+    itemSize = CGSizeMake(70, 70);
     
     // Do any additional setup after loading the view, typically from a nib.
     [self prepareSpringyCarousel];
@@ -47,7 +47,7 @@
 - (void)createCells
 {
     _collectionViewCellContent = [NSMutableArray array];
-    for (int i=0; i<10; i++) {
+    for (int i=0; i<30; i++) {
         [_collectionViewCellContent addObject:@(i)];
     }
 }

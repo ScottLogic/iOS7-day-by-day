@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pZ9-Sd-BPX">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pZ9-Sd-BPX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KLP-f6-dd1">
@@ -33,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNw-9z-LJd">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNw-9z-LJd">
                                                     <rect key="frame" x="12" y="12" width="56" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -58,6 +58,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pZ9-Sd-BPX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="EIG-Ze-1MP"/>
+                            <constraint firstItem="pZ9-Sd-BPX" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="X5S-uc-F83"/>
+                            <constraint firstItem="pZ9-Sd-BPX" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="fzs-an-IB2"/>
+                            <constraint firstItem="pZ9-Sd-BPX" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottom" id="qny-x8-Aml"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="pZ9-Sd-BPX" id="Izn-Cy-8MD"/>
