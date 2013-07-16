@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+- (IBAction)newViewButtonPressed:(id)sender;
+
 @end
