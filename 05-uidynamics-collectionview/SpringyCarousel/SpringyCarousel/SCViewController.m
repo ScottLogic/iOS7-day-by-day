@@ -7,8 +7,13 @@
 //
 
 #import "SCViewController.h"
+#import "SCSpringyCarousel.h"
+#import "SCCollectionViewSampleCell.h"
 
-@interface SCViewController ()
+@interface SCViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
+    UICollectionViewFlowLayout *_collectionViewLayout;
+    NSMutableArray *_collectionViewCellContent;
+}
 
 @end
 
@@ -18,12 +23,55 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self prepareSpringyCarousel];
+    
+    // Create the cells
+    [self createCells];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)prepareSpringyCarousel
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Provide the layout
+    _collectionViewLayout = [[SCSpringyCarousel alloc] init];
+    self.collectionView.collectionViewLayout = _collectionViewLayout;
+    
+    // Set datasource and delegate
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+}
+
+- (void)createCells
+{
+    _collectionViewCellContent = [NSMutableArray array];
+    for (int i=0; i<10; i++) {
+        [_collectionViewCellContent addObject:@(i)];
+    }
+}
+
+
+#pragma mark - UICollectionViewDataSource methods
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [_collectionViewCellContent count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    SCCollectionViewSampleCell *cell = (SCCollectionViewSampleCell *)[self.collectionView dequeueReusableCellWithReuseIdentifier:@"SpringyCell" forIndexPath:indexPath];
+    cell.numberLabel.text = [NSString stringWithFormat:@"%d", [_collectionViewCellContent[indexPath.row] integerValue]];
+    return cell;
+}
+
+
+#pragma mark - UICollectionViewDelegate methods
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(100, 100);
 }
 
 @end

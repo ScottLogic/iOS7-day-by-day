@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F446D0D817957E2E00FD4D78 /* SCSpringyCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = F446D0D717957E2E00FD4D78 /* SCSpringyCarousel.m */; };
+		F446D0DB1795835B00FD4D78 /* SCCollectionViewSampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F446D0DA1795835B00FD4D78 /* SCCollectionViewSampleCell.m */; };
 		F4D651A7179450BB00493F3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651A6179450BB00493F3C /* Foundation.framework */; };
 		F4D651A9179450BB00493F3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651A8179450BB00493F3C /* CoreGraphics.framework */; };
 		F4D651AB179450BB00493F3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651AA179450BB00493F3C /* UIKit.framework */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F446D0D617957E2E00FD4D78 /* SCSpringyCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSpringyCarousel.h; sourceTree = "<group>"; };
+		F446D0D717957E2E00FD4D78 /* SCSpringyCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSpringyCarousel.m; sourceTree = "<group>"; };
+		F446D0D91795835B00FD4D78 /* SCCollectionViewSampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCollectionViewSampleCell.h; sourceTree = "<group>"; };
+		F446D0DA1795835B00FD4D78 /* SCCollectionViewSampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCollectionViewSampleCell.m; sourceTree = "<group>"; };
 		F4D651A3179450BB00493F3C /* SpringyCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringyCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D651A6179450BB00493F3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F4D651A8179450BB00493F3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F446D0D517957E0500FD4D78 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F446D0D617957E2E00FD4D78 /* SCSpringyCarousel.h */,
+				F446D0D717957E2E00FD4D78 /* SCSpringyCarousel.m */,
+				F446D0D91795835B00FD4D78 /* SCCollectionViewSampleCell.h */,
+				F446D0DA1795835B00FD4D78 /* SCCollectionViewSampleCell.m */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
 		F4D6519A179450BB00493F3C = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +129,7 @@
 		F4D651AC179450BB00493F3C /* SpringyCarousel */ = {
 			isa = PBXGroup;
 			children = (
+				F446D0D517957E0500FD4D78 /* CollectionView */,
 				F4D651B5179450BB00493F3C /* SCAppDelegate.h */,
 				F4D651B6179450BB00493F3C /* SCAppDelegate.m */,
 				F4D651B8179450BB00493F3C /* Main.storyboard */,
@@ -252,6 +270,8 @@
 			files = (
 				F4D651B7179450BB00493F3C /* SCAppDelegate.m in Sources */,
 				F4D651BD179450BB00493F3C /* SCViewController.m in Sources */,
+				F446D0DB1795835B00FD4D78 /* SCCollectionViewSampleCell.m in Sources */,
+				F446D0D817957E2E00FD4D78 /* SCSpringyCarousel.m in Sources */,
 				F4D651B3179450BB00493F3C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +475,7 @@
 				F4D651D7179450BC00493F3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4D651D8179450BC00493F3C /* Build configuration list for PBXNativeTarget "SpringyCarouselTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +484,7 @@
 				F4D651DA179450BC00493F3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
