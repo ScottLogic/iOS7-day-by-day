@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCSpringyCarousel : UICollectionViewFlowLayout
+@interface SCSpringyCarousel : UICollectionViewFlowLayout <UIDynamicAnimatorDelegate>
 
 - (instancetype)initWithItemSize:(CGSize)size;
 
