@@ -7,13 +7,12 @@
 //
 
 #import "SCSpringyCarousel.h"
+#import "SCItemBehaviorManager.h"
 
 @implementation SCSpringyCarousel {
     CGSize _itemSize;
     UIDynamicAnimator *_dynamicAnimator;
-    NSMutableArray *_newItemBehaviors;
-    NSMutableDictionary *_springs;
-    UIDynamicBehavior *_newItemBehavior;
+    SCItemBehaviorManager *_behaviorManager;
 }
 
 - (id)initWithItemSize:(CGSize)size
@@ -23,7 +22,8 @@
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         // Save off the size
         _itemSize = size;
-        _newItemBehaviors = [NSMutableArray array];
+        _dynamicAnimator = [[UIDynamicAnimator alloc] initWithCollectionViewLayout:self];
+        _behaviorManager = [[SCItemBehaviorManager alloc] initWithAnimator:_dynamicAnimator];
     }
     return self;
 }
@@ -35,10 +35,9 @@
     
     CGPoint touchLocation = [self.collectionView.panGestureRecognizer locationInView:self.collectionView];
     
-    for (UIAttachmentBehavior *behavior in [_springs allValues]) {
+    for (UIAttachmentBehavior *behavior in [_behaviorManager.attachmentBehaviors allValues]) {
         CGPoint anchorPoint = behavior.anchorPoint;
         CGFloat distFromTouch = ABS(anchorPoint.x - touchLocation.x);
-        
         
         UICollectionViewLayoutAttributes *attr = [behavior.items firstObject];
         CGPoint center = attr.center;
@@ -60,47 +59,14 @@
     self.sectionInset = UIEdgeInsetsMake(CGRectGetHeight(self.collectionView.bounds) - _itemSize.height, 0, 0, 0);
     [super prepareLayout];
     
-    if(!_dynamicAnimator) {
-        _dynamicAnimator = [[UIDynamicAnimator alloc] initWithCollectionViewLayout:self];
-        _dynamicAnimator.delegate = self;
-        
-        _springs = [NSMutableDictionary dictionary];
-    }
-    
     // Get a list of the objects around the current view
     CGRect expandedViewPort = self.collectionView.bounds;
     expandedViewPort.origin.x -= 2 * _itemSize.width;
     expandedViewPort.size.width += 4 * _itemSize.width;
     NSArray *currentItems = [super layoutAttributesForElementsInRect:expandedViewPort];
     
-    // Find the items we need to add springs to
-    NSMutableSet *toAdd = [NSMutableSet setWithArray:currentItems];
-    [toAdd minusSet:[NSSet setWithArray:[_springs allKeys]]];
-
-    // Create the newly required attachement behaviors
-    for (UICollectionViewLayoutAttributes *attr in toAdd) {
-        // Create an attachment behaviour
-        UIAttachmentBehavior *behavior = [[UIAttachmentBehavior alloc] initWithItem:attr attachedToAnchor:[attr center]];
-        behavior.length = 0;
-        behavior.damping = 0.8;
-        behavior.frequency = 0.8;
-        // Add the new behavior to the animator
-        [_dynamicAnimator addBehavior:behavior];
-        // And keep it in the _springs dictionary
-        [_springs setObject:behavior forKey:attr];
-    }
-    
-    // Let's find the ones we need to remove
-    NSMutableSet *toRemove = [NSMutableSet setWithArray:[_springs allKeys]];
-    [toRemove minusSet:[NSSet setWithArray:currentItems]];
-    
-    // Let's remove any we no longer need
-    for (UICollectionViewLayoutAttributes *attr in toRemove) {
-        UIDynamicBehavior *behaviorToRemove = _springs[attr];
-        [_dynamicAnimator removeBehavior:behaviorToRemove];
-        // And throw from the _springs dictionary
-        [_springs removeObjectForKey:attr];
-    }
+    // We update our behavior collection to just contain the objects we can currently (almost) see
+    [_behaviorManager updateItemCollection:currentItems];
     
 }
 
@@ -114,13 +80,13 @@
     return [_dynamicAnimator layoutAttributesForCellAtIndexPath:indexPath];
 }
 
-
+/*
 - (void)prepareForCollectionViewUpdates:(NSArray *)updateItems
 {
     for (UICollectionViewUpdateItem *updateItem in updateItems) {
         if(updateItem.updateAction == UICollectionUpdateActionInsert) {
             
-            /* We need to loop through all the visible ones and update them */
+            // We need to loop through all the visible ones and update them
             NSArray *curIndexPaths = [self.collectionView indexPathsForVisibleItems];
             
             [curIndexPaths enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -182,23 +148,11 @@
         }
     }
 }
-
+*/
 
 - (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
 {
     return [_dynamicAnimator layoutAttributesForCellAtIndexPath:itemIndexPath];
-}
-
-#pragma mark - UIDynamicAnimatorDelegate methods
-- (void)dynamicAnimatorDidPause:(UIDynamicAnimator *)animator
-{
-    // If the dynamic animator has paused, then we remove the _newItemBehavior
-    if([_newItemBehaviors count] > 0) {
-        for (UIDynamicBehavior *behavior in _newItemBehaviors) {
-            [_dynamicAnimator removeBehavior:behavior];
-        }
-        [_newItemBehaviors removeAllObjects];
-    }
 }
 
 @end
