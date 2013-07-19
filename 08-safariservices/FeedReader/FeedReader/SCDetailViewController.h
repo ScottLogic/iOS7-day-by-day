@@ -12,5 +12,8 @@
 
 @property (strong, nonatomic) id detailItem;
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+- (IBAction)readLaterButtonPressed:(id)sender;
 @end

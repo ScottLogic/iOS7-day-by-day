@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F45DCED617997C6A00160C30 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DCED517997C6A00160C30 /* SafariServices.framework */; };
 		F49571CA1799427000E0ECA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49571C91799427000E0ECA6 /* Foundation.framework */; };
 		F49571CC1799427000E0ECA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49571CB1799427000E0ECA6 /* CoreGraphics.framework */; };
 		F49571CE1799427000E0ECA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49571CD1799427000E0ECA6 /* UIKit.framework */; };
@@ -22,6 +23,8 @@
 		F49571EE1799427100E0ECA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49571CD1799427000E0ECA6 /* UIKit.framework */; };
 		F49571F61799427100E0ECA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F49571F41799427100E0ECA6 /* InfoPlist.strings */; };
 		F49571F81799427100E0ECA6 /* FeedReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F49571F71799427100E0ECA6 /* FeedReaderTests.m */; };
+		F4957204179942D500E0ECA6 /* SCRSSEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F4957203179942D500E0ECA6 /* SCRSSEntry.m */; };
+		F495720717994FC100E0ECA6 /* SCRSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = F495720617994FC100E0ECA6 /* SCRSSFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F45DCED517997C6A00160C30 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		F49571C61799427000E0ECA6 /* FeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49571C91799427000E0ECA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F49571CB1799427000E0ECA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +60,10 @@
 		F49571F31799427100E0ECA6 /* FeedReaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FeedReaderTests-Info.plist"; sourceTree = "<group>"; };
 		F49571F51799427100E0ECA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F49571F71799427100E0ECA6 /* FeedReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedReaderTests.m; sourceTree = "<group>"; };
+		F4957202179942D500E0ECA6 /* SCRSSEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRSSEntry.h; sourceTree = "<group>"; };
+		F4957203179942D500E0ECA6 /* SCRSSEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRSSEntry.m; sourceTree = "<group>"; };
+		F495720517994FC100E0ECA6 /* SCRSSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRSSFeed.h; sourceTree = "<group>"; };
+		F495720617994FC100E0ECA6 /* SCRSSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRSSFeed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45DCED617997C6A00160C30 /* SafariServices.framework in Frameworks */,
 				F49571CC1799427000E0ECA6 /* CoreGraphics.framework in Frameworks */,
 				F49571CE1799427000E0ECA6 /* UIKit.framework in Frameworks */,
 				F49571CA1799427000E0ECA6 /* Foundation.framework in Frameworks */,
@@ -104,6 +113,7 @@
 		F49571C81799427000E0ECA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F45DCED517997C6A00160C30 /* SafariServices.framework */,
 				F49571C91799427000E0ECA6 /* Foundation.framework */,
 				F49571CB1799427000E0ECA6 /* CoreGraphics.framework */,
 				F49571CD1799427000E0ECA6 /* UIKit.framework */,
@@ -115,6 +125,7 @@
 		F49571CF1799427000E0ECA6 /* FeedReader */ = {
 			isa = PBXGroup;
 			children = (
+				F4957201179942B700E0ECA6 /* Data */,
 				F49571D81799427000E0ECA6 /* SCAppDelegate.h */,
 				F49571D91799427000E0ECA6 /* SCAppDelegate.m */,
 				F49571DB1799427000E0ECA6 /* Main.storyboard */,
@@ -155,6 +166,17 @@
 				F49571F41799427100E0ECA6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4957201179942B700E0ECA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F4957202179942D500E0ECA6 /* SCRSSEntry.h */,
+				F4957203179942D500E0ECA6 /* SCRSSEntry.m */,
+				F495720517994FC100E0ECA6 /* SCRSSFeed.h */,
+				F495720617994FC100E0ECA6 /* SCRSSFeed.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +279,8 @@
 			files = (
 				F49571E01799427000E0ECA6 /* SCMasterViewController.m in Sources */,
 				F49571DA1799427000E0ECA6 /* SCAppDelegate.m in Sources */,
+				F495720717994FC100E0ECA6 /* SCRSSFeed.m in Sources */,
+				F4957204179942D500E0ECA6 /* SCRSSEntry.m in Sources */,
 				F49571D61799427000E0ECA6 /* main.m in Sources */,
 				F49571E31799427000E0ECA6 /* SCDetailViewController.m in Sources */,
 			);
@@ -461,6 +485,7 @@
 				F49571FD1799427100E0ECA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F49571FE1799427100E0ECA6 /* Build configuration list for PBXNativeTarget "FeedReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +494,7 @@
 				F49572001799427100E0ECA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

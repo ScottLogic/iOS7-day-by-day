@@ -7,6 +7,7 @@
 //
 
 #import "SCDetailViewController.h"
+@import SafariServices;
 
 @interface SCDetailViewController ()
 - (void)configureView;
@@ -32,6 +33,7 @@
 
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
+        self.titleLabel.text = [self.detailItem title];
     }
 }
 
@@ -42,10 +44,18 @@
     [self configureView];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)readLaterButtonPressed:(id)sender {
+    if([SSReadingList supportsURL:[self.detailItem url]]) {
+        SSReadingList *readingList = [SSReadingList defaultReadingList];
+        NSError *error;
+        [readingList addReadingListItemWithURL:[self.detailItem url] title:[self.detailItem title] previewText:[self.detailItem description] error:&error];
+        if(error) {
+            NSLog(@"There was a problem adding to a reading list");
+        } else {
+            NSLog(@"Successfully added to reading list");
+        }
+    }
+    
 }
 
 @end
