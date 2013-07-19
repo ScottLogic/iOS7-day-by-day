@@ -1,5 +1,5 @@
 //
-//  SCViewController.h
+//  SCMasterViewController.h
 //  FeedReader
 //
 //  Created by Sam Davies on 19/07/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCViewController : UIViewController
+@interface SCMasterViewController : UITableViewController
 
 @end
