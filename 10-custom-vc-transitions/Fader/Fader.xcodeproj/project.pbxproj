@@ -21,6 +21,8 @@
 		2256746A17E0DB3300F39CCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2256744C17E0DB3300F39CCF /* UIKit.framework */; };
 		2256747217E0DB3300F39CCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2256747017E0DB3300F39CCF /* InfoPlist.strings */; };
 		2256747417E0DB3300F39CCF /* FaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256747317E0DB3300F39CCF /* FaderTests.m */; };
+		2256747F17E124BA00F39CCF /* SCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256747E17E124BA00F39CCF /* SCFirstViewController.m */; };
+		2256748217E1255200F39CCF /* SCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256748117E1255200F39CCF /* SCSecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		2256746F17E0DB3300F39CCF /* FaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FaderTests-Info.plist"; sourceTree = "<group>"; };
 		2256747117E0DB3300F39CCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2256747317E0DB3300F39CCF /* FaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaderTests.m; sourceTree = "<group>"; };
+		2256747D17E124BA00F39CCF /* SCFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFirstViewController.h; sourceTree = "<group>"; };
+		2256747E17E124BA00F39CCF /* SCFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFirstViewController.m; sourceTree = "<group>"; };
+		2256748017E1255200F39CCF /* SCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSecondViewController.h; sourceTree = "<group>"; };
+		2256748117E1255200F39CCF /* SCSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				2256745E17E0DB3300F39CCF /* SCViewController.m */,
 				2256746017E0DB3300F39CCF /* Images.xcassets */,
 				2256744F17E0DB3300F39CCF /* Supporting Files */,
+				2256747D17E124BA00F39CCF /* SCFirstViewController.h */,
+				2256747E17E124BA00F39CCF /* SCFirstViewController.m */,
+				2256748017E1255200F39CCF /* SCSecondViewController.h */,
+				2256748117E1255200F39CCF /* SCSecondViewController.m */,
 			);
 			path = Fader;
 			sourceTree = "<group>";
@@ -253,6 +263,8 @@
 				2256745917E0DB3300F39CCF /* SCAppDelegate.m in Sources */,
 				2256745F17E0DB3300F39CCF /* SCViewController.m in Sources */,
 				2256745517E0DB3300F39CCF /* main.m in Sources */,
+				2256747F17E124BA00F39CCF /* SCFirstViewController.m in Sources */,
+				2256748217E1255200F39CCF /* SCSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

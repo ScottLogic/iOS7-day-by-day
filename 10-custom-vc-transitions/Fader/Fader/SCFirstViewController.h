@@ -1,5 +1,5 @@
 //
-//  SCViewController.h
+//  SCFirstViewController.h
 //  Fader
 //
 //  Created by Sam Davies on 11/09/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCViewController : UINavigationController
+@interface SCFirstViewController : UIViewController
 
 @end
