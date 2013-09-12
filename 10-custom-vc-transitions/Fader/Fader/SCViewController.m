@@ -7,12 +7,25 @@
 //
 
 #import "SCViewController.h"
+#import "SCNavControllerDelegate.h"
 
-@interface SCViewController ()
+@interface SCViewController () {
+    id<UINavigationControllerDelegate> _navDelegate;
+}
 
 @end
 
 @implementation SCViewController
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if(self) {
+        _navDelegate = [SCNavControllerDelegate new];
+        self.delegate = _navDelegate;
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {

@@ -23,6 +23,8 @@
 		2256747417E0DB3300F39CCF /* FaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256747317E0DB3300F39CCF /* FaderTests.m */; };
 		2256747F17E124BA00F39CCF /* SCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256747E17E124BA00F39CCF /* SCFirstViewController.m */; };
 		2256748217E1255200F39CCF /* SCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256748117E1255200F39CCF /* SCSecondViewController.m */; };
+		2256748717E1451E00F39CCF /* SCNavControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256748617E1451E00F39CCF /* SCNavControllerDelegate.m */; };
+		2256748A17E14B3D00F39CCF /* SCFadeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256748917E14B3D00F39CCF /* SCFadeTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		2256747E17E124BA00F39CCF /* SCFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFirstViewController.m; sourceTree = "<group>"; };
 		2256748017E1255200F39CCF /* SCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSecondViewController.h; sourceTree = "<group>"; };
 		2256748117E1255200F39CCF /* SCSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSecondViewController.m; sourceTree = "<group>"; };
+		2256748517E1451E00F39CCF /* SCNavControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNavControllerDelegate.h; sourceTree = "<group>"; };
+		2256748617E1451E00F39CCF /* SCNavControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNavControllerDelegate.m; sourceTree = "<group>"; };
+		2256748817E14B3D00F39CCF /* SCFadeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFadeTransition.h; sourceTree = "<group>"; };
+		2256748917E14B3D00F39CCF /* SCFadeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFadeTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,17 +124,13 @@
 		2256744E17E0DB3300F39CCF /* Fader */ = {
 			isa = PBXGroup;
 			children = (
+				2256748417E144F300F39CCF /* Transitions */,
+				2256748317E144E000F39CCF /* ViewControllers */,
 				2256745717E0DB3300F39CCF /* SCAppDelegate.h */,
 				2256745817E0DB3300F39CCF /* SCAppDelegate.m */,
 				2256745A17E0DB3300F39CCF /* Main.storyboard */,
-				2256745D17E0DB3300F39CCF /* SCViewController.h */,
-				2256745E17E0DB3300F39CCF /* SCViewController.m */,
 				2256746017E0DB3300F39CCF /* Images.xcassets */,
 				2256744F17E0DB3300F39CCF /* Supporting Files */,
-				2256747D17E124BA00F39CCF /* SCFirstViewController.h */,
-				2256747E17E124BA00F39CCF /* SCFirstViewController.m */,
-				2256748017E1255200F39CCF /* SCSecondViewController.h */,
-				2256748117E1255200F39CCF /* SCSecondViewController.m */,
 			);
 			path = Fader;
 			sourceTree = "<group>";
@@ -160,6 +162,30 @@
 				2256747017E0DB3300F39CCF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2256748317E144E000F39CCF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2256745D17E0DB3300F39CCF /* SCViewController.h */,
+				2256745E17E0DB3300F39CCF /* SCViewController.m */,
+				2256747D17E124BA00F39CCF /* SCFirstViewController.h */,
+				2256747E17E124BA00F39CCF /* SCFirstViewController.m */,
+				2256748017E1255200F39CCF /* SCSecondViewController.h */,
+				2256748117E1255200F39CCF /* SCSecondViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2256748417E144F300F39CCF /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				2256748517E1451E00F39CCF /* SCNavControllerDelegate.h */,
+				2256748617E1451E00F39CCF /* SCNavControllerDelegate.m */,
+				2256748817E14B3D00F39CCF /* SCFadeTransition.h */,
+				2256748917E14B3D00F39CCF /* SCFadeTransition.m */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +288,10 @@
 			files = (
 				2256745917E0DB3300F39CCF /* SCAppDelegate.m in Sources */,
 				2256745F17E0DB3300F39CCF /* SCViewController.m in Sources */,
+				2256748A17E14B3D00F39CCF /* SCFadeTransition.m in Sources */,
 				2256745517E0DB3300F39CCF /* main.m in Sources */,
 				2256747F17E124BA00F39CCF /* SCFirstViewController.m in Sources */,
+				2256748717E1451E00F39CCF /* SCNavControllerDelegate.m in Sources */,
 				2256748217E1255200F39CCF /* SCSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
