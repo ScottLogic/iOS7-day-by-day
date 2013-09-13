@@ -7,18 +7,22 @@
 //
 
 #import "SCModalViewController.h"
+#import "SCModalTransitioningDelegate.h"
 
-@interface SCModalViewController ()
+@interface SCModalViewController () {
+    id<UIViewControllerTransitioningDelegate> _transitionDelegate;
+}
 
 @end
 
 @implementation SCModalViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self = [super initWithCoder:aDecoder];
+    if(self) {
+        _transitionDelegate = [SCModalTransitioningDelegate new];
+        self.transitioningDelegate = _transitionDelegate;
     }
     return self;
 }
