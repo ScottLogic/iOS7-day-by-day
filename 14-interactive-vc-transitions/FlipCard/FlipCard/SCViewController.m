@@ -7,8 +7,9 @@
 //
 
 #import "SCViewController.h"
+#import "SCModalViewController.h"
 
-@interface SCViewController ()
+@interface SCViewController () <SCModalViewControllerDelegate>
 
 @end
 
@@ -24,6 +25,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.destinationViewController isKindOfClass:[SCModalViewController class]]) {
+        // Set the delegate
+        SCModalViewController *vc = (SCModalViewController *)segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
+
+#pragma mark - SCModalViewControllerDelegate
+- (void)dismissModalVC
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

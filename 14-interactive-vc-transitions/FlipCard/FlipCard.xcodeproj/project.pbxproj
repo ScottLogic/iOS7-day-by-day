@@ -21,6 +21,7 @@
 		225674B917E35B5F00F39CCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2256749B17E35B5F00F39CCF /* UIKit.framework */; };
 		225674C117E35B5F00F39CCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 225674BF17E35B5F00F39CCF /* InfoPlist.strings */; };
 		225674C317E35B5F00F39CCF /* FlipCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225674C217E35B5F00F39CCF /* FlipCardTests.m */; };
+		225674D017E368B400F39CCF /* SCModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225674CF17E368B400F39CCF /* SCModalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		225674BE17E35B5F00F39CCF /* FlipCardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlipCardTests-Info.plist"; sourceTree = "<group>"; };
 		225674C017E35B5F00F39CCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		225674C217E35B5F00F39CCF /* FlipCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipCardTests.m; sourceTree = "<group>"; };
+		225674CE17E368B400F39CCF /* SCModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCModalViewController.h; sourceTree = "<group>"; };
+		225674CF17E368B400F39CCF /* SCModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCModalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,11 @@
 		2256749D17E35B5F00F39CCF /* FlipCard */ = {
 			isa = PBXGroup;
 			children = (
+				225674CD17E3643900F39CCF /* Transitions */,
+				225674CC17E3642F00F39CCF /* View Controllers */,
 				225674A617E35B5F00F39CCF /* SCAppDelegate.h */,
 				225674A717E35B5F00F39CCF /* SCAppDelegate.m */,
 				225674A917E35B5F00F39CCF /* Main.storyboard */,
-				225674AC17E35B5F00F39CCF /* SCViewController.h */,
-				225674AD17E35B5F00F39CCF /* SCViewController.m */,
 				225674AF17E35B5F00F39CCF /* Images.xcassets */,
 				2256749E17E35B5F00F39CCF /* Supporting Files */,
 			);
@@ -150,6 +153,24 @@
 				225674BF17E35B5F00F39CCF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		225674CC17E3642F00F39CCF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				225674AC17E35B5F00F39CCF /* SCViewController.h */,
+				225674AD17E35B5F00F39CCF /* SCViewController.m */,
+				225674CE17E368B400F39CCF /* SCModalViewController.h */,
+				225674CF17E368B400F39CCF /* SCModalViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		225674CD17E3643900F39CCF /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225674D017E368B400F39CCF /* SCModalViewController.m in Sources */,
 				225674A817E35B5F00F39CCF /* SCAppDelegate.m in Sources */,
 				225674AE17E35B5F00F39CCF /* SCViewController.m in Sources */,
 				225674A417E35B5F00F39CCF /* main.m in Sources */,
