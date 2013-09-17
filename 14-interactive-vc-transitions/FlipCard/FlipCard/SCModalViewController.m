@@ -17,16 +17,41 @@
 
 @implementation SCModalViewController
 
+#pragma mark - Construction
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if(self) {
-        _transitionDelegate = [SCModalTransitioningDelegate new];
-        self.transitioningDelegate = _transitionDelegate;
+        [self commonInit];
     }
     return self;
 }
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit
+{
+    _transitionDelegate = [SCModalTransitioningDelegate new];
+    self.transitioningDelegate = _transitionDelegate;
+}
+
+- (void)setInteractor:(id<UIViewControllerInteractiveTransitioning>)interactor
+{
+    if (interactor != _interactor) {
+        _interactor = interactor;
+        ((SCModalTransitioningDelegate*)_transitionDelegate).interactor = self.interactor;
+    }
+}
+
+
+#pragma mark - View Lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,6 +59,12 @@
 }
 
 - (IBAction)handleDismissPressed:(id)sender {
+    [self proceedToNextViewController];
+}
+
+#pragma mark - SCInteractiveTransitionViewControllerDelegate methods
+- (void)proceedToNextViewController
+{
     if(self.delegate && [self.delegate respondsToSelector:@selector(dismissModalVC)]) {
         [self.delegate dismissModalVC];
     }

@@ -10,4 +10,6 @@
 
 @interface SCModalTransitioningDelegate : NSObject <UIViewControllerTransitioningDelegate>
 
+@property (nonatomic, weak) id<UIViewControllerInteractiveTransitioning> interactor;
+
 @end

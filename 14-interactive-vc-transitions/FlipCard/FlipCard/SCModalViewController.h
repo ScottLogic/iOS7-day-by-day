@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SCInteractiveTransitionViewControllerDelegate.h"
 
 @protocol SCModalViewControllerDelegate <NSObject>
 
@@ -16,8 +17,9 @@
 @end
 
 
-@interface SCModalViewController : UIViewController
+@interface SCModalViewController : UIViewController <SCInteractiveTransitionViewControllerDelegate>
 
 @property (nonatomic, weak) id<SCModalViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<UIViewControllerInteractiveTransitioning> interactor;
 
 @end

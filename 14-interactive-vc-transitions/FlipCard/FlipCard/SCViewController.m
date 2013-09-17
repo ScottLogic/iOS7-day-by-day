@@ -8,8 +8,11 @@
 
 #import "SCViewController.h"
 #import "SCModalViewController.h"
+#import "SCFlipAnimationInteractor.h"
 
-@interface SCViewController () <SCModalViewControllerDelegate>
+@interface SCViewController () <SCModalViewControllerDelegate> {
+    SCFlipAnimationInteractor *_animationInteractor;
+}
 
 @end
 
@@ -19,6 +22,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    _animationInteractor = [[SCFlipAnimationInteractor alloc] initWithViewController:self];
+    // Add the gesture recogniser
+    //[self.view.window addGestureRecognizer:_animationInteractor.gestureRecogniser];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.view.window addGestureRecognizer:_animationInteractor.gestureRecogniser];
 }
 
 
@@ -35,6 +46,15 @@
 - (void)dismissModalVC
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark - SCInteractiveTransitionViewControllerDelegate methods
+- (void)proceedToNextViewController
+{
+    SCModalViewController *vc = [SCModalViewController new];
+    vc.delegate = self;
+    vc.interactor = _animationInteractor;
+    [self presentViewController:vc animated:YES completion:NULL];
 }
 
 @end
