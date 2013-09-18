@@ -25,7 +25,7 @@
         
         // Let's kick the cradle off with a push to start with
         _userDragBehavior = [[UIPushBehavior alloc] initWithItems:@[_ballBearings[0]] mode:UIPushBehaviorModeInstantaneous];
-        _userDragBehavior.xComponent = -10;
+        _userDragBehavior.pushDirection = CGVectorMake(-0.5, 0);
         [_animator addBehavior:_userDragBehavior];
     }
     return self;
@@ -71,7 +71,7 @@
     }
     
     // Set the force to be proportional to distance the gesture has moved
-    _userDragBehavior.xComponent = [recognizer translationInView:self].x / 3.f;
+    _userDragBehavior.pushDirection = CGVectorMake([recognizer translationInView:self].x / 10.f, 0);
     
     // If we're finishing then cancel the behavior to 'let-go' of the ball
     if (recognizer.state == UIGestureRecognizerStateEnded) {
@@ -104,7 +104,7 @@
     // Elasticity governs the efficiency of the collisions
     itemBehavior.elasticity = 1.0;
     itemBehavior.allowsRotation = NO;
-    itemBehavior.resistance = 0.5;
+    itemBehavior.resistance = 2.f;
     [behavior addChildBehavior:itemBehavior];
     
     // Create the animator
@@ -127,16 +127,17 @@
     [self addSubview:blueBox];
     
     // Create the attachment behavior
-    return [[UIAttachmentBehavior alloc] initWithItem:ballBearing
-                                                point:CGPointMake(0, -CGRectGetHeight(ballBearing.bounds)/2)
-                                     attachedToAnchor:anchor];
+    UIAttachmentBehavior *behavior = [[UIAttachmentBehavior alloc] initWithItem:ballBearing
+                                                               attachedToAnchor:anchor];
+    behavior.anchorPoint = anchor;
+    return behavior;
 }
 
 - (UIDynamicBehavior *)createGravityBehaviorForObjects:(NSArray *)objects
 {
     // Create a gravity behavior
     UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:objects];
-    gravity.yComponent = 10;
+    gravity.magnitude = 10;
     return gravity;
 }
 
