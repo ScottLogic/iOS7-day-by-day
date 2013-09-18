@@ -40,12 +40,14 @@
             inProcessSession.sessionDescription = @"in-process NSURLSession";
         }
         
-        NSString *url = @"http://viewallpapers.com/wp-content/uploads/2013/04/Green-Forest-Nature-Landscape-Pictures-Wallpapers.jpg";
+        NSString *url = @"http://viewallpapers.com/wp-content/uploads/2013/04/Green-Forest-Nature-Landscape-Pictures-Wallpapers-1080x675.jpg";
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
         
         cancellableTask = [inProcessSession downloadTaskWithRequest:request];
         [self setDownloadButtonsAsEnabled:NO];
         self.imageView.hidden = YES;
+        // Need to start the download
+        [cancellableTask resume];
     }
 }
 
@@ -83,6 +85,8 @@
         
         [self setDownloadButtonsAsEnabled:NO];
         self.imageView.hidden = YES;
+        // Start the download task
+        [self.resumableTask resume];
     }
 }
 
@@ -92,6 +96,8 @@
     self.backgroundTask = [self.backgroundSession downloadTaskWithRequest:request];
     [self setDownloadButtonsAsEnabled:NO];
     self.imageView.hidden = YES;
+    // Start the download
+    [self.backgroundTask resume];
 }
 
 #pragma mark - Utility methods

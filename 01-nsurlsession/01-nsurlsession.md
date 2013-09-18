@@ -57,6 +57,7 @@ a simple file download:
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
         
     NSURLSessionDownloadTask *cancellableTask = [inProcessSession downloadTaskWithRequest:request];
+    [cancellableTask resume];
 
 That's all there is to it - the session will now asynchronously attempt to download
 the file at the specified URL.
@@ -195,6 +196,7 @@ provide a resume data object:
             NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
             self.resumableTask = [inProcessSession downloadTaskWithRequest:request];
         }
+        [self.resumableTask resume];
     }
 
 If we've got a partialDownload object then we create the task using that, otherwise
@@ -234,6 +236,7 @@ created:
     NSString *url = @"http://url/for/picture";
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     self.backgroundTask = [self.backgroundSession downloadTaskWithRequest:request];
+    [self.backgroundTask resume];
 
 Now, even when you press the home button to leave the app, the download will
 continue in the background (subject to the configuration options mentioned at
