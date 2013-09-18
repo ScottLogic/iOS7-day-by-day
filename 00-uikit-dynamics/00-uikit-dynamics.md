@@ -12,7 +12,8 @@ UIKit Dynamics and build a Newton's cradle simulation.
 
 In order to model the physics of real world we use `UIDynamicBehavior` subclasses
 to apply different behaviors to objects which adopt the `UIDynamicItem` protocol.
-Examples of behaviors include concepts such as gravity, collisions and springs. Although you can create your own objects which adopt the `UIDynamicItem`
+Examples of behaviors include concepts such as gravity, collisions and springs.
+Although you can create your own objects which adopt the `UIDynamicItem`
 protocol, importantly `UIView` already does this. The `UIDynamicBehavior` objects
 can be composited together to generate a behavior object which contains all the
 behavior for a given object or set of objects.
@@ -46,7 +47,7 @@ behavior to collect the behavior together:
 Next we'll start adding the behaviors we wish to model - first up gravity:
 
     UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[ballBearing]];
-    gravity.yComponent = 10;
+    gravity.magnitude = 10;
     [behavior addChildBehavior:gravity];
 
 `UIGravityBehavior` represents the gravitational attraction between an object and
@@ -82,8 +83,6 @@ With that we've actually created our first UIKit Dynamics system. However, if
 you run up the app, nothing will happen. This is because the system starts in
 and equilibrium state - we need to perturb the system to see some motion.
 
-TODO: Put an image of a pendulum here.
-
 ### Gesture responsive behaviors
 
 We need to add a gesture recognizer to the ball bearing to allow the user to
@@ -107,7 +106,8 @@ to the ball bearing:
         }
         
         // Set the force to be proportional to distance the gesture has moved
-        _userDragBehavior.xComponent = [recognizer translationInView:self].x / 3.f;
+        _userDragBehavior.pushDirection = CGVectorMake([recognizer translationInView:self].x / 10.f, 0);
+
         
         // If we're finishing then cancel the behavior to 'let-go' of the ball
         if (recognizer.state == UIGestureRecognizerStateEnded) {
@@ -123,14 +123,13 @@ remembering to add it to the dynamics animator. We set the size of the force to
 be proportional to the horizontal displacement. In order for the pendulum to
 swing we remove the push behavior when the gesture has ended.
 
-TODO: gif of the pendulum here
-
 ### Combining multiple pendulums
 
 A Newton's cradle is an arrangement of identical pendulums, such that the ball
 bearings are almost touching. 
 
-TODO: photo of a Newton's cradle
+![Newton's Cradle](img/newtons_cradle.jpg)
+(attr: flickr/xraijs)
 
 To recreate this using UIKit Dynamics we need to create multiple pendulums -
 following the same pattern for each of them as we did above. They should be
@@ -156,7 +155,7 @@ specify various shared properties:
     // Elasticity governs the efficiency of the collisions
     itemBehavior.elasticity = 1.0;
     itemBehavior.allowsRotation = NO;
-    itemBehavior.resistance = 0.5;
+    itemBehavior.resistance = 2.0;
     [behavior addChildBehavior:itemBehavior];
 
 We use `UIDynamicItemBehavior` to specify the elasticity of the collisions, along
@@ -169,7 +168,7 @@ Running the app up now will show a Newton's cradle which behaves exactly as you
 would expect it in the real world. Maybe as an extension you could investigate
 drawing the strings of the pendulums as well as the ball bearings.
 
-TODO: gif of newton's cradle.
+![Newton's Cradle](img/completed_cradle.jpg)
 
 The code which accompanies this post represents the completed Newton's cradle
 project. It uses all the elements introduced, but just tidies them up a little

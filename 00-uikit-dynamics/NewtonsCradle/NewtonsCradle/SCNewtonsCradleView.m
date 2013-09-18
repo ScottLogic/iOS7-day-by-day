@@ -129,7 +129,6 @@
     // Create the attachment behavior
     UIAttachmentBehavior *behavior = [[UIAttachmentBehavior alloc] initWithItem:ballBearing
                                                                attachedToAnchor:anchor];
-    behavior.anchorPoint = anchor;
     return behavior;
 }
 
