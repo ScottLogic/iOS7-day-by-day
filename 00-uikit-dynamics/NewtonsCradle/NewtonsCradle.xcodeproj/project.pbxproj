@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F48AADE51782D32000A59F4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48AADE41782D32000A59F4A /* Foundation.framework */; };
+		F48AADE71782D32000A59F4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48AADE61782D32000A59F4A /* CoreGraphics.framework */; };
+		F48AADE91782D32000A59F4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48AADE81782D32000A59F4A /* UIKit.framework */; };
+		F48AADEF1782D32000A59F4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F48AADED1782D32000A59F4A /* InfoPlist.strings */; };
+		F48AADF11782D32000A59F4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F48AADF01782D32000A59F4A /* main.m */; };
+		F48AADF51782D32000A59F4A /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F48AADF41782D32000A59F4A /* SCAppDelegate.m */; };
+		F48AADF81782D32000A59F4A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48AADF61782D32000A59F4A /* Main_iPhone.storyboard */; };
+		F48AADFB1782D32000A59F4A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48AADF91782D32000A59F4A /* Main_iPad.storyboard */; };
+		F48AADFE1782D32000A59F4A /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48AADFD1782D32000A59F4A /* SCViewController.m */; };
+		F48AAE001782D32000A59F4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48AADFF1782D32000A59F4A /* Images.xcassets */; };
+		F48AAE071782D32000A59F4A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48AAE061782D32000A59F4A /* XCTest.framework */; };
+		F48AAE081782D32000A59F4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48AADE41782D32000A59F4A /* Foundation.framework */; };
+		F48AAE091782D32000A59F4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48AADE81782D32000A59F4A /* UIKit.framework */; };
+		F48AAE111782D32000A59F4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F48AAE0F1782D32000A59F4A /* InfoPlist.strings */; };
+		F48AAE131782D32000A59F4A /* NewtonsCradleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48AAE121782D32000A59F4A /* NewtonsCradleTests.m */; };
+		F4FB5E751782D50700C955A9 /* SCBallBearingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FB5E741782D50700C955A9 /* SCBallBearingView.m */; };
+		F4FB5E781782D7CB00C955A9 /* SCNewtonsCradleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FB5E771782D7CB00C955A9 /* SCNewtonsCradleView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F48AAE0A1782D32000A59F4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F48AADD91782D32000A59F4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F48AADE01782D32000A59F4A;
+			remoteInfo = NewtonsCradle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F48AADE11782D32000A59F4A /* NewtonsCradle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewtonsCradle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48AADE41782D32000A59F4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F48AADE61782D32000A59F4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F48AADE81782D32000A59F4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F48AADEC1782D32000A59F4A /* NewtonsCradle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewtonsCradle-Info.plist"; sourceTree = "<group>"; };
+		F48AADEE1782D32000A59F4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F48AADF01782D32000A59F4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F48AADF21782D32000A59F4A /* NewtonsCradle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewtonsCradle-Prefix.pch"; sourceTree = "<group>"; };
+		F48AADF31782D32000A59F4A /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		F48AADF41782D32000A59F4A /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		F48AADF71782D32000A59F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		F48AADFA1782D32000A59F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		F48AADFC1782D32000A59F4A /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		F48AADFD1782D32000A59F4A /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		F48AADFF1782D32000A59F4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F48AAE051782D32000A59F4A /* NewtonsCradleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewtonsCradleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48AAE061782D32000A59F4A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F48AAE0E1782D32000A59F4A /* NewtonsCradleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewtonsCradleTests-Info.plist"; sourceTree = "<group>"; };
+		F48AAE101782D32000A59F4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F48AAE121782D32000A59F4A /* NewtonsCradleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewtonsCradleTests.m; sourceTree = "<group>"; };
+		F4FB5E731782D50700C955A9 /* SCBallBearingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBallBearingView.h; sourceTree = "<group>"; };
+		F4FB5E741782D50700C955A9 /* SCBallBearingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBallBearingView.m; sourceTree = "<group>"; };
+		F4FB5E761782D7CB00C955A9 /* SCNewtonsCradleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNewtonsCradleView.h; sourceTree = "<group>"; };
+		F4FB5E771782D7CB00C955A9 /* SCNewtonsCradleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNewtonsCradleView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F48AADDE1782D32000A59F4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48AADE71782D32000A59F4A /* CoreGraphics.framework in Frameworks */,
+				F48AADE91782D32000A59F4A /* UIKit.framework in Frameworks */,
+				F48AADE51782D32000A59F4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48AAE021782D32000A59F4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48AAE071782D32000A59F4A /* XCTest.framework in Frameworks */,
+				F48AAE091782D32000A59F4A /* UIKit.framework in Frameworks */,
+				F48AAE081782D32000A59F4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F48AADD81782D32000A59F4A = {
+			isa = PBXGroup;
+			children = (
+				F48AADEA1782D32000A59F4A /* NewtonsCradle */,
+				F48AAE0C1782D32000A59F4A /* NewtonsCradleTests */,
+				F48AADE31782D32000A59F4A /* Frameworks */,
+				F48AADE21782D32000A59F4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F48AADE21782D32000A59F4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F48AADE11782D32000A59F4A /* NewtonsCradle.app */,
+				F48AAE051782D32000A59F4A /* NewtonsCradleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F48AADE31782D32000A59F4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F48AADE41782D32000A59F4A /* Foundation.framework */,
+				F48AADE61782D32000A59F4A /* CoreGraphics.framework */,
+				F48AADE81782D32000A59F4A /* UIKit.framework */,
+				F48AAE061782D32000A59F4A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F48AADEA1782D32000A59F4A /* NewtonsCradle */ = {
+			isa = PBXGroup;
+			children = (
+				F4FB5E721782D4EF00C955A9 /* Components */,
+				F48AADF31782D32000A59F4A /* SCAppDelegate.h */,
+				F48AADF41782D32000A59F4A /* SCAppDelegate.m */,
+				F48AADF61782D32000A59F4A /* Main_iPhone.storyboard */,
+				F48AADF91782D32000A59F4A /* Main_iPad.storyboard */,
+				F48AADFC1782D32000A59F4A /* SCViewController.h */,
+				F48AADFD1782D32000A59F4A /* SCViewController.m */,
+				F48AADFF1782D32000A59F4A /* Images.xcassets */,
+				F48AADEB1782D32000A59F4A /* Supporting Files */,
+			);
+			path = NewtonsCradle;
+			sourceTree = "<group>";
+		};
+		F48AADEB1782D32000A59F4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F48AADEC1782D32000A59F4A /* NewtonsCradle-Info.plist */,
+				F48AADED1782D32000A59F4A /* InfoPlist.strings */,
+				F48AADF01782D32000A59F4A /* main.m */,
+				F48AADF21782D32000A59F4A /* NewtonsCradle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F48AAE0C1782D32000A59F4A /* NewtonsCradleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F48AAE121782D32000A59F4A /* NewtonsCradleTests.m */,
+				F48AAE0D1782D32000A59F4A /* Supporting Files */,
+			);
+			path = NewtonsCradleTests;
+			sourceTree = "<group>";
+		};
+		F48AAE0D1782D32000A59F4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F48AAE0E1782D32000A59F4A /* NewtonsCradleTests-Info.plist */,
+				F48AAE0F1782D32000A59F4A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4FB5E721782D4EF00C955A9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F4FB5E731782D50700C955A9 /* SCBallBearingView.h */,
+				F4FB5E741782D50700C955A9 /* SCBallBearingView.m */,
+				F4FB5E761782D7CB00C955A9 /* SCNewtonsCradleView.h */,
+				F4FB5E771782D7CB00C955A9 /* SCNewtonsCradleView.m */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F48AADE01782D32000A59F4A /* NewtonsCradle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F48AAE161782D32000A59F4A /* Build configuration list for PBXNativeTarget "NewtonsCradle" */;
+			buildPhases = (
+				F48AADDD1782D32000A59F4A /* Sources */,
+				F48AADDE1782D32000A59F4A /* Frameworks */,
+				F48AADDF1782D32000A59F4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewtonsCradle;
+			productName = NewtonsCradle;
+			productReference = F48AADE11782D32000A59F4A /* NewtonsCradle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F48AAE041782D32000A59F4A /* NewtonsCradleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F48AAE191782D32000A59F4A /* Build configuration list for PBXNativeTarget "NewtonsCradleTests" */;
+			buildPhases = (
+				F48AAE011782D32000A59F4A /* Sources */,
+				F48AAE021782D32000A59F4A /* Frameworks */,
+				F48AAE031782D32000A59F4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F48AAE0B1782D32000A59F4A /* PBXTargetDependency */,
+			);
+			name = NewtonsCradleTests;
+			productName = NewtonsCradleTests;
+			productReference = F48AAE051782D32000A59F4A /* NewtonsCradleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F48AADD91782D32000A59F4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = ShinobiControls;
+				TargetAttributes = {
+					F48AAE041782D32000A59F4A = {
+						TestTargetID = F48AADE01782D32000A59F4A;
+					};
+				};
+			};
+			buildConfigurationList = F48AADDC1782D32000A59F4A /* Build configuration list for PBXProject "NewtonsCradle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F48AADD81782D32000A59F4A;
+			productRefGroup = F48AADE21782D32000A59F4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F48AADE01782D32000A59F4A /* NewtonsCradle */,
+				F48AAE041782D32000A59F4A /* NewtonsCradleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F48AADDF1782D32000A59F4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48AADFB1782D32000A59F4A /* Main_iPad.storyboard in Resources */,
+				F48AAE001782D32000A59F4A /* Images.xcassets in Resources */,
+				F48AADF81782D32000A59F4A /* Main_iPhone.storyboard in Resources */,
+				F48AADEF1782D32000A59F4A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48AAE031782D32000A59F4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48AAE111782D32000A59F4A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F48AADDD1782D32000A59F4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48AADF51782D32000A59F4A /* SCAppDelegate.m in Sources */,
+				F48AADFE1782D32000A59F4A /* SCViewController.m in Sources */,
+				F4FB5E781782D7CB00C955A9 /* SCNewtonsCradleView.m in Sources */,
+				F4FB5E751782D50700C955A9 /* SCBallBearingView.m in Sources */,
+				F48AADF11782D32000A59F4A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48AAE011782D32000A59F4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48AAE131782D32000A59F4A /* NewtonsCradleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F48AAE0B1782D32000A59F4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F48AADE01782D32000A59F4A /* NewtonsCradle */;
+			targetProxy = F48AAE0A1782D32000A59F4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F48AADED1782D32000A59F4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F48AADEE1782D32000A59F4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F48AADF61782D32000A59F4A /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F48AADF71782D32000A59F4A /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		F48AADF91782D32000A59F4A /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F48AADFA1782D32000A59F4A /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		F48AAE0F1782D32000A59F4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F48AAE101782D32000A59F4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F48AAE141782D32000A59F4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F48AAE151782D32000A59F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F48AAE171782D32000A59F4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewtonsCradle/NewtonsCradle-Prefix.pch";
+				INFOPLIST_FILE = "NewtonsCradle/NewtonsCradle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F48AAE181782D32000A59F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewtonsCradle/NewtonsCradle-Prefix.pch";
+				INFOPLIST_FILE = "NewtonsCradle/NewtonsCradle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F48AAE1A1782D32000A59F4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewtonsCradle.app/NewtonsCradle";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewtonsCradle/NewtonsCradle-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NewtonsCradleTests/NewtonsCradleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F48AAE1B1782D32000A59F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewtonsCradle.app/NewtonsCradle";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewtonsCradle/NewtonsCradle-Prefix.pch";
+				INFOPLIST_FILE = "NewtonsCradleTests/NewtonsCradleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F48AADDC1782D32000A59F4A /* Build configuration list for PBXProject "NewtonsCradle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48AAE141782D32000A59F4A /* Debug */,
+				F48AAE151782D32000A59F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F48AAE161782D32000A59F4A /* Build configuration list for PBXNativeTarget "NewtonsCradle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48AAE171782D32000A59F4A /* Debug */,
+				F48AAE181782D32000A59F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F48AAE191782D32000A59F4A /* Build configuration list for PBXNativeTarget "NewtonsCradleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48AAE1A1782D32000A59F4A /* Debug */,
+				F48AAE1B1782D32000A59F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F48AADD91782D32000A59F4A /* Project object */;
+}
