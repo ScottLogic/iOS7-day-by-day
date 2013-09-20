@@ -49,7 +49,8 @@
             inProcessSession.sessionDescription = @"in-process NSURLSession";
         }
         
-        NSString *url = @"http://viewallpapers.com/wp-content/uploads/2013/04/Green-Forest-Nature-Landscape-Pictures-Wallpapers-1080x675.jpg";
+        // Image CreativeCommons courtesy of flickr.com/charliematters
+        NSString *url = @"http://farm6.staticflickr.com/5505/9824098016_0e28a047c2_b_d.jpg";
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
         
         cancellableTask = [inProcessSession downloadTaskWithRequest:request];
@@ -87,7 +88,8 @@
         if(partialDownload) {
             self.resumableTask = [inProcessSession downloadTaskWithResumeData:partialDownload];
         } else {
-            NSString *url = @"http://hdnaturepictures.com/wp-content/uploads/2013/06/Mountains-View-Landscape.jpg";
+            // Image CreativeCommons courtesy of flickr.com/charliematters
+            NSString *url = @"http://farm3.staticflickr.com/2846/9823925914_78cd653ac9_b_d.jpg";
             NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
             self.resumableTask = [inProcessSession downloadTaskWithRequest:request];
         }
@@ -100,7 +102,8 @@
 }
 
 - (IBAction)startBackground:(id)sender {
-    NSString *url = @"http://www.hdwallpaperstop.com/wp-content/uploads/2013/05/Beautiful-Landscape-Pictures-of-nature.jpg";
+    // Image CreativeCommons courtesy of flickr.com/charliematters
+    NSString *url = @"http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg";
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     self.backgroundTask = [self.backgroundSession downloadTaskWithRequest:request];
     [self setDownloadButtonsAsEnabled:NO];
