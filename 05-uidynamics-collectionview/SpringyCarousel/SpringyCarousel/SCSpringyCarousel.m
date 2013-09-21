@@ -80,7 +80,7 @@
     return [_dynamicAnimator layoutAttributesForCellAtIndexPath:indexPath];
 }
 
-/*
+
 - (void)prepareForCollectionViewUpdates:(NSArray *)updateItems
 {
     for (UICollectionViewUpdateItem *updateItem in updateItems) {
@@ -100,7 +100,7 @@
                         
                         // Need to push
                         newAttr.center = curAttr.center;
-                        [_dynamicAnimator updateItemFromCurrentState:newAttr];
+                        [_dynamicAnimator updateItemUsingCurrentState:newAttr];
                     }
                 }
             }];
@@ -116,39 +116,18 @@
             // Also need to push the current destination location
             UICollectionViewLayoutAttributes *insertionPointAttr = [self layoutAttributesForItemAtIndexPath:updateItem.indexPathAfterUpdate];
             insertionPointAttr.center = attr.center;
-            [_dynamicAnimator updateItemFromCurrentState:insertionPointAttr];
-            
-            // Create the appropriate behaviors
-            UIDynamicBehavior *newItemBehavior = [[UIDynamicBehavior alloc] init];
+            [_dynamicAnimator updateItemUsingCurrentState:insertionPointAttr];
             
             // Create the separate behaviors
-            UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems:@[attr]];
-            gravity.yComponent = 0.5;
-            UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[attr]];
-            collision.translatesReferenceBoundsIntoBoundary = YES;
-
-            
-            // Update some dynamic properties
-            UIDynamicItemBehavior *itemBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[attr]];
-            itemBehavior.elasticity = 1;
-            itemBehavior.allowsRotation = NO;
-            
-            [newItemBehavior addChildBehavior:gravity];
-            [newItemBehavior addChildBehavior:collision];
-            [collision addChildBehavior:itemBehavior];
-            
-            // Add the behavior to the animator
-            [_dynamicAnimator addBehavior:newItemBehavior];
-
-            // Save the behavior
-            [_newItemBehaviors addObject:newItemBehavior];
+            [_behaviorManager.gravityBehavior addItem:attr];
+            [_behaviorManager.collisionBehavior addItem:attr];
             
             // Update the position in the animator
-            [_dynamicAnimator updateItemFromCurrentState:attr];
+            [_dynamicAnimator updateItemUsingCurrentState:attr];
         }
     }
 }
-*/
+
 
 - (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
 {
