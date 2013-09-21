@@ -45,15 +45,26 @@
     [self.collisionBehavior addItem:item];
 }
 
-- (void)removeItem:(id<UIDynamicItem>)item
+- (void)removeItem:(UICollectionViewLayoutAttributes *)item
 {
     // Remove the attachment behavior from the animator
     UIAttachmentBehavior *attachmentBehavior = self.attachmentBehaviors[item];
     [self.animator removeBehavior:attachmentBehavior];
+
     
     // Remove the item from the global behaviors
-    [self.gravityBehavior removeItem:item];
-    [self.collisionBehavior removeItem:item];
+    for(UICollectionViewLayoutAttributes *attr in [self.gravityBehavior.items copy])
+    {
+        if([attr.indexPath isEqual:item.indexPath]) {
+            [self.gravityBehavior removeItem:attr];
+        }
+    }
+    for (UICollectionViewLayoutAttributes *attr in [self.collisionBehavior.items copy])
+    {
+        if([attr.indexPath isEqual:item.indexPath]) {
+            [self.collisionBehavior removeItem:attr];
+        }
+    }
     
     // And remove the entry from our dictionary
     [_attachmentBehaviors removeObjectForKey:item];
@@ -61,15 +72,6 @@
 
 - (void)updateItemCollection:(NSArray *)items
 {
-    // Find the items we need to add springs to
-    NSMutableSet *toAdd = [NSMutableSet setWithArray:items];
-    [toAdd minusSet:[NSSet setWithArray:[self.attachmentBehaviors allKeys]]];
-    
-    // Create the newly required attachement behaviors
-    for (UICollectionViewLayoutAttributes *attr in toAdd) {
-        [self addItem:attr anchor:attr.center];
-    }
-    
     // Let's find the ones we need to remove
     NSMutableSet *toRemove = [NSMutableSet setWithArray:[self.attachmentBehaviors allKeys]];
     [toRemove minusSet:[NSSet setWithArray:items]];
@@ -78,6 +80,16 @@
     for (UICollectionViewLayoutAttributes *attr in toRemove) {
         [self removeItem:attr];
     }
+    
+    // Find the items we need to add springs to
+    NSMutableSet *toAdd = [NSMutableSet setWithArray:items];
+    [toAdd minusSet:[NSSet setWithArray:[self.attachmentBehaviors allKeys]]];
+    
+    // Create the newly required attachement behaviors
+    for (UICollectionViewLayoutAttributes *attr in toAdd) {
+        [self addItem:attr anchor:attr.center];
+    }
+
 }
 
 #pragma mark - Property override
@@ -91,7 +103,7 @@
 - (void)createGravityBehavior
 {
     _gravityBehavior = [[UIGravityBehavior alloc] init];
-    _gravityBehavior.yComponent = 0.3;
+    _gravityBehavior.magnitude = 0.3;
 }
 
 - (void)createCollisionBehavior

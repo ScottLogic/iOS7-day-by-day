@@ -46,7 +46,7 @@
         center.x += scrollDelta * scrollFactor;
         attr.center = center;
         
-        [_dynamicAnimator updateItemFromCurrentState:attr];
+        [_dynamicAnimator updateItemUsingCurrentState:attr];
     }
     
     return NO;
