@@ -18,9 +18,10 @@
 
 - (instancetype)initWithAnimator:(UIDynamicAnimator *)animator;
 
-- (void)addItem:(id<UIDynamicItem, NSCopying>)item anchor:(CGPoint)anchor;
-- (void)removeItem:(id<UIDynamicItem, NSCopying>)item;
+- (void)addItem:(UICollectionViewLayoutAttributes *)item anchor:(CGPoint)anchor;
+- (void)removeItemAtIndexPath:(NSIndexPath *)indexPath;
 - (void)updateItemCollection:(NSArray*)items;
 
+- (NSArray *)currentlyManagedItemIndexPaths;
 
 @end

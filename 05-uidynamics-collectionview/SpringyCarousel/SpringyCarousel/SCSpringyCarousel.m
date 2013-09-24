@@ -86,22 +86,24 @@
     for (UICollectionViewUpdateItem *updateItem in updateItems) {
         if(updateItem.updateAction == UICollectionUpdateActionInsert) {
             
-            // We need to loop through all the visible ones and update them
-            NSArray *curIndexPaths = [self.collectionView indexPathsForVisibleItems];
-            
-            [curIndexPaths enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                if(idx > 0) {
-                    NSIndexPath *idxPath = (NSIndexPath*)obj;
-                    if(idxPath.item >= updateItem.indexPathAfterUpdate.item) {
-                        // These ones need moving to the right
-                        // It's going to try and move from one attr to another. Need to update the springs appropriately
-                        UICollectionViewLayoutAttributes *curAttr = [self layoutAttributesForItemAtIndexPath:idxPath];
-                        UICollectionViewLayoutAttributes *newAttr = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForItem:(idxPath.item + 1) inSection:idxPath.section]];
-                        
-                        // Need to push
-                        newAttr.center = curAttr.center;
-                        [_dynamicAnimator updateItemUsingCurrentState:newAttr];
-                    }
+            // Get a list of items, sorted by their indexPath
+            NSArray *items = [_behaviorManager currentlyManagedItemIndexPaths];
+            // Now loop backwards, updating centers appropriately.
+            // We need to get 2 enumerators - copy from one to the other
+            NSEnumerator *fromEnumerator = [items reverseObjectEnumerator];
+            // We want to skip the lastmost object in the array as we're copying left to right
+            [fromEnumerator nextObject];
+            // Now enumarate the array - through the 'to' positions
+            [items enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                NSIndexPath *toIndex = (NSIndexPath*)obj;
+                NSIndexPath *fromIndex = (NSIndexPath *)[fromEnumerator nextObject];
+                
+                
+                if(fromIndex && fromIndex.item >= updateItem.indexPathAfterUpdate.item) {
+                    UICollectionViewLayoutAttributes *toItem = [self layoutAttributesForItemAtIndexPath:toIndex];
+                    UICollectionViewLayoutAttributes *fromItem = [self layoutAttributesForItemAtIndexPath:fromIndex];
+                    toItem.center = fromItem.center;
+                    [_dynamicAnimator updateItemUsingCurrentState:toItem];
                 }
             }];
             

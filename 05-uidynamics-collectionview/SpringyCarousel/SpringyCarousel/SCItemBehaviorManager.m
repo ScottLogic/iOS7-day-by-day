@@ -32,64 +32,85 @@
 }
 
 #pragma mark - API Methods
-- (void)addItem:(id<UIDynamicItem, NSCopying>)item anchor:(CGPoint)anchor
+- (void)addItem:(UICollectionViewLayoutAttributes *)item anchor:(CGPoint)anchor
 {
     UIAttachmentBehavior *attachmentBehavior = [self createAttachmentBehaviorForItem:item anchor:anchor];
     // Add the behavior to the animator
     [self.animator addBehavior:attachmentBehavior];
-    // And store it in the dictionary
-    [_attachmentBehaviors setObject:attachmentBehavior forKey:item];
+    // And store it in the dictionary. Keyed by the index path
+    [_attachmentBehaviors setObject:attachmentBehavior forKey:item.indexPath];
     
     // Also need to add this item to the global behaviors
     [self.gravityBehavior addItem:item];
     [self.collisionBehavior addItem:item];
 }
 
-- (void)removeItem:(UICollectionViewLayoutAttributes *)item
+- (void)removeItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // Remove the attachment behavior from the animator
-    UIAttachmentBehavior *attachmentBehavior = self.attachmentBehaviors[item];
+    UIAttachmentBehavior *attachmentBehavior = self.attachmentBehaviors[indexPath];
     [self.animator removeBehavior:attachmentBehavior];
 
     
     // Remove the item from the global behaviors
     for(UICollectionViewLayoutAttributes *attr in [self.gravityBehavior.items copy])
     {
-        if([attr.indexPath isEqual:item.indexPath]) {
+        if([attr.indexPath isEqual:indexPath]) {
             [self.gravityBehavior removeItem:attr];
         }
     }
     for (UICollectionViewLayoutAttributes *attr in [self.collisionBehavior.items copy])
     {
-        if([attr.indexPath isEqual:item.indexPath]) {
+        if([attr.indexPath isEqual:indexPath]) {
             [self.collisionBehavior removeItem:attr];
         }
     }
     
     // And remove the entry from our dictionary
-    [_attachmentBehaviors removeObjectForKey:item];
+    [_attachmentBehaviors removeObjectForKey:indexPath];
 }
 
 - (void)updateItemCollection:(NSArray *)items
 {
-    // Let's find the ones we need to remove
+    // Let's find the ones we need to remove. We work in indexPaths here
     NSMutableSet *toRemove = [NSMutableSet setWithArray:[self.attachmentBehaviors allKeys]];
-    [toRemove minusSet:[NSSet setWithArray:items]];
+    [toRemove minusSet:[NSSet setWithArray:[items valueForKeyPath:@"indexPath"]]];
     
     // Let's remove any we no longer need
-    for (UICollectionViewLayoutAttributes *attr in toRemove) {
-        [self removeItem:attr];
+    for (NSIndexPath *indexPath in toRemove) {
+        [self removeItemAtIndexPath:indexPath];
     }
     
-    // Find the items we need to add springs to
-    NSMutableSet *toAdd = [NSMutableSet setWithArray:items];
-    [toAdd minusSet:[NSSet setWithArray:[self.attachmentBehaviors allKeys]]];
-    
-    // Create the newly required attachement behaviors
-    for (UICollectionViewLayoutAttributes *attr in toAdd) {
-        [self addItem:attr anchor:attr.center];
+    // Find the items we need to add springs to. A bit more complicated =(
+    // Loop through the items we want
+    NSArray *existingIndexPaths = [self currentlyManagedItemIndexPaths];
+    for(UICollectionViewLayoutAttributes *attr in items) {
+        // Find whether this item matches an existing index path
+        BOOL alreadyExists = NO;
+        for(NSIndexPath *indexPath in existingIndexPaths) {
+            if ([indexPath isEqual:attr.indexPath]) {
+                alreadyExists = YES;
+            }
+        }
+        // If it doesn't then let's add it
+        if(!alreadyExists) {
+            // Need to add
+            [self addItem:attr anchor:attr.center];
+        }
     }
+}
 
+- (NSArray *)currentlyManagedItemIndexPaths
+{
+    return [[_attachmentBehaviors allKeys] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        if([(NSIndexPath*)obj1 item] < [(NSIndexPath*)obj2 item]) {
+            return NSOrderedAscending;
+        } else if ([(NSIndexPath*)obj1 item] > [(NSIndexPath*)obj2 item]) {
+            return NSOrderedDescending;
+        } else {
+            return NSOrderedSame;
+        }
+    }];
 }
 
 #pragma mark - Property override
