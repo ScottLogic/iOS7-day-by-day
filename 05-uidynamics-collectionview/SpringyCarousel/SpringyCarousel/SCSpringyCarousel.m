@@ -81,51 +81,24 @@
 }
 
 
+#pragma mark - Item insertion methods
 - (void)prepareForCollectionViewUpdates:(NSArray *)updateItems
 {
     for (UICollectionViewUpdateItem *updateItem in updateItems) {
         if(updateItem.updateAction == UICollectionUpdateActionInsert) {
+            // Reset the springs of the existing items
+            [self resetItemSpringsForInsertAtIndexPath:updateItem.indexPathAfterUpdate];
             
-            // Get a list of items, sorted by their indexPath
-            NSArray *items = [_behaviorManager currentlyManagedItemIndexPaths];
-            // Now loop backwards, updating centers appropriately.
-            // We need to get 2 enumerators - copy from one to the other
-            NSEnumerator *fromEnumerator = [items reverseObjectEnumerator];
-            // We want to skip the lastmost object in the array as we're copying left to right
-            [fromEnumerator nextObject];
-            // Now enumarate the array - through the 'to' positions
-            [items enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                NSIndexPath *toIndex = (NSIndexPath*)obj;
-                NSIndexPath *fromIndex = (NSIndexPath *)[fromEnumerator nextObject];
-                
-                
-                if(fromIndex && fromIndex.item >= updateItem.indexPathAfterUpdate.item) {
-                    UICollectionViewLayoutAttributes *toItem = [self layoutAttributesForItemAtIndexPath:toIndex];
-                    UICollectionViewLayoutAttributes *fromItem = [self layoutAttributesForItemAtIndexPath:fromIndex];
-                    toItem.center = fromItem.center;
-                    [_dynamicAnimator updateItemUsingCurrentState:toItem];
-                }
-            }];
-            
-            
-            // Need to find the initial layout attributes
+            // Where would the flow layout like to place the new cell?
             UICollectionViewLayoutAttributes *attr = [super initialLayoutAttributesForAppearingItemAtIndexPath:updateItem.indexPathAfterUpdate];
             CGPoint center = attr.center;
             CGSize contentSize = [self collectionViewContentSize];
             center.y -= contentSize.height - CGRectGetHeight(attr.bounds);
-            attr.center = center;
             
-            // Also need to push the current destination location
+            // Now reset the center of insertion point for the animator
             UICollectionViewLayoutAttributes *insertionPointAttr = [self layoutAttributesForItemAtIndexPath:updateItem.indexPathAfterUpdate];
-            insertionPointAttr.center = attr.center;
+            insertionPointAttr.center = center;
             [_dynamicAnimator updateItemUsingCurrentState:insertionPointAttr];
-            
-            // Create the separate behaviors
-            [_behaviorManager.gravityBehavior addItem:attr];
-            [_behaviorManager.collisionBehavior addItem:attr];
-            
-            // Update the position in the animator
-            [_dynamicAnimator updateItemUsingCurrentState:attr];
         }
     }
 }
@@ -134,6 +107,32 @@
 - (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
 {
     return [_dynamicAnimator layoutAttributesForCellAtIndexPath:itemIndexPath];
+}
+
+
+#pragma mark - Utility Methods
+- (void)resetItemSpringsForInsertAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Get a list of items, sorted by their indexPath
+    NSArray *items = [_behaviorManager currentlyManagedItemIndexPaths];
+    // Now loop backwards, updating centers appropriately.
+    // We need to get 2 enumerators - copy from one to the other
+    NSEnumerator *fromEnumerator = [items reverseObjectEnumerator];
+    // We want to skip the lastmost object in the array as we're copying left to right
+    [fromEnumerator nextObject];
+    // Now enumarate the array - through the 'to' positions
+    [items enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSIndexPath *toIndex = (NSIndexPath*)obj;
+        NSIndexPath *fromIndex = (NSIndexPath *)[fromEnumerator nextObject];
+        
+        // If the 'from' cell is after the insert then need to reset the springs
+        if(fromIndex && fromIndex.item >= indexPath.item) {
+            UICollectionViewLayoutAttributes *toItem = [self layoutAttributesForItemAtIndexPath:toIndex];
+            UICollectionViewLayoutAttributes *fromItem = [self layoutAttributesForItemAtIndexPath:fromIndex];
+            toItem.center = fromItem.center;
+            [_dynamicAnimator updateItemUsingCurrentState:toItem];
+        }
+    }];
 }
 
 @end
