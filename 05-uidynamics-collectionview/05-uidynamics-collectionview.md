@@ -85,7 +85,7 @@ carousel we're after.
         self.collectionView.collectionViewLayout = _collectionViewLayout;
     }
 
-
+![image](img/springy_carousel_non_springy.png)
 
 ### Adding springs
 
@@ -120,9 +120,10 @@ following:
 
     - (instancetype)initWithAnimator:(UIDynamicAnimator *)animator;
 
-    - (void)addItem:(id<UIDynamicItem, NSCopying>)item anchor:(CGPoint)anchor;
-    - (void)removeItem:(id<UIDynamicItem, NSCopying>)item;
+    - (void)addItem:(UICollectionViewLayoutAttributes *)item anchor:(CGPoint)anchor;
+    - (void)removeItemAtIndexPath:(NSIndexPath *)indexPath;
     - (void)updateItemCollection:(NSArray*)items;
+    - (NSArray *)currentlyManagedItemIndexPaths;
     @end
 
 The behavior of each of our cells is constructed from a shared `UIGravityBehavior`,
@@ -182,13 +183,13 @@ and `removeItem:` methods. The add method will add the new item to the global
 behaviors and also set up the spring which attaches the cell to the background
 canvas:
 
-    - (void)addItem:(id<UIDynamicItem, NSCopying>)item anchor:(CGPoint)anchor
+    - (void)addItem:(UICollectionViewLayoutAttributes *)item anchor:(CGPoint)anchor
     {
         UIAttachmentBehavior *attachmentBehavior = [self createAttachmentBehaviorForItem:item anchor:anchor];
         // Add the behavior to the animator
         [self.animator addBehavior:attachmentBehavior];
-        // And store it in the dictionary
-        [_attachmentBehaviors setObject:attachmentBehavior forKey:item];
+        // And store it in the dictionary. Keyed by the index path
+        [_attachmentBehaviors setObject:attachmentBehavior forKey:item.indexPath];
         
         // Also need to add this item to the global behaviors
         [self.gravityBehavior addItem:item];
@@ -217,29 +218,29 @@ The remove method performs exactly the opposite operation - remove the attachmen
 behavior from the animator and the item from the shared gravity and collision
 behaviors:
 
-    - (void)removeItem:(UICollectionViewLayoutAttributes *)item
+    - (void)removeItemAtIndexPath:(NSIndexPath *)indexPath
     {
         // Remove the attachment behavior from the animator
-        UIAttachmentBehavior *attachmentBehavior = self.attachmentBehaviors[item];
+        UIAttachmentBehavior *attachmentBehavior = self.attachmentBehaviors[indexPath];
         [self.animator removeBehavior:attachmentBehavior];
 
         
         // Remove the item from the global behaviors
         for(UICollectionViewLayoutAttributes *attr in [self.gravityBehavior.items copy])
         {
-            if([attr.indexPath isEqual:item.indexPath]) {
+            if([attr.indexPath isEqual:indexPath]) {
                 [self.gravityBehavior removeItem:attr];
             }
         }
         for (UICollectionViewLayoutAttributes *attr in [self.collisionBehavior.items copy])
         {
-            if([attr.indexPath isEqual:item.indexPath]) {
+            if([attr.indexPath isEqual:indexPath]) {
                 [self.collisionBehavior removeItem:attr];
             }
         }
         
         // And remove the entry from our dictionary
-        [_attachmentBehaviors removeObjectForKey:item];
+        [_attachmentBehaviors removeObjectForKey:indexPath];
     }
 
 This method is slightly more complicated than we would like. Removing the
@@ -257,24 +258,34 @@ but let's take a look at the implementation:
 
     - (void)updateItemCollection:(NSArray *)items
     {
-        // Let's find the ones we need to remove
+        // Let's find the ones we need to remove. We work in indexPaths here
         NSMutableSet *toRemove = [NSMutableSet setWithArray:[self.attachmentBehaviors allKeys]];
-        [toRemove minusSet:[NSSet setWithArray:items]];
+        [toRemove minusSet:[NSSet setWithArray:[items valueForKeyPath:@"indexPath"]]];
         
         // Let's remove any we no longer need
-        for (UICollectionViewLayoutAttributes *attr in toRemove) {
-            [self removeItem:attr];
+        for (NSIndexPath *indexPath in toRemove) {
+            [self removeItemAtIndexPath:indexPath];
         }
         
-        // Find the items we need to add springs to
-        NSMutableSet *toAdd = [NSMutableSet setWithArray:items];
-        [toAdd minusSet:[NSSet setWithArray:[self.attachmentBehaviors allKeys]]];
-        
-        // Create the newly required attachement behaviors
-        for (UICollectionViewLayoutAttributes *attr in toAdd) {
-            [self addItem:attr anchor:attr.center];
+        // Find the items we need to add springs to. A bit more complicated =(
+        // Loop through the items we want
+        NSArray *existingIndexPaths = [self currentlyManagedItemIndexPaths];
+        for(UICollectionViewLayoutAttributes *attr in items) {
+            // Find whether this item matches an existing index path
+            BOOL alreadyExists = NO;
+            for(NSIndexPath *indexPath in existingIndexPaths) {
+                if ([indexPath isEqual:attr.indexPath]) {
+                    alreadyExists = YES;
+                }
+            }
+            // If it doesn't then let's add it
+            if(!alreadyExists) {
+                // Need to add
+                [self addItem:attr anchor:attr.center];
+            }
         }
     }
+
 
 It's a very simple method - we first find the items we need to remove - using
 some simple set operations ({Items we currently have} / {Items we should have}).
@@ -382,9 +393,6 @@ the state of this item.
 of our cells, we don't need the collection view to re-request it from the layout.
 
 
-NEED A DIAGRAM SOMEWHERE ROUND HERE
-
-
 There are 2 more methods we need to override, the purpose of both is to remove
 the responsibility of item layout from the flow layout class, and give it instead
 to the dynamic animator:
@@ -411,7 +419,7 @@ Well, if you run this project up now you should have a horizontal carousel, whic
 as you drag items around you get a springy effect - where cells ahead of the drag
 direction bunch up, and those behind spread out.
 
-PICTURE HERE
+![image](img/springy_carousel_scrolling.png)
 
 
 ### Inserting items
@@ -575,6 +583,8 @@ of the center of the currently visible items:
 And with that we're done. Fire up the app and try adding cells - they drop
 nicely in and then bounce - really cool. Try pressing adding cells whilst the
 carousel is scrolling - this shows how awesome the dynamic animator really is!
+
+![image](img/springy_carousel_inserting.png)
 
 ### Conclusion
 
