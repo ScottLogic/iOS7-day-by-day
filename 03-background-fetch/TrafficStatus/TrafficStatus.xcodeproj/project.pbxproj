@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F489D267178C489C00BFA028 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489D266178C489C00BFA028 /* Foundation.framework */; };
+		F489D269178C489C00BFA028 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489D268178C489C00BFA028 /* CoreGraphics.framework */; };
+		F489D26B178C489C00BFA028 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489D26A178C489C00BFA028 /* UIKit.framework */; };
+		F489D271178C489C00BFA028 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F489D26F178C489C00BFA028 /* InfoPlist.strings */; };
+		F489D273178C489C00BFA028 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D272178C489C00BFA028 /* main.m */; };
+		F489D277178C489C00BFA028 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D276178C489C00BFA028 /* SCAppDelegate.m */; };
+		F489D27A178C489C00BFA028 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F489D278178C489C00BFA028 /* Main.storyboard */; };
+		F489D27D178C489C00BFA028 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D27C178C489C00BFA028 /* SCViewController.m */; };
+		F489D27F178C489C00BFA028 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F489D27E178C489C00BFA028 /* Images.xcassets */; };
+		F489D286178C489C00BFA028 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489D285178C489C00BFA028 /* XCTest.framework */; };
+		F489D287178C489C00BFA028 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489D266178C489C00BFA028 /* Foundation.framework */; };
+		F489D288178C489C00BFA028 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F489D26A178C489C00BFA028 /* UIKit.framework */; };
+		F489D290178C489C00BFA028 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F489D28E178C489C00BFA028 /* InfoPlist.strings */; };
+		F489D292178C489C00BFA028 /* TrafficStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D291178C489C00BFA028 /* TrafficStatusTests.m */; };
+		F489D29E178C4C6900BFA028 /* SCTrafficStatusTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D29D178C4C6900BFA028 /* SCTrafficStatusTableCell.m */; };
+		F489D2A1178C4EE100BFA028 /* SCTrafficStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D2A0178C4EE100BFA028 /* SCTrafficStatus.m */; };
+		F489D2A7178C50F000BFA028 /* NSArray+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = F489D2A6178C50F000BFA028 /* NSArray+Random.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F489D289178C489C00BFA028 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F489D25B178C489C00BFA028 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F489D262178C489C00BFA028;
+			remoteInfo = TrafficStatus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F489D263178C489C00BFA028 /* TrafficStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F489D266178C489C00BFA028 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F489D268178C489C00BFA028 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F489D26A178C489C00BFA028 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F489D26E178C489C00BFA028 /* TrafficStatus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrafficStatus-Info.plist"; sourceTree = "<group>"; };
+		F489D270178C489C00BFA028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F489D272178C489C00BFA028 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F489D274178C489C00BFA028 /* TrafficStatus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrafficStatus-Prefix.pch"; sourceTree = "<group>"; };
+		F489D275178C489C00BFA028 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		F489D276178C489C00BFA028 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		F489D279178C489C00BFA028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F489D27B178C489C00BFA028 /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		F489D27C178C489C00BFA028 /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		F489D27E178C489C00BFA028 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F489D284178C489C00BFA028 /* TrafficStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrafficStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F489D285178C489C00BFA028 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F489D28D178C489C00BFA028 /* TrafficStatusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrafficStatusTests-Info.plist"; sourceTree = "<group>"; };
+		F489D28F178C489C00BFA028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F489D291178C489C00BFA028 /* TrafficStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficStatusTests.m; sourceTree = "<group>"; };
+		F489D29C178C4C6900BFA028 /* SCTrafficStatusTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTrafficStatusTableCell.h; sourceTree = "<group>"; };
+		F489D29D178C4C6900BFA028 /* SCTrafficStatusTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTrafficStatusTableCell.m; sourceTree = "<group>"; };
+		F489D29F178C4EE100BFA028 /* SCTrafficStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTrafficStatus.h; sourceTree = "<group>"; };
+		F489D2A0178C4EE100BFA028 /* SCTrafficStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTrafficStatus.m; sourceTree = "<group>"; };
+		F489D2A5178C50F000BFA028 /* NSArray+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Random.h"; sourceTree = "<group>"; };
+		F489D2A6178C50F000BFA028 /* NSArray+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Random.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F489D260178C489C00BFA028 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F489D269178C489C00BFA028 /* CoreGraphics.framework in Frameworks */,
+				F489D26B178C489C00BFA028 /* UIKit.framework in Frameworks */,
+				F489D267178C489C00BFA028 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F489D281178C489C00BFA028 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F489D286178C489C00BFA028 /* XCTest.framework in Frameworks */,
+				F489D288178C489C00BFA028 /* UIKit.framework in Frameworks */,
+				F489D287178C489C00BFA028 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F489D25A178C489C00BFA028 = {
+			isa = PBXGroup;
+			children = (
+				F489D26C178C489C00BFA028 /* TrafficStatus */,
+				F489D28B178C489C00BFA028 /* TrafficStatusTests */,
+				F489D265178C489C00BFA028 /* Frameworks */,
+				F489D264178C489C00BFA028 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F489D264178C489C00BFA028 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F489D263178C489C00BFA028 /* TrafficStatus.app */,
+				F489D284178C489C00BFA028 /* TrafficStatusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F489D265178C489C00BFA028 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F489D266178C489C00BFA028 /* Foundation.framework */,
+				F489D268178C489C00BFA028 /* CoreGraphics.framework */,
+				F489D26A178C489C00BFA028 /* UIKit.framework */,
+				F489D285178C489C00BFA028 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F489D26C178C489C00BFA028 /* TrafficStatus */ = {
+			isa = PBXGroup;
+			children = (
+				F489D29B178C4C3300BFA028 /* NotRelevantForDemo */,
+				F489D275178C489C00BFA028 /* SCAppDelegate.h */,
+				F489D276178C489C00BFA028 /* SCAppDelegate.m */,
+				F489D278178C489C00BFA028 /* Main.storyboard */,
+				F489D27B178C489C00BFA028 /* SCViewController.h */,
+				F489D27C178C489C00BFA028 /* SCViewController.m */,
+				F489D27E178C489C00BFA028 /* Images.xcassets */,
+				F489D26D178C489C00BFA028 /* Supporting Files */,
+			);
+			path = TrafficStatus;
+			sourceTree = "<group>";
+		};
+		F489D26D178C489C00BFA028 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F489D26E178C489C00BFA028 /* TrafficStatus-Info.plist */,
+				F489D26F178C489C00BFA028 /* InfoPlist.strings */,
+				F489D272178C489C00BFA028 /* main.m */,
+				F489D274178C489C00BFA028 /* TrafficStatus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F489D28B178C489C00BFA028 /* TrafficStatusTests */ = {
+			isa = PBXGroup;
+			children = (
+				F489D291178C489C00BFA028 /* TrafficStatusTests.m */,
+				F489D28C178C489C00BFA028 /* Supporting Files */,
+			);
+			path = TrafficStatusTests;
+			sourceTree = "<group>";
+		};
+		F489D28C178C489C00BFA028 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F489D28D178C489C00BFA028 /* TrafficStatusTests-Info.plist */,
+				F489D28E178C489C00BFA028 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F489D29B178C4C3300BFA028 /* NotRelevantForDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F489D29C178C4C6900BFA028 /* SCTrafficStatusTableCell.h */,
+				F489D29D178C4C6900BFA028 /* SCTrafficStatusTableCell.m */,
+				F489D29F178C4EE100BFA028 /* SCTrafficStatus.h */,
+				F489D2A0178C4EE100BFA028 /* SCTrafficStatus.m */,
+				F489D2A5178C50F000BFA028 /* NSArray+Random.h */,
+				F489D2A6178C50F000BFA028 /* NSArray+Random.m */,
+			);
+			name = NotRelevantForDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F489D262178C489C00BFA028 /* TrafficStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F489D295178C489C00BFA028 /* Build configuration list for PBXNativeTarget "TrafficStatus" */;
+			buildPhases = (
+				F489D25F178C489C00BFA028 /* Sources */,
+				F489D260178C489C00BFA028 /* Frameworks */,
+				F489D261178C489C00BFA028 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrafficStatus;
+			productName = TrafficStatus;
+			productReference = F489D263178C489C00BFA028 /* TrafficStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F489D283178C489C00BFA028 /* TrafficStatusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F489D298178C489C00BFA028 /* Build configuration list for PBXNativeTarget "TrafficStatusTests" */;
+			buildPhases = (
+				F489D280178C489C00BFA028 /* Sources */,
+				F489D281178C489C00BFA028 /* Frameworks */,
+				F489D282178C489C00BFA028 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F489D28A178C489C00BFA028 /* PBXTargetDependency */,
+			);
+			name = TrafficStatusTests;
+			productName = TrafficStatusTests;
+			productReference = F489D284178C489C00BFA028 /* TrafficStatusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F489D25B178C489C00BFA028 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = ShinobiControls;
+				TargetAttributes = {
+					F489D262178C489C00BFA028 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					F489D283178C489C00BFA028 = {
+						TestTargetID = F489D262178C489C00BFA028;
+					};
+				};
+			};
+			buildConfigurationList = F489D25E178C489C00BFA028 /* Build configuration list for PBXProject "TrafficStatus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F489D25A178C489C00BFA028;
+			productRefGroup = F489D264178C489C00BFA028 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F489D262178C489C00BFA028 /* TrafficStatus */,
+				F489D283178C489C00BFA028 /* TrafficStatusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F489D261178C489C00BFA028 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F489D27F178C489C00BFA028 /* Images.xcassets in Resources */,
+				F489D271178C489C00BFA028 /* InfoPlist.strings in Resources */,
+				F489D27A178C489C00BFA028 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F489D282178C489C00BFA028 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F489D290178C489C00BFA028 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F489D25F178C489C00BFA028 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F489D277178C489C00BFA028 /* SCAppDelegate.m in Sources */,
+				F489D27D178C489C00BFA028 /* SCViewController.m in Sources */,
+				F489D29E178C4C6900BFA028 /* SCTrafficStatusTableCell.m in Sources */,
+				F489D2A7178C50F000BFA028 /* NSArray+Random.m in Sources */,
+				F489D2A1178C4EE100BFA028 /* SCTrafficStatus.m in Sources */,
+				F489D273178C489C00BFA028 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F489D280178C489C00BFA028 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F489D292178C489C00BFA028 /* TrafficStatusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F489D28A178C489C00BFA028 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F489D262178C489C00BFA028 /* TrafficStatus */;
+			targetProxy = F489D289178C489C00BFA028 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F489D26F178C489C00BFA028 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F489D270178C489C00BFA028 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F489D278178C489C00BFA028 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F489D279178C489C00BFA028 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F489D28E178C489C00BFA028 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F489D28F178C489C00BFA028 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F489D293178C489C00BFA028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F489D294178C489C00BFA028 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F489D296178C489C00BFA028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrafficStatus/TrafficStatus-Prefix.pch";
+				INFOPLIST_FILE = "TrafficStatus/TrafficStatus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F489D297178C489C00BFA028 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrafficStatus/TrafficStatus-Prefix.pch";
+				INFOPLIST_FILE = "TrafficStatus/TrafficStatus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F489D299178C489C00BFA028 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrafficStatus.app/TrafficStatus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrafficStatus/TrafficStatus-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TrafficStatusTests/TrafficStatusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F489D29A178C489C00BFA028 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrafficStatus.app/TrafficStatus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrafficStatus/TrafficStatus-Prefix.pch";
+				INFOPLIST_FILE = "TrafficStatusTests/TrafficStatusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F489D25E178C489C00BFA028 /* Build configuration list for PBXProject "TrafficStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F489D293178C489C00BFA028 /* Debug */,
+				F489D294178C489C00BFA028 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F489D295178C489C00BFA028 /* Build configuration list for PBXNativeTarget "TrafficStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F489D296178C489C00BFA028 /* Debug */,
+				F489D297178C489C00BFA028 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F489D298178C489C00BFA028 /* Build configuration list for PBXNativeTarget "TrafficStatusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F489D299178C489C00BFA028 /* Debug */,
+				F489D29A178C489C00BFA028 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F489D25B178C489C00BFA028 /* Project object */;
+}
