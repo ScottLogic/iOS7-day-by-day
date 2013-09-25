@@ -18,5 +18,9 @@
 #import <UIKit/UIKit.h>
 
 @interface SCViewController : UIViewController
+- (IBAction)changeColorHandler:(id)sender;
+- (IBAction)dimTintHandler:(id)sender;
+@property (weak, nonatomic) IBOutlet UISwitch *dimTintSwitch;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 
 @end

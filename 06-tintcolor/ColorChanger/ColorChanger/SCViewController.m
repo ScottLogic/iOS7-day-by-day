@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.view.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+    self.dimTintSwitch.on = NO;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -34,4 +36,23 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+
+#pragma mark - Action Handlers
+- (IBAction)changeColorHandler:(id)sender {
+    // Generate a random color
+    CGFloat hue = ( arc4random() % 256 / 256.0 );
+    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;
+    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;
+    UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+    self.view.tintColor = color;
+    self.progressView.progressTintColor = color;
+}
+
+- (IBAction)dimTintHandler:(id)sender {
+    if(self.dimTintSwitch.isOn) {
+        self.view.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
+    } else {
+        self.view.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+    }
+}
 @end
