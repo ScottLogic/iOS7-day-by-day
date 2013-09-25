@@ -21,6 +21,7 @@
 		229F0A8F17F26464008A4555 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229F0A7117F26464008A4555 /* UIKit.framework */; };
 		229F0A9717F26464008A4555 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 229F0A9517F26464008A4555 /* InfoPlist.strings */; };
 		229F0A9917F26464008A4555 /* ColorChangerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 229F0A9817F26464008A4555 /* ColorChangerTests.m */; };
+		229F0AA517F26F8C008A4555 /* SCSampleCustomControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 229F0AA417F26F8C008A4555 /* SCSampleCustomControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		229F0A9417F26464008A4555 /* ColorChangerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorChangerTests-Info.plist"; sourceTree = "<group>"; };
 		229F0A9617F26464008A4555 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		229F0A9817F26464008A4555 /* ColorChangerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorChangerTests.m; sourceTree = "<group>"; };
+		229F0AA317F26F8C008A4555 /* SCSampleCustomControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSampleCustomControl.h; sourceTree = "<group>"; };
+		229F0AA417F26F8C008A4555 /* SCSampleCustomControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSampleCustomControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		229F0A7317F26464008A4555 /* ColorChanger */ = {
 			isa = PBXGroup;
 			children = (
+				229F0AA217F26F71008A4555 /* CustomControl */,
 				229F0A7C17F26464008A4555 /* SCAppDelegate.h */,
 				229F0A7D17F26464008A4555 /* SCAppDelegate.m */,
 				229F0A7F17F26464008A4555 /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				229F0A9517F26464008A4555 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		229F0AA217F26F71008A4555 /* CustomControl */ = {
+			isa = PBXGroup;
+			children = (
+				229F0AA317F26F8C008A4555 /* SCSampleCustomControl.h */,
+				229F0AA417F26F8C008A4555 /* SCSampleCustomControl.m */,
+			);
+			name = CustomControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +265,7 @@
 			files = (
 				229F0A7E17F26464008A4555 /* SCAppDelegate.m in Sources */,
 				229F0A8417F26464008A4555 /* SCViewController.m in Sources */,
+				229F0AA517F26F8C008A4555 /* SCSampleCustomControl.m in Sources */,
 				229F0A7A17F26464008A4555 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

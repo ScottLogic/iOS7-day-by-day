@@ -45,7 +45,7 @@
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;
     UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
     self.view.tintColor = color;
-    self.progressView.progressTintColor = color;
+    [self updateProgressViewTint];
 }
 
 - (IBAction)dimTintHandler:(id)sender {
@@ -54,5 +54,12 @@
     } else {
         self.view.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
     }
+    [self updateProgressViewTint];
+    
+}
+
+- (void)updateProgressViewTint
+{
+    self.progressView.progressTintColor = self.view.tintColor;
 }
 @end
