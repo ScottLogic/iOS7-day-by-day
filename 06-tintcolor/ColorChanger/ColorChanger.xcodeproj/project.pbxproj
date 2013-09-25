@@ -22,6 +22,7 @@
 		229F0A9717F26464008A4555 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 229F0A9517F26464008A4555 /* InfoPlist.strings */; };
 		229F0A9917F26464008A4555 /* ColorChangerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 229F0A9817F26464008A4555 /* ColorChangerTests.m */; };
 		229F0AA517F26F8C008A4555 /* SCSampleCustomControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 229F0AA417F26F8C008A4555 /* SCSampleCustomControl.m */; };
+		229F0AA717F2746A008A4555 /* shinobihead.png in Resources */ = {isa = PBXBuildFile; fileRef = 229F0AA617F2746A008A4555 /* shinobihead.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		229F0A9817F26464008A4555 /* ColorChangerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorChangerTests.m; sourceTree = "<group>"; };
 		229F0AA317F26F8C008A4555 /* SCSampleCustomControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSampleCustomControl.h; sourceTree = "<group>"; };
 		229F0AA417F26F8C008A4555 /* SCSampleCustomControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSampleCustomControl.m; sourceTree = "<group>"; };
+		229F0AA617F2746A008A4555 /* shinobihead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shinobihead.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				229F0A8217F26464008A4555 /* SCViewController.h */,
 				229F0A8317F26464008A4555 /* SCViewController.m */,
 				229F0A8517F26464008A4555 /* Images.xcassets */,
+				229F0AA617F2746A008A4555 /* shinobihead.png */,
 				229F0A7417F26464008A4555 /* Supporting Files */,
 			);
 			path = ColorChanger;
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229F0AA717F2746A008A4555 /* shinobihead.png in Resources */,
 				229F0A8617F26464008A4555 /* Images.xcassets in Resources */,
 				229F0A7817F26464008A4555 /* InfoPlist.strings in Resources */,
 				229F0A8117F26464008A4555 /* Main.storyboard in Resources */,
