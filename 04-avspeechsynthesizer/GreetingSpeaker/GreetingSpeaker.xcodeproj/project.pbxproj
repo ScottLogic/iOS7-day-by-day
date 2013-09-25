@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4750083178FFAEE00E859CE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4750082178FFAEE00E859CE /* AVFoundation.framework */; };
+		F4750087178FFF3300E859CE /* SCGreetingLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4750086178FFF3300E859CE /* SCGreetingLanguage.m */; };
+		F485192C178FF8380000980D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485192B178FF8380000980D /* Foundation.framework */; };
+		F485192E178FF8380000980D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485192D178FF8380000980D /* CoreGraphics.framework */; };
+		F4851930178FF8380000980D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485192F178FF8380000980D /* UIKit.framework */; };
+		F4851936178FF8380000980D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4851934178FF8380000980D /* InfoPlist.strings */; };
+		F4851938178FF8380000980D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4851937178FF8380000980D /* main.m */; };
+		F485193C178FF8380000980D /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F485193B178FF8380000980D /* SCAppDelegate.m */; };
+		F485193F178FF8380000980D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F485193D178FF8380000980D /* Main.storyboard */; };
+		F4851942178FF8380000980D /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4851941178FF8380000980D /* SCViewController.m */; };
+		F4851944178FF8380000980D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4851943178FF8380000980D /* Images.xcassets */; };
+		F485194B178FF8380000980D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485194A178FF8380000980D /* XCTest.framework */; };
+		F485194C178FF8380000980D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485192B178FF8380000980D /* Foundation.framework */; };
+		F485194D178FF8380000980D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F485192F178FF8380000980D /* UIKit.framework */; };
+		F4851955178FF8380000980D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4851953178FF8380000980D /* InfoPlist.strings */; };
+		F4851957178FF8380000980D /* GreetingSpeakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4851956178FF8380000980D /* GreetingSpeakerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F485194E178FF8380000980D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4851920178FF8380000980D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4851927178FF8380000980D;
+			remoteInfo = GreetingSpeaker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4750082178FFAEE00E859CE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F4750085178FFF3300E859CE /* SCGreetingLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGreetingLanguage.h; sourceTree = "<group>"; };
+		F4750086178FFF3300E859CE /* SCGreetingLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGreetingLanguage.m; sourceTree = "<group>"; };
+		F4851928178FF8380000980D /* GreetingSpeaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreetingSpeaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F485192B178FF8380000980D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F485192D178FF8380000980D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F485192F178FF8380000980D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F4851933178FF8380000980D /* GreetingSpeaker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GreetingSpeaker-Info.plist"; sourceTree = "<group>"; };
+		F4851935178FF8380000980D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4851937178FF8380000980D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4851939178FF8380000980D /* GreetingSpeaker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GreetingSpeaker-Prefix.pch"; sourceTree = "<group>"; };
+		F485193A178FF8380000980D /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		F485193B178FF8380000980D /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		F485193E178FF8380000980D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4851940178FF8380000980D /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		F4851941178FF8380000980D /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		F4851943178FF8380000980D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4851949178FF8380000980D /* GreetingSpeakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreetingSpeakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F485194A178FF8380000980D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F4851952178FF8380000980D /* GreetingSpeakerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GreetingSpeakerTests-Info.plist"; sourceTree = "<group>"; };
+		F4851954178FF8380000980D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4851956178FF8380000980D /* GreetingSpeakerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreetingSpeakerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4851925178FF8380000980D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4750083178FFAEE00E859CE /* AVFoundation.framework in Frameworks */,
+				F485192E178FF8380000980D /* CoreGraphics.framework in Frameworks */,
+				F4851930178FF8380000980D /* UIKit.framework in Frameworks */,
+				F485192C178FF8380000980D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4851946178FF8380000980D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F485194B178FF8380000980D /* XCTest.framework in Frameworks */,
+				F485194D178FF8380000980D /* UIKit.framework in Frameworks */,
+				F485194C178FF8380000980D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4750084178FFF1200E859CE /* Utility Components */ = {
+			isa = PBXGroup;
+			children = (
+				F4750085178FFF3300E859CE /* SCGreetingLanguage.h */,
+				F4750086178FFF3300E859CE /* SCGreetingLanguage.m */,
+			);
+			name = "Utility Components";
+			sourceTree = "<group>";
+		};
+		F485191F178FF8380000980D = {
+			isa = PBXGroup;
+			children = (
+				F4851931178FF8380000980D /* GreetingSpeaker */,
+				F4851950178FF8380000980D /* GreetingSpeakerTests */,
+				F485192A178FF8380000980D /* Frameworks */,
+				F4851929178FF8380000980D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4851929178FF8380000980D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4851928178FF8380000980D /* GreetingSpeaker.app */,
+				F4851949178FF8380000980D /* GreetingSpeakerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F485192A178FF8380000980D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4750082178FFAEE00E859CE /* AVFoundation.framework */,
+				F485192B178FF8380000980D /* Foundation.framework */,
+				F485192D178FF8380000980D /* CoreGraphics.framework */,
+				F485192F178FF8380000980D /* UIKit.framework */,
+				F485194A178FF8380000980D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4851931178FF8380000980D /* GreetingSpeaker */ = {
+			isa = PBXGroup;
+			children = (
+				F4750084178FFF1200E859CE /* Utility Components */,
+				F485193A178FF8380000980D /* SCAppDelegate.h */,
+				F485193B178FF8380000980D /* SCAppDelegate.m */,
+				F485193D178FF8380000980D /* Main.storyboard */,
+				F4851940178FF8380000980D /* SCViewController.h */,
+				F4851941178FF8380000980D /* SCViewController.m */,
+				F4851943178FF8380000980D /* Images.xcassets */,
+				F4851932178FF8380000980D /* Supporting Files */,
+			);
+			path = GreetingSpeaker;
+			sourceTree = "<group>";
+		};
+		F4851932178FF8380000980D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4851933178FF8380000980D /* GreetingSpeaker-Info.plist */,
+				F4851934178FF8380000980D /* InfoPlist.strings */,
+				F4851937178FF8380000980D /* main.m */,
+				F4851939178FF8380000980D /* GreetingSpeaker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4851950178FF8380000980D /* GreetingSpeakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4851956178FF8380000980D /* GreetingSpeakerTests.m */,
+				F4851951178FF8380000980D /* Supporting Files */,
+			);
+			path = GreetingSpeakerTests;
+			sourceTree = "<group>";
+		};
+		F4851951178FF8380000980D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4851952178FF8380000980D /* GreetingSpeakerTests-Info.plist */,
+				F4851953178FF8380000980D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4851927178FF8380000980D /* GreetingSpeaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F485195A178FF8380000980D /* Build configuration list for PBXNativeTarget "GreetingSpeaker" */;
+			buildPhases = (
+				F4851924178FF8380000980D /* Sources */,
+				F4851925178FF8380000980D /* Frameworks */,
+				F4851926178FF8380000980D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GreetingSpeaker;
+			productName = GreetingSpeaker;
+			productReference = F4851928178FF8380000980D /* GreetingSpeaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4851948178FF8380000980D /* GreetingSpeakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F485195D178FF8380000980D /* Build configuration list for PBXNativeTarget "GreetingSpeakerTests" */;
+			buildPhases = (
+				F4851945178FF8380000980D /* Sources */,
+				F4851946178FF8380000980D /* Frameworks */,
+				F4851947178FF8380000980D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F485194F178FF8380000980D /* PBXTargetDependency */,
+			);
+			name = GreetingSpeakerTests;
+			productName = GreetingSpeakerTests;
+			productReference = F4851949178FF8380000980D /* GreetingSpeakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4851920178FF8380000980D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = ShinobiControls;
+				TargetAttributes = {
+					F4851948178FF8380000980D = {
+						TestTargetID = F4851927178FF8380000980D;
+					};
+				};
+			};
+			buildConfigurationList = F4851923178FF8380000980D /* Build configuration list for PBXProject "GreetingSpeaker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F485191F178FF8380000980D;
+			productRefGroup = F4851929178FF8380000980D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4851927178FF8380000980D /* GreetingSpeaker */,
+				F4851948178FF8380000980D /* GreetingSpeakerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4851926178FF8380000980D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4851944178FF8380000980D /* Images.xcassets in Resources */,
+				F4851936178FF8380000980D /* InfoPlist.strings in Resources */,
+				F485193F178FF8380000980D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4851947178FF8380000980D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4851955178FF8380000980D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4851924178FF8380000980D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F485193C178FF8380000980D /* SCAppDelegate.m in Sources */,
+				F4851942178FF8380000980D /* SCViewController.m in Sources */,
+				F4750087178FFF3300E859CE /* SCGreetingLanguage.m in Sources */,
+				F4851938178FF8380000980D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4851945178FF8380000980D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4851957178FF8380000980D /* GreetingSpeakerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F485194F178FF8380000980D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4851927178FF8380000980D /* GreetingSpeaker */;
+			targetProxy = F485194E178FF8380000980D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4851934178FF8380000980D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4851935178FF8380000980D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F485193D178FF8380000980D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F485193E178FF8380000980D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4851953178FF8380000980D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4851954178FF8380000980D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4851958178FF8380000980D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4851959178FF8380000980D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F485195B178FF8380000980D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreetingSpeaker/GreetingSpeaker-Prefix.pch";
+				INFOPLIST_FILE = "GreetingSpeaker/GreetingSpeaker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F485195C178FF8380000980D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreetingSpeaker/GreetingSpeaker-Prefix.pch";
+				INFOPLIST_FILE = "GreetingSpeaker/GreetingSpeaker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F485195E178FF8380000980D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GreetingSpeaker.app/GreetingSpeaker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreetingSpeaker/GreetingSpeaker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GreetingSpeakerTests/GreetingSpeakerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F485195F178FF8380000980D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GreetingSpeaker.app/GreetingSpeaker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreetingSpeaker/GreetingSpeaker-Prefix.pch";
+				INFOPLIST_FILE = "GreetingSpeakerTests/GreetingSpeakerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4851923178FF8380000980D /* Build configuration list for PBXProject "GreetingSpeaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4851958178FF8380000980D /* Debug */,
+				F4851959178FF8380000980D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F485195A178FF8380000980D /* Build configuration list for PBXNativeTarget "GreetingSpeaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F485195B178FF8380000980D /* Debug */,
+				F485195C178FF8380000980D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F485195D178FF8380000980D /* Build configuration list for PBXNativeTarget "GreetingSpeakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F485195E178FF8380000980D /* Debug */,
+				F485195F178FF8380000980D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4851920178FF8380000980D /* Project object */;
+}
