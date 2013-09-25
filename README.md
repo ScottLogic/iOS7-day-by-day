@@ -12,6 +12,9 @@ twitter at [@iwantmyrealname](https://twitter.com/iwantmyrealname), and do
 fork the repo and have a play around with the code!
 
 sam
+
 [iwantmyreal.name](http://iwantmyreal.name/)
+
 [@iwantmyreal.name](https://twitter.com/iwantmyrealname)
+
 [ShinobiControls Blogs](http://www.shinobicontrols.com/blog/?author=sdavies)
