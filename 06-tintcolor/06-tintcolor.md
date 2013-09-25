@@ -60,14 +60,14 @@ three values: `UIViewTintAdjustmentModeNormal`, `UIViewTintAdjustmentModeDimmed`
 `UIViewTintAdjustmentModeAuto`. To demonstrate the effects this has we've added
 a UISwitch and wired up its `valueChanged` event to the following method:
 
-- (IBAction)dimTintHandler:(id)sender {
-    if(self.dimTintSwitch.isOn) {
-        self.view.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
-    } else {
-        self.view.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+    - (IBAction)dimTintHandler:(id)sender {
+        if(self.dimTintSwitch.isOn) {
+            self.view.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
+        } else {
+            self.view.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+        }
+        [self updateProgressViewTint];
     }
-    [self updateProgressViewTint];
-}
 
 When you flick the switch you'll see that all the regions which are usually the
 tint color, now dim to a gray color. This is especially useful if you want to
