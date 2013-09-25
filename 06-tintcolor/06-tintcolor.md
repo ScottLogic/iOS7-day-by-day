@@ -48,6 +48,8 @@ change color along with the other UI controls, we add the following method:
 
 This gets called at the end of `changeColorHandler:`.
 
+![tint-color-1](img/tint-color-1.png)
+![tint-color-2](img/tint-color-2.png)
 
 ### Tint Dimming
 
@@ -158,6 +160,8 @@ And that's it. The tint color changing code in the view controller doesn't need
 to change. Because of the way that `tintColor` works with the `UIView` hierarchy
 we don't have to touch anything else.
 
+![custom color 1](img/tint-color-custom-1.png)
+![custom color 2](img/tint-color-custom-2.png)
 
 ### Tinting images with tintColor
 
@@ -191,6 +195,8 @@ Once we've set the image mode to templated, we simply set it as the image for ou
 image view, and set the scaling factor to ensure the ninja's head doesn't get
 squashed.
 
+![image color 1](img/tint-color-image-1.png)
+![image color 2](img/tint-color-image-2.png)
 
 ### Conclusion
 
