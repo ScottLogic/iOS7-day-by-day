@@ -152,6 +152,10 @@ the view hierarchy once the transition is completed.
 - The `completeTransition:` method on the transition context needs to be called
 once we've finished the animation so that the OS knows that we've finished.
 
+![fade 1](img/fader-1.png)
+![fade 2](img/fader-2.png)
+![fade 3](img/fader-3.png)
+
 ### Summary
 
 With that we're done! It's actually quite simple once you get your head around
