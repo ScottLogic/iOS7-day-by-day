@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2203718F1797390300B283C7 /* SCItemBehaviorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2203718E1797390300B283C7 /* SCItemBehaviorManager.m */; };
+		F446D0D817957E2E00FD4D78 /* SCSpringyCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = F446D0D717957E2E00FD4D78 /* SCSpringyCarousel.m */; };
+		F446D0DB1795835B00FD4D78 /* SCCollectionViewSampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F446D0DA1795835B00FD4D78 /* SCCollectionViewSampleCell.m */; };
+		F4D651A7179450BB00493F3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651A6179450BB00493F3C /* Foundation.framework */; };
+		F4D651A9179450BB00493F3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651A8179450BB00493F3C /* CoreGraphics.framework */; };
+		F4D651AB179450BB00493F3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651AA179450BB00493F3C /* UIKit.framework */; };
+		F4D651B1179450BB00493F3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4D651AF179450BB00493F3C /* InfoPlist.strings */; };
+		F4D651B3179450BB00493F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D651B2179450BB00493F3C /* main.m */; };
+		F4D651B7179450BB00493F3C /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D651B6179450BB00493F3C /* SCAppDelegate.m */; };
+		F4D651BA179450BB00493F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D651B8179450BB00493F3C /* Main.storyboard */; };
+		F4D651BD179450BB00493F3C /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D651BC179450BB00493F3C /* SCViewController.m */; };
+		F4D651BF179450BB00493F3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D651BE179450BB00493F3C /* Images.xcassets */; };
+		F4D651C6179450BC00493F3C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651C5179450BB00493F3C /* XCTest.framework */; };
+		F4D651C7179450BC00493F3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651A6179450BB00493F3C /* Foundation.framework */; };
+		F4D651C8179450BC00493F3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D651AA179450BB00493F3C /* UIKit.framework */; };
+		F4D651D0179450BC00493F3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4D651CE179450BC00493F3C /* InfoPlist.strings */; };
+		F4D651D2179450BC00493F3C /* SpringyCarouselTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D651D1179450BC00493F3C /* SpringyCarouselTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4D651C9179450BC00493F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4D6519B179450BB00493F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4D651A2179450BB00493F3C;
+			remoteInfo = SpringyCarousel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2203718D1797390300B283C7 /* SCItemBehaviorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCItemBehaviorManager.h; sourceTree = "<group>"; };
+		2203718E1797390300B283C7 /* SCItemBehaviorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCItemBehaviorManager.m; sourceTree = "<group>"; };
+		F446D0D617957E2E00FD4D78 /* SCSpringyCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSpringyCarousel.h; sourceTree = "<group>"; };
+		F446D0D717957E2E00FD4D78 /* SCSpringyCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSpringyCarousel.m; sourceTree = "<group>"; };
+		F446D0D91795835B00FD4D78 /* SCCollectionViewSampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCollectionViewSampleCell.h; sourceTree = "<group>"; };
+		F446D0DA1795835B00FD4D78 /* SCCollectionViewSampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCollectionViewSampleCell.m; sourceTree = "<group>"; };
+		F4D651A3179450BB00493F3C /* SpringyCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringyCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4D651A6179450BB00493F3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F4D651A8179450BB00493F3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F4D651AA179450BB00493F3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F4D651AE179450BB00493F3C /* SpringyCarousel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpringyCarousel-Info.plist"; sourceTree = "<group>"; };
+		F4D651B0179450BB00493F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4D651B2179450BB00493F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4D651B4179450BB00493F3C /* SpringyCarousel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpringyCarousel-Prefix.pch"; sourceTree = "<group>"; };
+		F4D651B5179450BB00493F3C /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		F4D651B6179450BB00493F3C /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		F4D651B9179450BB00493F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4D651BB179450BB00493F3C /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		F4D651BC179450BB00493F3C /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		F4D651BE179450BB00493F3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4D651C4179450BB00493F3C /* SpringyCarouselTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpringyCarouselTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4D651C5179450BB00493F3C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F4D651CD179450BC00493F3C /* SpringyCarouselTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpringyCarouselTests-Info.plist"; sourceTree = "<group>"; };
+		F4D651CF179450BC00493F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4D651D1179450BC00493F3C /* SpringyCarouselTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringyCarouselTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4D651A0179450BB00493F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D651A9179450BB00493F3C /* CoreGraphics.framework in Frameworks */,
+				F4D651AB179450BB00493F3C /* UIKit.framework in Frameworks */,
+				F4D651A7179450BB00493F3C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4D651C1179450BB00493F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D651C6179450BC00493F3C /* XCTest.framework in Frameworks */,
+				F4D651C8179450BC00493F3C /* UIKit.framework in Frameworks */,
+				F4D651C7179450BC00493F3C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F446D0D517957E0500FD4D78 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F446D0D617957E2E00FD4D78 /* SCSpringyCarousel.h */,
+				F446D0D717957E2E00FD4D78 /* SCSpringyCarousel.m */,
+				F446D0D91795835B00FD4D78 /* SCCollectionViewSampleCell.h */,
+				F446D0DA1795835B00FD4D78 /* SCCollectionViewSampleCell.m */,
+				2203718D1797390300B283C7 /* SCItemBehaviorManager.h */,
+				2203718E1797390300B283C7 /* SCItemBehaviorManager.m */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		F4D6519A179450BB00493F3C = {
+			isa = PBXGroup;
+			children = (
+				F4D651AC179450BB00493F3C /* SpringyCarousel */,
+				F4D651CB179450BC00493F3C /* SpringyCarouselTests */,
+				F4D651A5179450BB00493F3C /* Frameworks */,
+				F4D651A4179450BB00493F3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4D651A4179450BB00493F3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4D651A3179450BB00493F3C /* SpringyCarousel.app */,
+				F4D651C4179450BB00493F3C /* SpringyCarouselTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4D651A5179450BB00493F3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4D651A6179450BB00493F3C /* Foundation.framework */,
+				F4D651A8179450BB00493F3C /* CoreGraphics.framework */,
+				F4D651AA179450BB00493F3C /* UIKit.framework */,
+				F4D651C5179450BB00493F3C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4D651AC179450BB00493F3C /* SpringyCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				F446D0D517957E0500FD4D78 /* CollectionView */,
+				F4D651B5179450BB00493F3C /* SCAppDelegate.h */,
+				F4D651B6179450BB00493F3C /* SCAppDelegate.m */,
+				F4D651B8179450BB00493F3C /* Main.storyboard */,
+				F4D651BB179450BB00493F3C /* SCViewController.h */,
+				F4D651BC179450BB00493F3C /* SCViewController.m */,
+				F4D651BE179450BB00493F3C /* Images.xcassets */,
+				F4D651AD179450BB00493F3C /* Supporting Files */,
+			);
+			path = SpringyCarousel;
+			sourceTree = "<group>";
+		};
+		F4D651AD179450BB00493F3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4D651AE179450BB00493F3C /* SpringyCarousel-Info.plist */,
+				F4D651AF179450BB00493F3C /* InfoPlist.strings */,
+				F4D651B2179450BB00493F3C /* main.m */,
+				F4D651B4179450BB00493F3C /* SpringyCarousel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4D651CB179450BC00493F3C /* SpringyCarouselTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4D651D1179450BC00493F3C /* SpringyCarouselTests.m */,
+				F4D651CC179450BC00493F3C /* Supporting Files */,
+			);
+			path = SpringyCarouselTests;
+			sourceTree = "<group>";
+		};
+		F4D651CC179450BC00493F3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4D651CD179450BC00493F3C /* SpringyCarouselTests-Info.plist */,
+				F4D651CE179450BC00493F3C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4D651A2179450BB00493F3C /* SpringyCarousel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4D651D5179450BC00493F3C /* Build configuration list for PBXNativeTarget "SpringyCarousel" */;
+			buildPhases = (
+				F4D6519F179450BB00493F3C /* Sources */,
+				F4D651A0179450BB00493F3C /* Frameworks */,
+				F4D651A1179450BB00493F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpringyCarousel;
+			productName = SpringyCarousel;
+			productReference = F4D651A3179450BB00493F3C /* SpringyCarousel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4D651C3179450BB00493F3C /* SpringyCarouselTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4D651D8179450BC00493F3C /* Build configuration list for PBXNativeTarget "SpringyCarouselTests" */;
+			buildPhases = (
+				F4D651C0179450BB00493F3C /* Sources */,
+				F4D651C1179450BB00493F3C /* Frameworks */,
+				F4D651C2179450BB00493F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4D651CA179450BC00493F3C /* PBXTargetDependency */,
+			);
+			name = SpringyCarouselTests;
+			productName = SpringyCarouselTests;
+			productReference = F4D651C4179450BB00493F3C /* SpringyCarouselTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4D6519B179450BB00493F3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = ShinobiControls;
+				TargetAttributes = {
+					F4D651C3179450BB00493F3C = {
+						TestTargetID = F4D651A2179450BB00493F3C;
+					};
+				};
+			};
+			buildConfigurationList = F4D6519E179450BB00493F3C /* Build configuration list for PBXProject "SpringyCarousel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4D6519A179450BB00493F3C;
+			productRefGroup = F4D651A4179450BB00493F3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4D651A2179450BB00493F3C /* SpringyCarousel */,
+				F4D651C3179450BB00493F3C /* SpringyCarouselTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4D651A1179450BB00493F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D651BF179450BB00493F3C /* Images.xcassets in Resources */,
+				F4D651B1179450BB00493F3C /* InfoPlist.strings in Resources */,
+				F4D651BA179450BB00493F3C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4D651C2179450BB00493F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D651D0179450BC00493F3C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4D6519F179450BB00493F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D651B7179450BB00493F3C /* SCAppDelegate.m in Sources */,
+				F4D651BD179450BB00493F3C /* SCViewController.m in Sources */,
+				2203718F1797390300B283C7 /* SCItemBehaviorManager.m in Sources */,
+				F446D0DB1795835B00FD4D78 /* SCCollectionViewSampleCell.m in Sources */,
+				F446D0D817957E2E00FD4D78 /* SCSpringyCarousel.m in Sources */,
+				F4D651B3179450BB00493F3C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4D651C0179450BB00493F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D651D2179450BC00493F3C /* SpringyCarouselTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4D651CA179450BC00493F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4D651A2179450BB00493F3C /* SpringyCarousel */;
+			targetProxy = F4D651C9179450BC00493F3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4D651AF179450BB00493F3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4D651B0179450BB00493F3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F4D651B8179450BB00493F3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4D651B9179450BB00493F3C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4D651CE179450BC00493F3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4D651CF179450BC00493F3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4D651D3179450BC00493F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4D651D4179450BC00493F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4D651D6179450BC00493F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpringyCarousel/SpringyCarousel-Prefix.pch";
+				INFOPLIST_FILE = "SpringyCarousel/SpringyCarousel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F4D651D7179450BC00493F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpringyCarousel/SpringyCarousel-Prefix.pch";
+				INFOPLIST_FILE = "SpringyCarousel/SpringyCarousel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F4D651D9179450BC00493F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpringyCarousel.app/SpringyCarousel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpringyCarousel/SpringyCarousel-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpringyCarouselTests/SpringyCarouselTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F4D651DA179450BC00493F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpringyCarousel.app/SpringyCarousel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpringyCarousel/SpringyCarousel-Prefix.pch";
+				INFOPLIST_FILE = "SpringyCarouselTests/SpringyCarouselTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4D6519E179450BB00493F3C /* Build configuration list for PBXProject "SpringyCarousel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4D651D3179450BC00493F3C /* Debug */,
+				F4D651D4179450BC00493F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4D651D5179450BC00493F3C /* Build configuration list for PBXNativeTarget "SpringyCarousel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4D651D6179450BC00493F3C /* Debug */,
+				F4D651D7179450BC00493F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4D651D8179450BC00493F3C /* Build configuration list for PBXNativeTarget "SpringyCarouselTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4D651D9179450BC00493F3C /* Debug */,
+				F4D651DA179450BC00493F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4D6519B179450BB00493F3C /* Project object */;
+}
