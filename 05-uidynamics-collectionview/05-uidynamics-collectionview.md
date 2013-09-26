@@ -92,7 +92,15 @@ carousel we're after.
 Now on to the more exciting stuff - let's fix this up with the UIKit Dynamics
 physics engine.
 
-The concept is as follows:
+The physical model we're going to use has each item connected to the position it
+would have been fixed to in a vanilla flow layout - i.e. the we take the items 
+from the carousel we've already made, and attach the them to their positions with
+springs. Then, as we scroll the view, the springs will stretch and we'll get the
+effect we want. Well, nearly, we need to perturb the springs a distance proportional
+to the distance from the touch point, but we'll come to that when the time is
+right.
+
+Translating this model into a UIDynamics concept is as follows:
 - When we are preparing the layout we request the positioning information from
 the flow layout super class.
 - We add appropriate behaviors to these positioning objects to allow them to
@@ -207,7 +215,7 @@ The spring behavior is created using a utility method:
         return attachmentBehavior;
     }
 
-We also store the attachment behavior in a dictionary, keyed by the `UIDynamicItem`.
+We also store the attachment behavior in a dictionary, keyed by the `NSIndexPath`.
 This will allow us to work out which spring we need to remove when we implement
 the remove method.
 
@@ -291,8 +299,9 @@ It's a very simple method - we first find the items we need to remove - using
 some simple set operations ({Items we currently have} / {Items we should have}).
 Then we loop through the resultant set and call the `removeItem:` method.
 
-Similarly for working out the items we should be managing, but aren't currently
-({Items we should have} / {Items we currently have}). We repeat the procedure with
+To work out the items we need to add we loop try to find each item in the collection
+we've been sent in our dictionary of managed items. If we can't find it then we
+need to start managing the behavior for it, so we call
 the `addItem:anchor:` method. Importantly, the anchor point is the current center
 position provided in the `UIDynamicItem` object. In terms of the `UICollectionView`,
 this means that we want our item to be anchored to the position the flow layout
