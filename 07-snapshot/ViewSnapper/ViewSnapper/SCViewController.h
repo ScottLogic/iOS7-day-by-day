@@ -13,6 +13,12 @@
 - (IBAction)handleAnimate:(id)sender;
 - (IBAction)handleSnapshot:(id)sender;
 
+- (IBAction)handlePreUpdateSnapshot:(id)sender;
+- (IBAction)handlePostUpdateSnapshot:(id)sender;
+
+- (IBAction)handleImageSnapshot:(id)sender;
+
+
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end

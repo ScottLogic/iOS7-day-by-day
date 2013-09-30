@@ -10,4 +10,6 @@
 
 @interface SCRotatingViews : UIView
 
+- (void)recolorSubviews:(UIColor *)newColor;
+
 @end

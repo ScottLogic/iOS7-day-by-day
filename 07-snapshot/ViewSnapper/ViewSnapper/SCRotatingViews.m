@@ -34,4 +34,11 @@
     }
 }
 
+- (void)recolorSubviews:(UIColor *)newColor
+{
+    for (UIView *subview in self.subviews) {
+        subview.backgroundColor = newColor;
+    }
+}
+
 @end

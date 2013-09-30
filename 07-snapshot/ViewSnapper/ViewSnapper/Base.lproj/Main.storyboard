@@ -30,6 +30,23 @@
                                             <action selector="handleSnapshot:" destination="vXZ-lx-hvc" id="PkH-eP-ctN"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Wrq-jU-Zh4"/>
+                                    <barButtonItem title="Pre" id="i6s-4R-LVI">
+                                        <connections>
+                                            <action selector="handlePreUpdateSnapshot:" destination="vXZ-lx-hvc" id="tMm-MV-fQZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Post" id="01b-D6-j0Z">
+                                        <connections>
+                                            <action selector="handlePostUpdateSnapshot:" destination="vXZ-lx-hvc" id="JvH-J1-Sy1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Cwl-it-XTu"/>
+                                    <barButtonItem title="Image" id="u3t-qh-Ntd">
+                                        <connections>
+                                            <action selector="handleImageSnapshot:" destination="vXZ-lx-hvc" id="xsM-C4-mm5"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHb-tm-Ljr">

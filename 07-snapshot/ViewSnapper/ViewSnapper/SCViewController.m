@@ -10,7 +10,7 @@
 #import "SCRotatingViews.h"
 
 @interface SCViewController () {
-    UIView *_complexView;
+    SCRotatingViews *_complexView;
 }
 
 @end
@@ -36,28 +36,63 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+/**
+ These 2 methods demonstrate how a UIView snapshot can be used in an animation
+ to simplify complex views
+ */
 - (IBAction)handleAnimate:(id)sender {
-    [UIView animateWithDuration:2.0
-                     animations:^{
-                         _complexView.bounds = CGRectZero;
-                     }
-                     completion:^(BOOL finished) {
-                         [_complexView removeFromSuperview];
-                         [self performSelector:@selector(createComplexView) withObject:nil afterDelay:1];
-                     }];
+    [self animateViewAwayAndReset:_complexView];
 }
 
 - (IBAction)handleSnapshot:(id)sender {
     UIView *snapshotView = [_complexView snapshotViewAfterScreenUpdates:NO];
     [self.containerView addSubview:snapshotView];
     [_complexView removeFromSuperview];
+    [self animateViewAwayAndReset:snapshotView];
+}
+
+/**
+ These 2 methods compare the difference between allowing screen updates and
+ not
+ */
+- (IBAction)handlePreUpdateSnapshot:(id)sender {
+    // Change the views
+    [_complexView recolorSubviews:[[UIColor redColor] colorWithAlphaComponent:0.3]];
+    // Take a snapshot. Don't wait for changes to be applied
+    UIView *snapshotView = [_complexView snapshotViewAfterScreenUpdates:NO];
+    [self.containerView addSubview:snapshotView];
+    [_complexView removeFromSuperview];
+    [self animateViewAwayAndReset:snapshotView];
+}
+
+- (IBAction)handlePostUpdateSnapshot:(id)sender {
+    // Change the views
+    [_complexView recolorSubviews:[[UIColor redColor] colorWithAlphaComponent:0.3]];
+    // Take a snapshot. This time, wait for the render changes to be applied
+    UIView *snapshotView = [_complexView snapshotViewAfterScreenUpdates:YES];
+    [self.containerView addSubview:snapshotView];
+    [_complexView removeFromSuperview];
+    [self animateViewAwayAndReset:snapshotView];
+}
+
+/**
+ This method demonstrate how to add an image effect to a UIView snapshot
+ */
+- (IBAction)handleImageSnapshot:(id)sender {
+}
+
+#pragma mark - Utility methods
+- (void)animateViewAwayAndReset:(UIView *)view
+{
     [UIView animateWithDuration:2.0
                      animations:^{
-                         snapshotView.bounds = CGRectZero;
+                         view.bounds = CGRectZero;
                      }
                      completion:^(BOOL finished) {
-                         [snapshotView removeFromSuperview];
-                         [self performSelector:@selector(createComplexView) withObject:nil afterDelay:1];
+                         [view removeFromSuperview];
+                         [self performSelector:@selector(createComplexView)
+                                    withObject:nil
+                                    afterDelay:1];
                      }];
 }
 @end
