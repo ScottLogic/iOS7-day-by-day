@@ -24,13 +24,6 @@
     [self createComplexView];
 }
 
-- (void)createComplexView
-{
-    _complexView = [[SCRotatingViews alloc] initWithFrame:self.view.bounds];
-    [self.containerView addSubview:_complexView];
-    
-}
-
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
@@ -98,6 +91,12 @@
 }
 
 #pragma mark - Utility methods
+- (void)createComplexView
+{
+    _complexView = [[SCRotatingViews alloc] initWithFrame:self.view.bounds];
+    [self.containerView addSubview:_complexView];
+}
+
 - (void)animateViewAwayAndReset:(UIView *)view
 {
     [UIView animateWithDuration:2.0

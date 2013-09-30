@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOt-UC-hbE">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOt-UC-hbE">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -49,13 +49,22 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHb-tm-Ljr">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHb-tm-Ljr">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DOt-UC-hbE" firstAttribute="leading" secondItem="sHb-tm-Ljr" secondAttribute="leading" id="23a-ba-arp"/>
+                            <constraint firstItem="DOt-UC-hbE" firstAttribute="trailing" secondItem="sHb-tm-Ljr" secondAttribute="trailing" id="CJh-bK-I87"/>
+                            <constraint firstItem="DOt-UC-hbE" firstAttribute="top" secondItem="sHb-tm-Ljr" secondAttribute="bottom" id="Nqz-4R-4gD"/>
+                            <constraint firstAttribute="bottom" secondItem="sHb-tm-Ljr" secondAttribute="bottom" constant="44" id="ODm-dL-nvL"/>
+                            <constraint firstItem="sHb-tm-Ljr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eHf-Es-ltX"/>
+                            <constraint firstAttribute="trailing" secondItem="sHb-tm-Ljr" secondAttribute="trailing" id="wW8-h4-uK8"/>
+                            <constraint firstItem="sHb-tm-Ljr" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="wt5-EC-bsr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="sHb-tm-Ljr" id="1jX-IQ-K0v"/>
