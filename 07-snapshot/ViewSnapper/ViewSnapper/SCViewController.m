@@ -79,6 +79,22 @@
  This method demonstrate how to add an image effect to a UIView snapshot
  */
 - (IBAction)handleImageSnapshot:(id)sender {
+    // Want to create an image context - the size of complex view and the scale of the device screen
+    UIGraphicsBeginImageContextWithOptions(_complexView.bounds.size, NO, 0.0);
+    // Render our snapshot into the image context
+    [_complexView drawViewHierarchyInRect:_complexView.bounds afterScreenUpdates:NO];
+    
+    // Grab the image from the context
+    UIImage *complexViewImage = UIGraphicsGetImageFromCurrentImageContext();
+    // Finish using the context
+    UIGraphicsEndImageContext();
+    
+    UIImageView *iv = [[UIImageView alloc] initWithImage:[self applyBlurToImage:complexViewImage]];
+    iv.center = _complexView.center;
+    [self.containerView addSubview:iv];
+    [_complexView removeFromSuperview];
+    // Let's wait a bit before we animate away
+    [self performSelector:@selector(animateViewAwayAndReset:) withObject:iv afterDelay:1.0];
 }
 
 #pragma mark - Utility methods
@@ -94,5 +110,17 @@
                                     withObject:nil
                                     afterDelay:1];
                      }];
+}
+
+- (UIImage *)applyBlurToImage:(UIImage *)image
+{
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CIImage *ci_image = [CIImage imageWithCGImage:image.CGImage];
+    CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
+    [filter setValue:ci_image forKey:kCIInputImageKey];
+    [filter setValue:@5 forKey:kCIInputRadiusKey];
+    CIImage *result = [filter valueForKey:kCIOutputImageKey];
+    CGImageRef cgImage = [context createCGImage:result fromRect:[result extent]];
+    return [UIImage imageWithCGImage:cgImage scale:image.scale orientation:image.imageOrientation];
 }
 @end
