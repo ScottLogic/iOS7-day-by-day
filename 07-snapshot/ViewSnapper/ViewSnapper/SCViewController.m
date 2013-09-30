@@ -7,8 +7,11 @@
 //
 
 #import "SCViewController.h"
+#import "SCRotatingViews.h"
 
-@interface SCViewController ()
+@interface SCViewController () {
+    UIView *_complexView;
+}
 
 @end
 
@@ -18,12 +21,43 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self createComplexView];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)createComplexView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    _complexView = [[SCRotatingViews alloc] initWithFrame:self.view.bounds];
+    [self.containerView addSubview:_complexView];
+    
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (IBAction)handleAnimate:(id)sender {
+    [UIView animateWithDuration:2.0
+                     animations:^{
+                         _complexView.bounds = CGRectZero;
+                     }
+                     completion:^(BOOL finished) {
+                         [_complexView removeFromSuperview];
+                         [self performSelector:@selector(createComplexView) withObject:nil afterDelay:1];
+                     }];
+}
+
+- (IBAction)handleSnapshot:(id)sender {
+    UIView *snapshotView = [_complexView snapshotViewAfterScreenUpdates:NO];
+    [self.containerView addSubview:snapshotView];
+    [_complexView removeFromSuperview];
+    [UIView animateWithDuration:2.0
+                     animations:^{
+                         snapshotView.bounds = CGRectZero;
+                     }
+                     completion:^(BOOL finished) {
+                         [snapshotView removeFromSuperview];
+                         [self performSelector:@selector(createComplexView) withObject:nil afterDelay:1];
+                     }];
+}
 @end

@@ -10,4 +10,9 @@
 
 @interface SCViewController : UIViewController
 
+- (IBAction)handleAnimate:(id)sender;
+- (IBAction)handleSnapshot:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 @end

@@ -21,6 +21,7 @@
 		22F25F8317F8451600E71D9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F25F6517F8451600E71D9F /* UIKit.framework */; };
 		22F25F8B17F8451600E71D9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22F25F8917F8451600E71D9F /* InfoPlist.strings */; };
 		22F25F8D17F8451600E71D9F /* ViewSnapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F25F8C17F8451600E71D9F /* ViewSnapperTests.m */; };
+		22F25F9C17F84A6700E71D9F /* SCRotatingViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F25F9B17F84A6700E71D9F /* SCRotatingViews.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		22F25F8817F8451600E71D9F /* ViewSnapperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ViewSnapperTests-Info.plist"; sourceTree = "<group>"; };
 		22F25F8A17F8451600E71D9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22F25F8C17F8451600E71D9F /* ViewSnapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewSnapperTests.m; sourceTree = "<group>"; };
+		22F25F9A17F84A6700E71D9F /* SCRotatingViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRotatingViews.h; sourceTree = "<group>"; };
+		22F25F9B17F84A6700E71D9F /* SCRotatingViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRotatingViews.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		22F25F6717F8451600E71D9F /* ViewSnapper */ = {
 			isa = PBXGroup;
 			children = (
+				22F25F9617F8490600E71D9F /* Views */,
 				22F25F7017F8451600E71D9F /* SCAppDelegate.h */,
 				22F25F7117F8451600E71D9F /* SCAppDelegate.m */,
 				22F25F7317F8451600E71D9F /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				22F25F8917F8451600E71D9F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22F25F9617F8490600E71D9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22F25F9A17F84A6700E71D9F /* SCRotatingViews.h */,
+				22F25F9B17F84A6700E71D9F /* SCRotatingViews.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F25F9C17F84A6700E71D9F /* SCRotatingViews.m in Sources */,
 				22F25F7217F8451600E71D9F /* SCAppDelegate.m in Sources */,
 				22F25F7817F8451600E71D9F /* SCViewController.m in Sources */,
 				22F25F6E17F8451600E71D9F /* main.m in Sources */,
