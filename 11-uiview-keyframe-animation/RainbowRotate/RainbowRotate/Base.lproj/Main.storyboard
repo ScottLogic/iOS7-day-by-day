@@ -66,6 +66,7 @@
                     <connections>
                         <outlet property="rainbowSwatch" destination="qXo-0I-yE2" id="Lnc-jh-7f8"/>
                         <outlet property="rotatingHead" destination="tX8-31-ANq" id="GNo-hl-XQj"/>
+                        <outlet property="toolbar" destination="Azw-eJ-RL7" id="xRV-FB-QyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

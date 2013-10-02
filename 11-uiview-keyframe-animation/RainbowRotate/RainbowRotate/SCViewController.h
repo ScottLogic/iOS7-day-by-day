@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *rotatingHead;
 @property (weak, nonatomic) IBOutlet UIView *rainbowSwatch;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 - (IBAction)handleRotateCW:(id)sender;
 - (IBAction)handleRotateCCW:(id)sender;
