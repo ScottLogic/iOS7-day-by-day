@@ -8,10 +8,6 @@
 
 #import "SCViewController.h"
 
-@interface SCViewController ()
-
-@end
-
 @implementation SCViewController
 
 - (void)viewDidLoad
@@ -25,4 +21,13 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+#pragma mark - Toolbar button handlers
+- (IBAction)handleRotateCW:(id)sender {
+}
+
+- (IBAction)handleRotateCCW:(id)sender {
+}
+
+- (IBAction)handleRainbow:(id)sender {
+}
 @end

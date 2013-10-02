@@ -1,23 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="SCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6kZ-iS-G2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="cJH-0W-IUc"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azw-eJ-RL7">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="CW" id="dis-UM-EFO">
+                                        <connections>
+                                            <action selector="handleRotateCW:" destination="vXZ-lx-hvc" id="U1E-Y5-YXi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="CCW" id="9Tk-xk-M3h">
+                                        <connections>
+                                            <action selector="handleRotateCCW:" destination="vXZ-lx-hvc" id="tk2-JA-Rnh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5tf-EF-2WU"/>
+                                    <barButtonItem title="Rainbow" id="qJE-iU-3rU">
+                                        <connections>
+                                            <action selector="handleRainbow:" destination="vXZ-lx-hvc" id="yxD-9X-eF8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shinobihead.png" translatesAutoresizingMaskIntoConstraints="NO" id="tX8-31-ANq">
+                                <rect key="frame" x="88" y="72" width="144" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXo-0I-yE2">
+                                <rect key="frame" x="88" y="278" width="145" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66194754840000003" green="0.68658167120000002" blue="0.72514748569999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qXo-0I-yE2" firstAttribute="centerX" secondItem="tX8-31-ANq" secondAttribute="centerX" id="14t-7m-CWV"/>
+                            <constraint firstAttribute="bottom" secondItem="Azw-eJ-RL7" secondAttribute="bottom" id="5iu-66-TIv"/>
+                            <constraint firstItem="tX8-31-ANq" firstAttribute="top" secondItem="6kZ-iS-G2I" secondAttribute="bottom" constant="52" id="8Rc-FX-acU"/>
+                            <constraint firstItem="qXo-0I-yE2" firstAttribute="top" secondItem="tX8-31-ANq" secondAttribute="bottom" constant="44" id="IOh-PC-hCx"/>
+                            <constraint firstItem="Azw-eJ-RL7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NFS-T0-MDd"/>
+                            <constraint firstItem="qXo-0I-yE2" firstAttribute="leading" secondItem="tX8-31-ANq" secondAttribute="leading" id="dbN-aU-Z6B"/>
+                            <constraint firstItem="qXo-0I-yE2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="88" id="j1p-es-nBT"/>
+                            <constraint firstItem="qXo-0I-yE2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="278" id="l2a-Nu-g9s"/>
+                            <constraint firstAttribute="bottom" secondItem="qXo-0I-yE2" secondAttribute="bottom" constant="145" id="ldg-ue-IVD"/>
+                            <constraint firstAttribute="trailing" secondItem="Azw-eJ-RL7" secondAttribute="trailing" id="mNt-6k-F7Y"/>
+                            <constraint firstItem="qXo-0I-yE2" firstAttribute="centerX" secondItem="Azw-eJ-RL7" secondAttribute="centerX" id="zT4-4j-Vbu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rainbowSwatch" destination="qXo-0I-yE2" id="Lnc-jh-7f8"/>
+                        <outlet property="rotatingHead" destination="tX8-31-ANq" id="GNo-hl-XQj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="shinobihead.png" width="1897" height="1752"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

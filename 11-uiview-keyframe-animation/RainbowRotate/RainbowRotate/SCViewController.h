@@ -10,4 +10,11 @@
 
 @interface SCViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *rotatingHead;
+@property (weak, nonatomic) IBOutlet UIView *rainbowSwatch;
+
+- (IBAction)handleRotateCW:(id)sender;
+- (IBAction)handleRotateCCW:(id)sender;
+- (IBAction)handleRainbow:(id)sender;
+
 @end
