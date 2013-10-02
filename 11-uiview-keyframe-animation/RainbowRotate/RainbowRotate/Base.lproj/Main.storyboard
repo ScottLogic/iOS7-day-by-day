@@ -39,28 +39,34 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shinobihead.png" translatesAutoresizingMaskIntoConstraints="NO" id="tX8-31-ANq">
-                                <rect key="frame" x="88" y="72" width="144" height="162"/>
+                                <rect key="frame" x="88" y="60" width="144" height="193"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="RKz-KY-WjE"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXo-0I-yE2">
                                 <rect key="frame" x="88" y="278" width="145" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.66194754840000003" green="0.68658167120000002" blue="0.72514748569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="0s0-zi-J4P"/>
+                                    <constraint firstAttribute="height" constant="145" id="7uT-Si-VwA"/>
+                                    <constraint firstAttribute="width" constant="145" id="Isq-WT-VLD"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qXo-0I-yE2" firstAttribute="centerX" secondItem="tX8-31-ANq" secondAttribute="centerX" id="14t-7m-CWV"/>
                             <constraint firstAttribute="bottom" secondItem="Azw-eJ-RL7" secondAttribute="bottom" id="5iu-66-TIv"/>
-                            <constraint firstItem="tX8-31-ANq" firstAttribute="top" secondItem="6kZ-iS-G2I" secondAttribute="bottom" constant="52" id="8Rc-FX-acU"/>
-                            <constraint firstItem="qXo-0I-yE2" firstAttribute="top" secondItem="tX8-31-ANq" secondAttribute="bottom" constant="44" id="IOh-PC-hCx"/>
                             <constraint firstItem="Azw-eJ-RL7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NFS-T0-MDd"/>
-                            <constraint firstItem="qXo-0I-yE2" firstAttribute="leading" secondItem="tX8-31-ANq" secondAttribute="leading" id="dbN-aU-Z6B"/>
-                            <constraint firstItem="qXo-0I-yE2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="88" id="j1p-es-nBT"/>
-                            <constraint firstItem="qXo-0I-yE2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="278" id="l2a-Nu-g9s"/>
-                            <constraint firstAttribute="bottom" secondItem="qXo-0I-yE2" secondAttribute="bottom" constant="145" id="ldg-ue-IVD"/>
+                            <constraint firstItem="qXo-0I-yE2" firstAttribute="centerX" secondItem="Azw-eJ-RL7" secondAttribute="centerX" id="Q6H-Df-fFh"/>
+                            <constraint firstItem="qXo-0I-yE2" firstAttribute="top" secondItem="tX8-31-ANq" secondAttribute="bottom" constant="25" id="fQU-1c-0aE"/>
+                            <constraint firstItem="tX8-31-ANq" firstAttribute="leading" secondItem="qXo-0I-yE2" secondAttribute="leading" id="jRZ-4y-mNJ"/>
                             <constraint firstAttribute="trailing" secondItem="Azw-eJ-RL7" secondAttribute="trailing" id="mNt-6k-F7Y"/>
-                            <constraint firstItem="qXo-0I-yE2" firstAttribute="centerX" secondItem="Azw-eJ-RL7" secondAttribute="centerX" id="zT4-4j-Vbu"/>
+                            <constraint firstAttribute="centerX" secondItem="qXo-0I-yE2" secondAttribute="centerX" id="oEp-9u-pg2"/>
+                            <constraint firstItem="tX8-31-ANq" firstAttribute="centerX" secondItem="qXo-0I-yE2" secondAttribute="centerX" id="ra1-Gz-KtM"/>
+                            <constraint firstItem="tX8-31-ANq" firstAttribute="top" secondItem="6kZ-iS-G2I" secondAttribute="bottom" constant="40" id="vMM-pD-CR8"/>
                         </constraints>
                     </view>
                     <connections>

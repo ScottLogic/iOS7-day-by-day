@@ -14,6 +14,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.rainbowSwatch.backgroundColor = [UIColor redColor];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -79,6 +80,33 @@
 }
 
 - (IBAction)handleRainbow:(id)sender {
+    [self enableToolbarItems:NO];
+    
+    void (^animationBlock)() = ^{
+        NSArray *rainbowColors = @[[UIColor orangeColor],
+                                   [UIColor yellowColor],
+                                   [UIColor greenColor],
+                                   [UIColor blueColor],
+                                   [UIColor purpleColor],
+                                   [UIColor redColor]];
+        
+        NSUInteger colorCount = [rainbowColors count];
+        for(NSUInteger i=0; i<[rainbowColors count]; i++) {
+            [UIView addKeyframeWithRelativeStartTime:i/(CGFloat)colorCount
+                                    relativeDuration:1/(CGFloat)colorCount
+                                          animations:^{
+                                              self.rainbowSwatch.backgroundColor = rainbowColors[i];
+                                          }];
+        }
+    };
+    
+    [UIView animateKeyframesWithDuration:4.0
+                                   delay:0.0
+                                 options:UIViewKeyframeAnimationOptionCalculationModeLinear | UIViewAnimationOptionCurveLinear
+                              animations:animationBlock
+                              completion:^(BOOL finished) {
+                                  [self enableToolbarItems:YES];
+                              }];
 }
 
 #pragma mark - Utility methods
