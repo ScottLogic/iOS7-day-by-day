@@ -91,7 +91,7 @@
                                    [UIColor redColor]];
         
         NSUInteger colorCount = [rainbowColors count];
-        for(NSUInteger i=0; i<[rainbowColors count]; i++) {
+        for(NSUInteger i=0; i<colorCount; i++) {
             [UIView addKeyframeWithRelativeStartTime:i/(CGFloat)colorCount
                                     relativeDuration:1/(CGFloat)colorCount
                                           animations:^{
