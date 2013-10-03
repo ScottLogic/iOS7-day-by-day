@@ -113,15 +113,56 @@ need to set the background color.
 If you run the app up now and press the 'Rainbow' button then you'll see your
 first `UIView` key-frame animation in action.
 
-PICTURES HERE
+![rainbow1](img/keyframe-rainbow1.png)
+![rainbow2](img/keyframe-rainbow2.png)
+![rainbow3](img/keyframe-rainbow3.png)
 
 ### Keyframe animation options
 
 The options parameter of the `animateKeyFrames:` method accepts `UIViewAnimationOptions`
 arguments, along with some new values specified in `UIViewKeyframeAnimationOptions`,
 notably the way in which the animation phases are fitted to the animation curve.
+The following are the options which govern this behavior:
 
-WRITE AN EXPLANATION HERE
+    UIViewKeyframeAnimationOptionCalculationModeLinear
+    UIViewKeyframeAnimationOptionCalculationModeDiscrete
+    UIViewKeyframeAnimationOptionCalculationModePaced
+    UIViewKeyframeAnimationOptionCalculationModeCubic
+    UIViewKeyframeAnimationOptionCalculationModeCubicPaced
+
+The graph below shows how the different options control the animation. The
+horizontal axis represents the time of the animation, whereas the vertical axis
+represents a one-dimensional parameter we are animating (this could be for example
+the `alpha` of a view, or the `width` of a `frame`). We have specified 3 key-frames
+in this example, each with different durations and end values.
+
+![optionsGraph](img/keyframe-optionsGraph.png)
+
+Let's look at each of the options in more detail:
+
+- __Linear__ The transitions between keyframes are linearly interpolated, as
+shown in red on the graph below. This means that an animation can appear to
+speed up and slow down, as the animation deltas vary.
+- __Discrete__ The transitions are instantaneous at the end of each keyframe
+duration, as shown in blue on the graph. In this case there is effectively no
+animation - just jumps between the keyframe values.
+- __Paced__ A simple algorithm which attempts to maintain a constant velocity
+between keyframe animation points.
+- __Cubic__ A cubic spline is drawn between the keyframe points, and then the
+animation occurs along this line - as demonstrated in green. This could result
+in animations initially going in the opposite direction to that you expect.
+- __CubicPaced__ This ignores the timings specified in the keyframe animations
+and instead forces a constant velocity between the different keyframe locations.
+A similar concept is demonstrated in pink on the graph. This will result in a
+smooth looking animation, with constant velocity, but it will ignore the timings
+you initially requested.
+
+I would suggest that other than discrete, it's worth playing around with the
+different options in your specific example. Since the algorithms are complete
+black-boxes, and you have no control over their parameters, trying to fully
+understand their operation is somewhat futile. An empirical approach to option
+selection will be more fruitful in this case (this isn't usually true - it's good
+to understand what the different options actually mean rather than guessing).
 
 
 ### Rotation Directions
@@ -171,7 +212,8 @@ as soon as there is an angle difference of greater than `π` then it will rotate
 in the opposite direction to that you'd like. At an angle difference of exactly
 `π`, the behavior will be undefined.
 
-PICTURE HERE
+![rotate1](img/keyframe-rotate1.png)
+![rotate2](img/keyframe-rotate2.png)
 
 In order to change the direction of rotation we can just reverse the key-frames
 i.e. starting at an angle of `0` we then move to `4π/3`, followed by `2π/3`
