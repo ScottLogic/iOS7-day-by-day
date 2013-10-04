@@ -25,13 +25,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    _animationInteractor = [[SCFlipAnimationInteractor alloc] initWithViewController:self];
-    _flipAnimation = [[SCFlipAnimation alloc] initForDismissal:NO];
+    _animationInteractor = [SCFlipAnimationInteractor new];
+    _flipAnimation = [SCFlipAnimation new];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.view.window addGestureRecognizer:_animationInteractor.gestureRecogniser];
+    // Add the gesture recogniser to the window first render time
+    if (![self.view.window.gestureRecognizers containsObject:_animationInteractor.gestureRecogniser]) {
+        [self.view.window addGestureRecognizer:_animationInteractor.gestureRecogniser];
+    }
+    // Set the recipeint of the interactor
+    _animationInteractor.presentingVC = self;
 }
 
 
@@ -41,9 +46,9 @@
         // Set the delegate
         SCModalViewController *vc = (SCModalViewController *)segue.destinationViewController;
         vc.transitioningDelegate = self;
+        vc.interactor = _animationInteractor;
     }
 }
-
 
 #pragma mark - SCInteractiveTransitionViewControllerDelegate methods
 - (void)proceedToNextViewController
@@ -54,12 +59,14 @@
 #pragma mark - UIViewControllerTransitioningDelegate
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
+    _flipAnimation.dismissal = NO;
     return _flipAnimation;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    return nil;
+    _flipAnimation.dismissal = YES;
+    return _flipAnimation;
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator
@@ -69,7 +76,7 @@
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator
 {
-    return nil;
+    return _animationInteractor;
 }
 
 @end

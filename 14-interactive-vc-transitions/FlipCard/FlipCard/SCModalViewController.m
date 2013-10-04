@@ -11,13 +11,20 @@
 @implementation SCModalViewController
 
 #pragma mark - View Lifecycle
-- (void)viewDidLoad
+
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Reset which view controller should be the receipient of the
+    // interactor's transition
+    self.interactor.presentingVC = self;
 }
 
 - (IBAction)handleDismissPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)proceedToNextViewController
+{
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

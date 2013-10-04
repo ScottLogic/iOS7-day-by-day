@@ -8,9 +8,7 @@
 
 #import "SCFlipAnimationInteractor.h"
 
-@interface SCFlipAnimationInteractor () {
-    UIViewController<SCInteractiveTransitionViewControllerDelegate>* _vc;
-}
+@interface SCFlipAnimationInteractor ()
 
 @property (nonatomic, strong, readwrite) UIPanGestureRecognizer *gestureRecogniser;
 
@@ -19,15 +17,15 @@
 
 @implementation SCFlipAnimationInteractor
 
-- (instancetype)initWithViewController:(UIViewController<SCInteractiveTransitionViewControllerDelegate> *)vc
+- (instancetype)init
 {
     self = [super init];
-    if(self) {
-        _vc = vc;
+    if (self) {
         self.gestureRecogniser = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     }
     return self;
 }
+
 
 #pragma mark - Gesture recognition
 - (void)handlePan:(UIPanGestureRecognizer *)pgr
@@ -37,24 +35,19 @@
     CGFloat percentage  = fabs(translation.y / CGRectGetHeight(pgr.view.bounds));
     switch (pgr.state) {
         case UIGestureRecognizerStateBegan:
-            NSLog(@"Begin");
-            [_vc proceedToNextViewController];
+            [self.presentingVC proceedToNextViewController];
             break;
             
         case UIGestureRecognizerStateChanged: {
-            NSLog(@"%f", percentage);
             [self updateInteractiveTransition:percentage];
             break;
         }
             
         case UIGestureRecognizerStateEnded:
-            NSLog(@"finished");
             [self finishInteractiveTransition];
-            //[pgr.view removeGestureRecognizer:pgr];
             break;
             
         case UIGestureRecognizerStateCancelled:
-            NSLog(@"cancelled");
             [self cancelInteractiveTransition];
             
         default:

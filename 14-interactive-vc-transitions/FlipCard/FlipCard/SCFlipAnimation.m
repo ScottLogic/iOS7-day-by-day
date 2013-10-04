@@ -10,15 +10,6 @@
 
 @implementation SCFlipAnimation
 
-- (instancetype)initForDismissal:(BOOL)dismissal
-{
-    self = [super init];
-    if (self) {
-        self.dismissal = dismissal;
-    }
-    return self;
-}
-
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     // Get the respective view controllers

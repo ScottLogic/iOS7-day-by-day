@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SCInteractiveTransitionViewControllerDelegate.h"
+#import "SCFlipAnimationInteractor.h"
 
-@interface SCModalViewController : UIViewController
+@interface SCModalViewController : UIViewController <SCInteractiveTransitionViewControllerDelegate>
 
 - (IBAction)handleDismissPressed:(id)sender;
+
+@property (nonatomic, weak) SCFlipAnimationInteractor *interactor;
 
 @end

@@ -12,6 +12,4 @@
 
 @property (nonatomic, assign) BOOL dismissal;
 
-- (instancetype)initForDismissal:(BOOL)dismissal;
-
 @end
