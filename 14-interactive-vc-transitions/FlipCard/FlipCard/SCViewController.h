@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SCInteractiveTransitionViewControllerDelegate.h"
 
-@interface SCViewController : UIViewController <SCInteractiveTransitionViewControllerDelegate>
+@interface SCViewController : UIViewController
 
 @end

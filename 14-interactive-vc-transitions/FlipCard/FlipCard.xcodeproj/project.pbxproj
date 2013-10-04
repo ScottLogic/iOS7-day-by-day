@@ -22,7 +22,6 @@
 		225674C117E35B5F00F39CCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 225674BF17E35B5F00F39CCF /* InfoPlist.strings */; };
 		225674C317E35B5F00F39CCF /* FlipCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225674C217E35B5F00F39CCF /* FlipCardTests.m */; };
 		225674D017E368B400F39CCF /* SCModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225674CF17E368B400F39CCF /* SCModalViewController.m */; };
-		225674D317E3777E00F39CCF /* SCModalTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225674D217E3777E00F39CCF /* SCModalTransitioningDelegate.m */; };
 		225674D617E3790500F39CCF /* SCFlipAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 225674D517E3790500F39CCF /* SCFlipAnimation.m */; };
 		225674D917E38BB700F39CCF /* SCFlipAnimationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 225674D817E38BB700F39CCF /* SCFlipAnimationInteractor.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22499CAD17FEAE6A00DE34D8 /* SCInteractiveTransitionViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCInteractiveTransitionViewControllerDelegate.h; sourceTree = "<group>"; };
 		2256749417E35B5F00F39CCF /* FlipCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2256749717E35B5F00F39CCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2256749917E35B5F00F39CCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,13 +59,10 @@
 		225674C217E35B5F00F39CCF /* FlipCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipCardTests.m; sourceTree = "<group>"; };
 		225674CE17E368B400F39CCF /* SCModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCModalViewController.h; sourceTree = "<group>"; };
 		225674CF17E368B400F39CCF /* SCModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCModalViewController.m; sourceTree = "<group>"; };
-		225674D117E3777E00F39CCF /* SCModalTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCModalTransitioningDelegate.h; sourceTree = "<group>"; };
-		225674D217E3777E00F39CCF /* SCModalTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCModalTransitioningDelegate.m; sourceTree = "<group>"; };
 		225674D417E3790500F39CCF /* SCFlipAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFlipAnimation.h; sourceTree = "<group>"; };
 		225674D517E3790500F39CCF /* SCFlipAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFlipAnimation.m; sourceTree = "<group>"; };
 		225674D717E38BB700F39CCF /* SCFlipAnimationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFlipAnimationInteractor.h; sourceTree = "<group>"; };
 		225674D817E38BB700F39CCF /* SCFlipAnimationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFlipAnimationInteractor.m; sourceTree = "<group>"; };
-		225674DA17E4267E00F39CCF /* SCInteractiveTransitionViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCInteractiveTransitionViewControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,13 +176,11 @@
 		225674CD17E3643900F39CCF /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				225674D117E3777E00F39CCF /* SCModalTransitioningDelegate.h */,
-				225674D217E3777E00F39CCF /* SCModalTransitioningDelegate.m */,
 				225674D417E3790500F39CCF /* SCFlipAnimation.h */,
 				225674D517E3790500F39CCF /* SCFlipAnimation.m */,
 				225674D717E38BB700F39CCF /* SCFlipAnimationInteractor.h */,
 				225674D817E38BB700F39CCF /* SCFlipAnimationInteractor.m */,
-				225674DA17E4267E00F39CCF /* SCInteractiveTransitionViewControllerDelegate.h */,
+				22499CAD17FEAE6A00DE34D8 /* SCInteractiveTransitionViewControllerDelegate.h */,
 			);
 			name = Transitions;
 			sourceTree = "<group>";
@@ -289,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				225674D017E368B400F39CCF /* SCModalViewController.m in Sources */,
-				225674D317E3777E00F39CCF /* SCModalTransitioningDelegate.m in Sources */,
 				225674A817E35B5F00F39CCF /* SCAppDelegate.m in Sources */,
 				225674AE17E35B5F00F39CCF /* SCViewController.m in Sources */,
 				225674D917E38BB700F39CCF /* SCFlipAnimationInteractor.m in Sources */,
@@ -503,6 +497,7 @@
 				225674C817E35B5F00F39CCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		225674C917E35B5F00F39CCF /* Build configuration list for PBXNativeTarget "FlipCardTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +506,7 @@
 				225674CB17E35B5F00F39CCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

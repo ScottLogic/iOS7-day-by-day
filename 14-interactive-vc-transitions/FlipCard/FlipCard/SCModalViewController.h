@@ -7,19 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SCInteractiveTransitionViewControllerDelegate.h"
 
-@protocol SCModalViewControllerDelegate <NSObject>
+@interface SCModalViewController : UIViewController
 
-@required
-- (void)dismissModalVC;
-
-@end
-
-
-@interface SCModalViewController : UIViewController <SCInteractiveTransitionViewControllerDelegate>
-
-@property (nonatomic, weak) id<SCModalViewControllerDelegate> delegate;
-@property (nonatomic, weak) id<UIViewControllerInteractiveTransitioning> interactor;
+- (IBAction)handleDismissPressed:(id)sender;
 
 @end

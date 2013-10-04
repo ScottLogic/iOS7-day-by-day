@@ -9,9 +9,12 @@
 #import "SCViewController.h"
 #import "SCModalViewController.h"
 #import "SCFlipAnimationInteractor.h"
+#import "SCFlipAnimation.h"
+#import "SCInteractiveTransitionViewControllerDelegate.h"
 
-@interface SCViewController () <SCModalViewControllerDelegate> {
+@interface SCViewController () <SCInteractiveTransitionViewControllerDelegate, UIViewControllerTransitioningDelegate> {
     SCFlipAnimationInteractor *_animationInteractor;
+    SCFlipAnimation *_flipAnimation;
 }
 
 @end
@@ -23,8 +26,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     _animationInteractor = [[SCFlipAnimationInteractor alloc] initWithViewController:self];
-    // Add the gesture recogniser
-    //[self.view.window addGestureRecognizer:_animationInteractor.gestureRecogniser];
+    _flipAnimation = [[SCFlipAnimation alloc] initForDismissal:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -38,23 +40,36 @@
     if([segue.destinationViewController isKindOfClass:[SCModalViewController class]]) {
         // Set the delegate
         SCModalViewController *vc = (SCModalViewController *)segue.destinationViewController;
-        vc.delegate = self;
+        vc.transitioningDelegate = self;
     }
 }
 
-#pragma mark - SCModalViewControllerDelegate
-- (void)dismissModalVC
-{
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
 
 #pragma mark - SCInteractiveTransitionViewControllerDelegate methods
 - (void)proceedToNextViewController
 {
-    SCModalViewController *vc = [SCModalViewController new];
-    vc.delegate = self;
-    vc.interactor = _animationInteractor;
-    [self presentViewController:vc animated:YES completion:NULL];
+    [self performSegueWithIdentifier:@"displayModal" sender:self];
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return _flipAnimation;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return nil;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator
+{
+    return _animationInteractor;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator
+{
+    return nil;
 }
 
 @end
