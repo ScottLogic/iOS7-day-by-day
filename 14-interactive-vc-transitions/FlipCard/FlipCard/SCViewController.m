@@ -71,12 +71,12 @@
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator
 {
-    return _animationInteractor;
+    return _animationInteractor.interactionInProgress ? _animationInteractor : nil;
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator
 {
-    return _animationInteractor;
+    return _animationInteractor.interactionInProgress ? _animationInteractor : nil;
 }
 
 @end

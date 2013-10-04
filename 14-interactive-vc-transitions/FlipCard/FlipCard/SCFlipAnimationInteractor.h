@@ -12,6 +12,7 @@
 @interface SCFlipAnimationInteractor : UIPercentDrivenInteractiveTransition
 
 @property (nonatomic, strong, readonly) UIPanGestureRecognizer *gestureRecogniser;
+@property (nonatomic, assign, readonly) BOOL interactionInProgress;
 @property (nonatomic, weak) UIViewController<SCInteractiveTransitionViewControllerDelegate> *presentingVC;
 
 @end

@@ -11,6 +11,7 @@
 @interface SCFlipAnimationInteractor ()
 
 @property (nonatomic, strong, readwrite) UIPanGestureRecognizer *gestureRecogniser;
+@property (nonatomic, assign, readwrite) BOOL interactionInProgress;
 
 @end
 
@@ -34,6 +35,7 @@
     CGFloat percentage  = fabs(translation.y / CGRectGetHeight(pgr.view.bounds));
     switch (pgr.state) {
         case UIGestureRecognizerStateBegan:
+            self.interactionInProgress = YES;
             [self.presentingVC proceedToNextViewController];
             break;
             
@@ -43,16 +45,17 @@
         }
             
         case UIGestureRecognizerStateEnded:
-            NSLog(@"%f", percentage);
             if(percentage < 0.5) {
                 [self cancelInteractiveTransition];
             } else {
                 [self finishInteractiveTransition];
             }
+            self.interactionInProgress = NO;
             break;
             
         case UIGestureRecognizerStateCancelled:
             [self cancelInteractiveTransition];
+            self.interactionInProgress = NO;
             
         default:
             break;
