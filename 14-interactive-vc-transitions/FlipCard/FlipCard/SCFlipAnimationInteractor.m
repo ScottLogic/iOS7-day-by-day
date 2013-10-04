@@ -30,7 +30,6 @@
 #pragma mark - Gesture recognition
 - (void)handlePan:(UIPanGestureRecognizer *)pgr
 {
-    NSLog(@"panning");
     CGPoint translation = [pgr translationInView:pgr.view];
     CGFloat percentage  = fabs(translation.y / CGRectGetHeight(pgr.view.bounds));
     switch (pgr.state) {
@@ -44,7 +43,12 @@
         }
             
         case UIGestureRecognizerStateEnded:
-            [self finishInteractiveTransition];
+            NSLog(@"%f", percentage);
+            if(percentage < 0.5) {
+                [self cancelInteractiveTransition];
+            } else {
+                [self finishInteractiveTransition];
+            }
             break;
             
         case UIGestureRecognizerStateCancelled:
