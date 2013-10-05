@@ -101,7 +101,9 @@ present and dismiss a modal view controller. There is a standard flip transition
 which would could use, but we're interested in using custom animations, so let's
 add our custom transition animation.
 
-PICTURES HERE
+![main](img/interactive-main.png)
+![default](img/interactive-default.png)
+![modal](img/interactive-modal.png)
 
 In day 10 we were controlling the transitions of a navigation controller, so we
 implemented the `UINavigationControllerDelegate` protocol. Here we're controlling
@@ -158,7 +160,10 @@ segue process, we can set this in the `prepareForSegue:sender:` method:
 If you run the app up now, then you should see that we've replaced the original
 slide animation with our custom vertical card-flip animation.
 
-PICTURES HERE
+![custom1](img/interactive-custom1.png)
+![custom2](img/interactive-custom2.png)
+![custom3](img/interactive-custom3.png)
+![custom4](img/interactive-custom4.png)
 
 
 ### Interactive transitioning
