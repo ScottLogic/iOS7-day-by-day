@@ -10,4 +10,6 @@
 
 @interface SCViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *subHeadingLabel;
+
 @end
