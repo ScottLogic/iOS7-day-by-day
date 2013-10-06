@@ -22,6 +22,8 @@
 		224D48E818011191006ED2A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 224D48E618011191006ED2A6 /* InfoPlist.strings */; };
 		224D48EA18011191006ED2A6 /* RouteMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48E918011191006ED2A6 /* RouteMasterTests.m */; };
 		224D48F4180113CE006ED2A6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48F3180113CE006ED2A6 /* MapKit.framework */; };
+		224D48F818015F0E006ED2A6 /* SCStepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48F718015F0E006ED2A6 /* SCStepsViewController.m */; };
+		224D48FB18015F24006ED2A6 /* SCIndividualStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48FA18015F24006ED2A6 /* SCIndividualStepViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		224D48E718011191006ED2A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		224D48E918011191006ED2A6 /* RouteMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouteMasterTests.m; sourceTree = "<group>"; };
 		224D48F3180113CE006ED2A6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		224D48F618015F0E006ED2A6 /* SCStepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStepsViewController.h; sourceTree = "<group>"; };
+		224D48F718015F0E006ED2A6 /* SCStepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCStepsViewController.m; sourceTree = "<group>"; };
+		224D48F918015F24006ED2A6 /* SCIndividualStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCIndividualStepViewController.h; sourceTree = "<group>"; };
+		224D48FA18015F24006ED2A6 /* SCIndividualStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCIndividualStepViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +122,10 @@
 		224D48C418011191006ED2A6 /* RouteMaster */ = {
 			isa = PBXGroup;
 			children = (
+				224D48F518015ED7006ED2A6 /* ViewControllers */,
 				224D48CD18011191006ED2A6 /* SCAppDelegate.h */,
 				224D48CE18011191006ED2A6 /* SCAppDelegate.m */,
 				224D48D018011191006ED2A6 /* Main.storyboard */,
-				224D48D318011191006ED2A6 /* SCViewController.h */,
-				224D48D418011191006ED2A6 /* SCViewController.m */,
 				224D48D618011191006ED2A6 /* Images.xcassets */,
 				224D48C518011191006ED2A6 /* Supporting Files */,
 			);
@@ -154,6 +159,19 @@
 				224D48E618011191006ED2A6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		224D48F518015ED7006ED2A6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				224D48D318011191006ED2A6 /* SCViewController.h */,
+				224D48D418011191006ED2A6 /* SCViewController.m */,
+				224D48F618015F0E006ED2A6 /* SCStepsViewController.h */,
+				224D48F718015F0E006ED2A6 /* SCStepsViewController.m */,
+				224D48F918015F24006ED2A6 /* SCIndividualStepViewController.h */,
+				224D48FA18015F24006ED2A6 /* SCIndividualStepViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224D48FB18015F24006ED2A6 /* SCIndividualStepViewController.m in Sources */,
 				224D48CF18011191006ED2A6 /* SCAppDelegate.m in Sources */,
 				224D48D518011191006ED2A6 /* SCViewController.m in Sources */,
+				224D48F818015F0E006ED2A6 /* SCStepsViewController.m in Sources */,
 				224D48CB18011191006ED2A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,12 +7,12 @@
 //
 
 #import "SCViewController.h"
+#import "SCStepsViewController.h"
 
 @interface SCViewController () <MKMapViewDelegate> {
-    MKPolylineRenderer *_routeRenderer;
     MKPolyline *_routeOverlay;
+    MKRoute *_currentRoute;
 }
-
 @end
 
 @implementation SCViewController
@@ -22,7 +22,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.activityIndicator.hidden = YES;
+    self.routeDetailsButton.hidden = YES;
+    self.routeDetailsButton.enabled = NO;
     self.mapView.delegate = self;
+    self.navigationItem.title = @"RouteMaster";
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -35,6 +38,7 @@
     self.activityIndicator.hidden = NO;
     [self.activityIndicator startAnimating];
     self.routeButton.enabled = NO;
+    self.routeDetailsButton.enabled = NO;
     
     // Make a directions request
     MKDirectionsRequest *directionsRequest = [MKDirectionsRequest new];
@@ -61,18 +65,29 @@
         }
         
         // So there wasn't an error - let's plot those routes
-        [self plotRoutesOnMap:response.routes];
+        self.routeDetailsButton.enabled = YES;
+        self.routeDetailsButton.hidden = NO;
+        _currentRoute = [response.routes firstObject];
+        [self plotRouteOnMap:_currentRoute];
     }];
 }
 
-- (void)plotRoutesOnMap:(NSArray*)routes
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[SCStepsViewController class]]) {
+        SCStepsViewController *vc = (SCStepsViewController *)segue.destinationViewController;
+        vc.route = _currentRoute;
+    }
+}
+
+#pragma mark - Utility Methods
+- (void)plotRouteOnMap:(MKRoute *)route
 {
     if(_routeOverlay) {
         [self.mapView removeOverlay:_routeOverlay];
     }
     
     // Create a new renderer
-    MKRoute *route = [routes firstObject];
     _routeOverlay = route.polyline;
     
     // Add it to the map
