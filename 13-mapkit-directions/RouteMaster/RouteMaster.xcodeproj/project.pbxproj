@@ -21,6 +21,7 @@
 		224D48E018011191006ED2A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48C218011191006ED2A6 /* UIKit.framework */; };
 		224D48E818011191006ED2A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 224D48E618011191006ED2A6 /* InfoPlist.strings */; };
 		224D48EA18011191006ED2A6 /* RouteMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48E918011191006ED2A6 /* RouteMasterTests.m */; };
+		224D48F4180113CE006ED2A6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48F3180113CE006ED2A6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		224D48E518011191006ED2A6 /* RouteMasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RouteMasterTests-Info.plist"; sourceTree = "<group>"; };
 		224D48E718011191006ED2A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		224D48E918011191006ED2A6 /* RouteMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouteMasterTests.m; sourceTree = "<group>"; };
+		224D48F3180113CE006ED2A6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			files = (
 				224D48C118011191006ED2A6 /* CoreGraphics.framework in Frameworks */,
 				224D48C318011191006ED2A6 /* UIKit.framework in Frameworks */,
+				224D48F4180113CE006ED2A6 /* MapKit.framework in Frameworks */,
 				224D48BF18011191006ED2A6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		224D48BD18011191006ED2A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				224D48F3180113CE006ED2A6 /* MapKit.framework */,
 				224D48BE18011191006ED2A6 /* Foundation.framework */,
 				224D48C018011191006ED2A6 /* CoreGraphics.framework */,
 				224D48C218011191006ED2A6 /* UIKit.framework */,
@@ -200,6 +204,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = shinobicontrols;
 				TargetAttributes = {
+					224D48BA18011191006ED2A6 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					224D48DB18011191006ED2A6 = {
 						TestTargetID = 224D48BA18011191006ED2A6;
 					};

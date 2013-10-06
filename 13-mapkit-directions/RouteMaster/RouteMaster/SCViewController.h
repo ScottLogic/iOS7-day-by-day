@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@import MapKit;
 
 @interface SCViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+- (IBAction)handleRoutePressed:(id)sender;
 @end
