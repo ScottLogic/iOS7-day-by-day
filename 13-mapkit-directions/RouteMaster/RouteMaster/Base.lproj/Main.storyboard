@@ -40,6 +40,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Pdk-3c-RWr" id="5kk-Ap-7t9"/>
                         <outlet property="mapView" destination="0fa-uD-z0s" id="Yuj-8l-yZJ"/>
+                        <outlet property="routeButton" destination="Vav-nh-l2v" id="45q-Vs-WoB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
