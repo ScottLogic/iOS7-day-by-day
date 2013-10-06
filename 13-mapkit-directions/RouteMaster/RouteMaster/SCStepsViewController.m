@@ -49,7 +49,6 @@
     // Configure the cell...
     cell.textLabel.text = [NSString stringWithFormat:@"%02d) %0.1fkm", indexPath.row, step.distance / 1000.0];
     cell.detailTextLabel.text = step.notice;
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
     return cell;
 }

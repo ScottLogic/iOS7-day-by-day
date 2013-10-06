@@ -80,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Kz5-7e-Jzk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Kz5-7e-Jzk">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kz5-7e-Jzk" id="Uhm-q7-e6x">
@@ -165,6 +165,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2mE-Y6-PHG"/>
                     <connections>
+                        <outlet property="distanceLabel" destination="Es0-29-hYS" id="HAn-Dq-W8T"/>
                         <outlet property="instructionsTextView" destination="QBD-oI-7FL" id="HAR-vz-Kpa"/>
                         <outlet property="mapView" destination="kT8-N8-PV7" id="F6p-Sd-YSB"/>
                     </connections>
