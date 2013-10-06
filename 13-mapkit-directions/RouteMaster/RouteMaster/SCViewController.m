@@ -87,7 +87,7 @@
         [self.mapView removeOverlay:_routeOverlay];
     }
     
-    // Create a new renderer
+    // Update the ivar
     _routeOverlay = route.polyline;
     
     // Add it to the map
