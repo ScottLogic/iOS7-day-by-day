@@ -39,18 +39,20 @@ There are 6 different text styles available in iOS7:
 As well as being able to specify the font via code, you can set it using
 interface builder:
 
-PICTURE HERE
+![IB](img/dynamic-type-storyboard.png)
 
 When combined with autolayout, using dynamic type means that a user can control
 the appearance of the text inside your app. There is a "Text Size" options screen
 within the settings screens which allows changing of the type size:
 
-PICTURE
+![Changing Size](img/dynamic-type-changing-size.png)
 
 There are a total of 7 different font sizes - the following shots demonstrate
 some of them:
 
-PICTURES
+![Small](img/dynamic-type-small.png)
+![Medium](img/dynamic-type-medium.png)
+![Large](img/dynamic-type-large.png)
 
 In future OS updates the specific font might change as the appearance of the
 operating system develops, but by adopting dynamic type you can be assured that
@@ -115,7 +117,7 @@ attributes. Other attributes which can be used include:
 This list is not exhaustive - `UIFontDescriptor` is incredibly powerful and brings
 iOS inline with many other text rendering engines used elsewhere.
 
-PICTURE
+![Font Descriptor](img/dynamic-type-font-descriptor.png)
 
 
 ### Conclusion
