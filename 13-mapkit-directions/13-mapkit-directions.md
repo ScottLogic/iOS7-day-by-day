@@ -27,6 +27,11 @@ URL. There are a couple of options for creating these - one of which is to use
 the user's current location:
 
     MKMapItem *source = [MKMapItem mapItemForCurrentLocation];
+    
+When the user fires up the app for the first time they will then be asked for
+permission to use their current location:
+
+![Allow location](img/mapkit-allow.png)
 
 You can also create a map item using a specific location using the
 `initWithPlacemark:` method, which brings us on to another MapKit class.
@@ -192,6 +197,8 @@ delegate method is called when the overlay is added to the map:
         self.mapView.delegate = self;
     }
 
+![Polyline Overlay](img/mapkit-route.png)
+
 ### Route steps
 
 As well as the polyline representing the route, we're also provided with an array
@@ -211,6 +218,10 @@ transport, so each step should have its own transport type.
 In the RouteMaster app accompanying today's post we populate a table view with
 the list of steps, and then show a new map view with the map for the section when
 requested.
+
+![Steps](img/mapkit-steps.png)
+![Step1](img/mapkit-step1.png)
+![Step2](img/mapkit-step2.png)
 
 ### Building RouteMaster
 
@@ -269,9 +280,15 @@ polyline as an overlay in exactly the same we did for the main view controller.
 
 The rest of the app is pretty self-explanatory, and if you run it up you should
 be provided with the best route from your current location (or simulated equivalent
-in the simulator) to the White House. Maybe not the most useful app, but with a
-sprinkling of CoreLocation, you could make your own directions app without too
-much difficulty.
+in the simulator) to the White House. You can change the simulated location in the
+Debug menu in Xcode, although it only seems to be possible to get routing results
+for a start location within the continental US (seems reasonable - driving across
+the Atlantic isn't that easy).
+
+![Simulate Location](img/mapkit-simulate-location.png)
+
+ Maybe not the most useful app, but with a sprinkling of CoreLocation, you could
+ make your own directions app without too much difficulty.
 
 
 ### Conclusion
