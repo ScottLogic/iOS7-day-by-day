@@ -11,5 +11,7 @@
 @interface SCViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *subHeadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *boldBodyTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *scriptTextLabel;
 
 @end
