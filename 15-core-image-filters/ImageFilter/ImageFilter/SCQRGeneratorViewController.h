@@ -1,5 +1,5 @@
 //
-//  SCFirstViewController.h
+//  SCSecondViewController.h
 //  ImageFilter
 //
 //  Created by Sam Davies on 08/10/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCFirstViewController : UIViewController
+@interface SCQRGeneratorViewController : UIViewController
 
 @end

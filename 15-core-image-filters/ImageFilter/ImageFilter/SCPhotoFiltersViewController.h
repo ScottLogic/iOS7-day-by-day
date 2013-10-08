@@ -1,5 +1,5 @@
 //
-//  SCSecondViewController.h
+//  SCFirstViewController.h
 //  ImageFilter
 //
 //  Created by Sam Davies on 08/10/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCSecondViewController : UIViewController
+@interface SCPhotoFiltersViewController : UICollectionViewController
 
 @end

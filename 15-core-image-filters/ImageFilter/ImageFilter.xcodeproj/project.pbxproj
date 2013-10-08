@@ -14,8 +14,8 @@
 		F47170BA18041D1600CC084A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170B918041D1600CC084A /* main.m */; };
 		F47170BE18041D1600CC084A /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170BD18041D1600CC084A /* SCAppDelegate.m */; };
 		F47170C118041D1600CC084A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47170BF18041D1600CC084A /* Main.storyboard */; };
-		F47170C418041D1600CC084A /* SCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170C318041D1600CC084A /* SCFirstViewController.m */; };
-		F47170C718041D1600CC084A /* SCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170C618041D1600CC084A /* SCSecondViewController.m */; };
+		F47170C418041D1600CC084A /* SCPhotoFiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170C318041D1600CC084A /* SCPhotoFiltersViewController.m */; };
+		F47170C718041D1600CC084A /* SCQRGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */; };
 		F47170C918041D1600CC084A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47170C818041D1600CC084A /* Images.xcassets */; };
 		F47170D018041D1600CC084A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170CF18041D1600CC084A /* XCTest.framework */; };
 		F47170D118041D1600CC084A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170AD18041D1600CC084A /* Foundation.framework */; };
@@ -46,10 +46,10 @@
 		F47170BC18041D1600CC084A /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
 		F47170BD18041D1600CC084A /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
 		F47170C018041D1600CC084A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F47170C218041D1600CC084A /* SCFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCFirstViewController.h; sourceTree = "<group>"; };
-		F47170C318041D1600CC084A /* SCFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCFirstViewController.m; sourceTree = "<group>"; };
-		F47170C518041D1600CC084A /* SCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSecondViewController.h; sourceTree = "<group>"; };
-		F47170C618041D1600CC084A /* SCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSecondViewController.m; sourceTree = "<group>"; };
+		F47170C218041D1600CC084A /* SCPhotoFiltersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCPhotoFiltersViewController.h; sourceTree = "<group>"; };
+		F47170C318041D1600CC084A /* SCPhotoFiltersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCPhotoFiltersViewController.m; sourceTree = "<group>"; };
+		F47170C518041D1600CC084A /* SCQRGeneratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCQRGeneratorViewController.h; sourceTree = "<group>"; };
+		F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCQRGeneratorViewController.m; sourceTree = "<group>"; };
 		F47170C818041D1600CC084A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F47170CE18041D1600CC084A /* ImageFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47170CF18041D1600CC084A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -115,13 +115,10 @@
 		F47170B318041D1600CC084A /* ImageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				F47170E518041E2100CC084A /* ViewControllers */,
 				F47170BC18041D1600CC084A /* SCAppDelegate.h */,
 				F47170BD18041D1600CC084A /* SCAppDelegate.m */,
 				F47170BF18041D1600CC084A /* Main.storyboard */,
-				F47170C218041D1600CC084A /* SCFirstViewController.h */,
-				F47170C318041D1600CC084A /* SCFirstViewController.m */,
-				F47170C518041D1600CC084A /* SCSecondViewController.h */,
-				F47170C618041D1600CC084A /* SCSecondViewController.m */,
 				F47170C818041D1600CC084A /* Images.xcassets */,
 				F47170B418041D1600CC084A /* Supporting Files */,
 			);
@@ -155,6 +152,17 @@
 				F47170D818041D1600CC084A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F47170E518041E2100CC084A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F47170C218041D1600CC084A /* SCPhotoFiltersViewController.h */,
+				F47170C318041D1600CC084A /* SCPhotoFiltersViewController.m */,
+				F47170C518041D1600CC084A /* SCQRGeneratorViewController.h */,
+				F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47170C718041D1600CC084A /* SCSecondViewController.m in Sources */,
-				F47170C418041D1600CC084A /* SCFirstViewController.m in Sources */,
+				F47170C718041D1600CC084A /* SCQRGeneratorViewController.m in Sources */,
+				F47170C418041D1600CC084A /* SCPhotoFiltersViewController.m in Sources */,
 				F47170BE18041D1600CC084A /* SCAppDelegate.m in Sources */,
 				F47170BA18041D1600CC084A /* main.m in Sources */,
 			);
