@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		224D48BF18011191006ED2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48BE18011191006ED2A6 /* Foundation.framework */; };
+		224D48C118011191006ED2A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48C018011191006ED2A6 /* CoreGraphics.framework */; };
+		224D48C318011191006ED2A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48C218011191006ED2A6 /* UIKit.framework */; };
+		224D48C918011191006ED2A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 224D48C718011191006ED2A6 /* InfoPlist.strings */; };
+		224D48CB18011191006ED2A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48CA18011191006ED2A6 /* main.m */; };
+		224D48CF18011191006ED2A6 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48CE18011191006ED2A6 /* SCAppDelegate.m */; };
+		224D48D218011191006ED2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224D48D018011191006ED2A6 /* Main.storyboard */; };
+		224D48D518011191006ED2A6 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48D418011191006ED2A6 /* SCViewController.m */; };
+		224D48D718011191006ED2A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224D48D618011191006ED2A6 /* Images.xcassets */; };
+		224D48DE18011191006ED2A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48DD18011191006ED2A6 /* XCTest.framework */; };
+		224D48DF18011191006ED2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48BE18011191006ED2A6 /* Foundation.framework */; };
+		224D48E018011191006ED2A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48C218011191006ED2A6 /* UIKit.framework */; };
+		224D48E818011191006ED2A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 224D48E618011191006ED2A6 /* InfoPlist.strings */; };
+		224D48EA18011191006ED2A6 /* RouteMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48E918011191006ED2A6 /* RouteMasterTests.m */; };
+		224D48F4180113CE006ED2A6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D48F3180113CE006ED2A6 /* MapKit.framework */; };
+		224D48F818015F0E006ED2A6 /* SCStepsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48F718015F0E006ED2A6 /* SCStepsViewController.m */; };
+		224D48FB18015F24006ED2A6 /* SCIndividualStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D48FA18015F24006ED2A6 /* SCIndividualStepViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		224D48E118011191006ED2A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 224D48B318011191006ED2A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 224D48BA18011191006ED2A6;
+			remoteInfo = RouteMaster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		224D48BB18011191006ED2A6 /* RouteMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		224D48BE18011191006ED2A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		224D48C018011191006ED2A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		224D48C218011191006ED2A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		224D48C618011191006ED2A6 /* RouteMaster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RouteMaster-Info.plist"; sourceTree = "<group>"; };
+		224D48C818011191006ED2A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		224D48CA18011191006ED2A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		224D48CC18011191006ED2A6 /* RouteMaster-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RouteMaster-Prefix.pch"; sourceTree = "<group>"; };
+		224D48CD18011191006ED2A6 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		224D48CE18011191006ED2A6 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		224D48D118011191006ED2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		224D48D318011191006ED2A6 /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		224D48D418011191006ED2A6 /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		224D48D618011191006ED2A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		224D48DC18011191006ED2A6 /* RouteMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouteMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		224D48DD18011191006ED2A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		224D48E518011191006ED2A6 /* RouteMasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RouteMasterTests-Info.plist"; sourceTree = "<group>"; };
+		224D48E718011191006ED2A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		224D48E918011191006ED2A6 /* RouteMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouteMasterTests.m; sourceTree = "<group>"; };
+		224D48F3180113CE006ED2A6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		224D48F618015F0E006ED2A6 /* SCStepsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStepsViewController.h; sourceTree = "<group>"; };
+		224D48F718015F0E006ED2A6 /* SCStepsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCStepsViewController.m; sourceTree = "<group>"; };
+		224D48F918015F24006ED2A6 /* SCIndividualStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCIndividualStepViewController.h; sourceTree = "<group>"; };
+		224D48FA18015F24006ED2A6 /* SCIndividualStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCIndividualStepViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		224D48B818011191006ED2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D48C118011191006ED2A6 /* CoreGraphics.framework in Frameworks */,
+				224D48C318011191006ED2A6 /* UIKit.framework in Frameworks */,
+				224D48F4180113CE006ED2A6 /* MapKit.framework in Frameworks */,
+				224D48BF18011191006ED2A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224D48D918011191006ED2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D48DE18011191006ED2A6 /* XCTest.framework in Frameworks */,
+				224D48E018011191006ED2A6 /* UIKit.framework in Frameworks */,
+				224D48DF18011191006ED2A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		224D48B218011191006ED2A6 = {
+			isa = PBXGroup;
+			children = (
+				224D48C418011191006ED2A6 /* RouteMaster */,
+				224D48E318011191006ED2A6 /* RouteMasterTests */,
+				224D48BD18011191006ED2A6 /* Frameworks */,
+				224D48BC18011191006ED2A6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		224D48BC18011191006ED2A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				224D48BB18011191006ED2A6 /* RouteMaster.app */,
+				224D48DC18011191006ED2A6 /* RouteMasterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		224D48BD18011191006ED2A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				224D48F3180113CE006ED2A6 /* MapKit.framework */,
+				224D48BE18011191006ED2A6 /* Foundation.framework */,
+				224D48C018011191006ED2A6 /* CoreGraphics.framework */,
+				224D48C218011191006ED2A6 /* UIKit.framework */,
+				224D48DD18011191006ED2A6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		224D48C418011191006ED2A6 /* RouteMaster */ = {
+			isa = PBXGroup;
+			children = (
+				224D48F518015ED7006ED2A6 /* ViewControllers */,
+				224D48CD18011191006ED2A6 /* SCAppDelegate.h */,
+				224D48CE18011191006ED2A6 /* SCAppDelegate.m */,
+				224D48D018011191006ED2A6 /* Main.storyboard */,
+				224D48D618011191006ED2A6 /* Images.xcassets */,
+				224D48C518011191006ED2A6 /* Supporting Files */,
+			);
+			path = RouteMaster;
+			sourceTree = "<group>";
+		};
+		224D48C518011191006ED2A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				224D48C618011191006ED2A6 /* RouteMaster-Info.plist */,
+				224D48C718011191006ED2A6 /* InfoPlist.strings */,
+				224D48CA18011191006ED2A6 /* main.m */,
+				224D48CC18011191006ED2A6 /* RouteMaster-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		224D48E318011191006ED2A6 /* RouteMasterTests */ = {
+			isa = PBXGroup;
+			children = (
+				224D48E918011191006ED2A6 /* RouteMasterTests.m */,
+				224D48E418011191006ED2A6 /* Supporting Files */,
+			);
+			path = RouteMasterTests;
+			sourceTree = "<group>";
+		};
+		224D48E418011191006ED2A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				224D48E518011191006ED2A6 /* RouteMasterTests-Info.plist */,
+				224D48E618011191006ED2A6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		224D48F518015ED7006ED2A6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				224D48D318011191006ED2A6 /* SCViewController.h */,
+				224D48D418011191006ED2A6 /* SCViewController.m */,
+				224D48F618015F0E006ED2A6 /* SCStepsViewController.h */,
+				224D48F718015F0E006ED2A6 /* SCStepsViewController.m */,
+				224D48F918015F24006ED2A6 /* SCIndividualStepViewController.h */,
+				224D48FA18015F24006ED2A6 /* SCIndividualStepViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		224D48BA18011191006ED2A6 /* RouteMaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224D48ED18011191006ED2A6 /* Build configuration list for PBXNativeTarget "RouteMaster" */;
+			buildPhases = (
+				224D48B718011191006ED2A6 /* Sources */,
+				224D48B818011191006ED2A6 /* Frameworks */,
+				224D48B918011191006ED2A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RouteMaster;
+			productName = RouteMaster;
+			productReference = 224D48BB18011191006ED2A6 /* RouteMaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		224D48DB18011191006ED2A6 /* RouteMasterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224D48F018011191006ED2A6 /* Build configuration list for PBXNativeTarget "RouteMasterTests" */;
+			buildPhases = (
+				224D48D818011191006ED2A6 /* Sources */,
+				224D48D918011191006ED2A6 /* Frameworks */,
+				224D48DA18011191006ED2A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				224D48E218011191006ED2A6 /* PBXTargetDependency */,
+			);
+			name = RouteMasterTests;
+			productName = RouteMasterTests;
+			productReference = 224D48DC18011191006ED2A6 /* RouteMasterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		224D48B318011191006ED2A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = shinobicontrols;
+				TargetAttributes = {
+					224D48BA18011191006ED2A6 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					224D48DB18011191006ED2A6 = {
+						TestTargetID = 224D48BA18011191006ED2A6;
+					};
+				};
+			};
+			buildConfigurationList = 224D48B618011191006ED2A6 /* Build configuration list for PBXProject "RouteMaster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 224D48B218011191006ED2A6;
+			productRefGroup = 224D48BC18011191006ED2A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				224D48BA18011191006ED2A6 /* RouteMaster */,
+				224D48DB18011191006ED2A6 /* RouteMasterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		224D48B918011191006ED2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D48D718011191006ED2A6 /* Images.xcassets in Resources */,
+				224D48C918011191006ED2A6 /* InfoPlist.strings in Resources */,
+				224D48D218011191006ED2A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224D48DA18011191006ED2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D48E818011191006ED2A6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		224D48B718011191006ED2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D48FB18015F24006ED2A6 /* SCIndividualStepViewController.m in Sources */,
+				224D48CF18011191006ED2A6 /* SCAppDelegate.m in Sources */,
+				224D48D518011191006ED2A6 /* SCViewController.m in Sources */,
+				224D48F818015F0E006ED2A6 /* SCStepsViewController.m in Sources */,
+				224D48CB18011191006ED2A6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224D48D818011191006ED2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224D48EA18011191006ED2A6 /* RouteMasterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		224D48E218011191006ED2A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 224D48BA18011191006ED2A6 /* RouteMaster */;
+			targetProxy = 224D48E118011191006ED2A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		224D48C718011191006ED2A6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224D48C818011191006ED2A6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		224D48D018011191006ED2A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224D48D118011191006ED2A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		224D48E618011191006ED2A6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224D48E718011191006ED2A6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		224D48EB18011191006ED2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		224D48EC18011191006ED2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		224D48EE18011191006ED2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RouteMaster/RouteMaster-Prefix.pch";
+				INFOPLIST_FILE = "RouteMaster/RouteMaster-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		224D48EF18011191006ED2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RouteMaster/RouteMaster-Prefix.pch";
+				INFOPLIST_FILE = "RouteMaster/RouteMaster-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		224D48F118011191006ED2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RouteMaster.app/RouteMaster";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RouteMaster/RouteMaster-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RouteMasterTests/RouteMasterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		224D48F218011191006ED2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RouteMaster.app/RouteMaster";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RouteMaster/RouteMaster-Prefix.pch";
+				INFOPLIST_FILE = "RouteMasterTests/RouteMasterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		224D48B618011191006ED2A6 /* Build configuration list for PBXProject "RouteMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224D48EB18011191006ED2A6 /* Debug */,
+				224D48EC18011191006ED2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224D48ED18011191006ED2A6 /* Build configuration list for PBXNativeTarget "RouteMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224D48EE18011191006ED2A6 /* Debug */,
+				224D48EF18011191006ED2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		224D48F018011191006ED2A6 /* Build configuration list for PBXNativeTarget "RouteMasterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224D48F118011191006ED2A6 /* Debug */,
+				224D48F218011191006ED2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 224D48B318011191006ED2A6 /* Project object */;
+}
