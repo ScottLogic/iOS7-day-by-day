@@ -14,7 +14,6 @@
 		F47170BA18041D1600CC084A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170B918041D1600CC084A /* main.m */; };
 		F47170BE18041D1600CC084A /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170BD18041D1600CC084A /* SCAppDelegate.m */; };
 		F47170C118041D1600CC084A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47170BF18041D1600CC084A /* Main.storyboard */; };
-		F47170C418041D1600CC084A /* SCPhotoFiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170C318041D1600CC084A /* SCPhotoFiltersViewController.m */; };
 		F47170C718041D1600CC084A /* SCQRGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */; };
 		F47170C918041D1600CC084A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47170C818041D1600CC084A /* Images.xcassets */; };
 		F47170D018041D1600CC084A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170CF18041D1600CC084A /* XCTest.framework */; };
@@ -22,6 +21,9 @@
 		F47170D218041D1600CC084A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170B118041D1600CC084A /* UIKit.framework */; };
 		F47170DA18041D1600CC084A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F47170D818041D1600CC084A /* InfoPlist.strings */; };
 		F47170DC18041D1600CC084A /* ImageFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170DB18041D1600CC084A /* ImageFilterTests.m */; };
+		F47170E7180445B800CC084A /* shinobi-badge-head@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47170E6180445B800CC084A /* shinobi-badge-head@2x.jpg */; };
+		F47170EA1804464500CC084A /* SCPhotoFiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170E91804464500CC084A /* SCPhotoFiltersViewController.m */; };
+		F480C7F718044864000A630C /* SCLabelledImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F480C7F618044864000A630C /* SCLabelledImageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +48,6 @@
 		F47170BC18041D1600CC084A /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
 		F47170BD18041D1600CC084A /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
 		F47170C018041D1600CC084A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F47170C218041D1600CC084A /* SCPhotoFiltersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCPhotoFiltersViewController.h; sourceTree = "<group>"; };
-		F47170C318041D1600CC084A /* SCPhotoFiltersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCPhotoFiltersViewController.m; sourceTree = "<group>"; };
 		F47170C518041D1600CC084A /* SCQRGeneratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCQRGeneratorViewController.h; sourceTree = "<group>"; };
 		F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCQRGeneratorViewController.m; sourceTree = "<group>"; };
 		F47170C818041D1600CC084A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -56,6 +56,11 @@
 		F47170D718041D1600CC084A /* ImageFilterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageFilterTests-Info.plist"; sourceTree = "<group>"; };
 		F47170D918041D1600CC084A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F47170DB18041D1600CC084A /* ImageFilterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageFilterTests.m; sourceTree = "<group>"; };
+		F47170E6180445B800CC084A /* shinobi-badge-head@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shinobi-badge-head@2x.jpg"; sourceTree = "<group>"; };
+		F47170E81804464500CC084A /* SCPhotoFiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPhotoFiltersViewController.h; sourceTree = "<group>"; };
+		F47170E91804464500CC084A /* SCPhotoFiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPhotoFiltersViewController.m; sourceTree = "<group>"; };
+		F480C7F518044864000A630C /* SCLabelledImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLabelledImageCell.h; sourceTree = "<group>"; };
+		F480C7F618044864000A630C /* SCLabelledImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLabelledImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,7 @@
 		F47170B318041D1600CC084A /* ImageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				F480C7F418044828000A630C /* Collection View */,
 				F47170E518041E2100CC084A /* ViewControllers */,
 				F47170BC18041D1600CC084A /* SCAppDelegate.h */,
 				F47170BD18041D1600CC084A /* SCAppDelegate.m */,
@@ -157,12 +163,22 @@
 		F47170E518041E2100CC084A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F47170C218041D1600CC084A /* SCPhotoFiltersViewController.h */,
-				F47170C318041D1600CC084A /* SCPhotoFiltersViewController.m */,
 				F47170C518041D1600CC084A /* SCQRGeneratorViewController.h */,
 				F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */,
+				F47170E81804464500CC084A /* SCPhotoFiltersViewController.h */,
+				F47170E91804464500CC084A /* SCPhotoFiltersViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F480C7F418044828000A630C /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				F47170E6180445B800CC084A /* shinobi-badge-head@2x.jpg */,
+				F480C7F518044864000A630C /* SCLabelledImageCell.h */,
+				F480C7F618044864000A630C /* SCLabelledImageCell.m */,
+			);
+			name = "Collection View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47170E7180445B800CC084A /* shinobi-badge-head@2x.jpg in Resources */,
 				F47170C918041D1600CC084A /* Images.xcassets in Resources */,
 				F47170B818041D1600CC084A /* InfoPlist.strings in Resources */,
 				F47170C118041D1600CC084A /* Main.storyboard in Resources */,
@@ -264,7 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47170C718041D1600CC084A /* SCQRGeneratorViewController.m in Sources */,
-				F47170C418041D1600CC084A /* SCPhotoFiltersViewController.m in Sources */,
+				F47170EA1804464500CC084A /* SCPhotoFiltersViewController.m in Sources */,
+				F480C7F718044864000A630C /* SCLabelledImageCell.m in Sources */,
 				F47170BE18041D1600CC084A /* SCAppDelegate.m in Sources */,
 				F47170BA18041D1600CC084A /* main.m in Sources */,
 			);
@@ -475,6 +493,7 @@
 				F47170E118041D1600CC084A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F47170E218041D1600CC084A /* Build configuration list for PBXNativeTarget "ImageFilterTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +502,7 @@
 				F47170E418041D1600CC084A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
