@@ -37,7 +37,7 @@
     CIImage *qrCode = [self createQRForString:stringToEncode];
     
     // Convert to an UIImage
-    UIImage *qrCodeImg = [self createUIImageFromCIImageViaCGGImage:qrCode];
+    UIImage *qrCodeImg = [self createNonInterpolatedUIImageFromCIImage:qrCode withScale:2*[[UIScreen mainScreen] scale]];
     
     // And push the image on to the screen
     self.qrImageView.image = qrCodeImg;
@@ -68,11 +68,22 @@
     self.stringTextField.enabled = enabled;
 }
 
-- (UIImage *)createUIImageFromCIImageViaCGGImage:(CIImage *)image
+- (UIImage *)createNonInterpolatedUIImageFromCIImage:(CIImage *)image withScale:(CGFloat)scale
 {
+    // Render the CIImage into a CGImage
     CGImageRef cgImage = [[CIContext contextWithOptions:nil] createCGImage:image fromRect:image.extent];
-    UIImage *newImage = [UIImage imageWithCGImage:cgImage];
+    
+    // Now we'll rescale using CoreGraphics
+    UIGraphicsBeginImageContext(CGSizeMake(image.extent.size.width * scale, image.extent.size.width * scale));
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    // We don't want to interpolate (since we've got a pixel-correct image)
+    CGContextSetInterpolationQuality(context, kCGInterpolationNone);
+    CGContextDrawImage(context, CGContextGetClipBoundingBox(context), cgImage);
+    // Get the image out
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    // Tidy up
+    UIGraphicsEndImageContext();
     CGImageRelease(cgImage);
-    return newImage;
+    return scaledImage;
 }
 @end
