@@ -10,4 +10,10 @@
 
 @interface SCQRGeneratorViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *qrImageView;
+@property (weak, nonatomic) IBOutlet UITextField *stringTextField;
+@property (weak, nonatomic) IBOutlet UIButton *generateButton;
+
+- (IBAction)handleGenerateButtonPressed:(id)sender;
+
 @end

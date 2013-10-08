@@ -50,9 +50,50 @@
                     <view key="view" contentMode="scaleToFill" id="gMD-aP-Fq6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ktn-mw-ROf">
+                                <rect key="frame" x="60" y="20" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="48x-zw-Iqy"/>
+                                    <constraint firstAttribute="height" constant="200" id="4aV-pD-Ybv"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBG-ab-MxP">
+                                <rect key="frame" x="20" y="228" width="209" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWv-QX-Xb0">
+                                <rect key="frame" x="237" y="228" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleGenerateButtonPressed:" destination="QUy-BD-bpt" eventType="touchUpInside" id="M8o-Th-i7l"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LBG-ab-MxP" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" constant="20" id="FgY-ey-e1J"/>
+                            <constraint firstItem="FWv-QX-Xb0" firstAttribute="top" secondItem="ktn-mw-ROf" secondAttribute="bottom" constant="8" id="Ons-ab-M3O"/>
+                            <constraint firstAttribute="trailing" secondItem="FWv-QX-Xb0" secondAttribute="trailing" constant="20" id="Pie-E9-bOF"/>
+                            <constraint firstItem="ktn-mw-ROf" firstAttribute="top" secondItem="z0M-FQ-uan" secondAttribute="bottom" id="SzP-Fj-npI"/>
+                            <constraint firstAttribute="centerX" secondItem="ktn-mw-ROf" secondAttribute="centerX" id="UJV-8z-KlI"/>
+                            <constraint firstItem="LBG-ab-MxP" firstAttribute="top" secondItem="ktn-mw-ROf" secondAttribute="bottom" constant="8" id="gzu-7H-CSK"/>
+                            <constraint firstItem="FWv-QX-Xb0" firstAttribute="leading" secondItem="LBG-ab-MxP" secondAttribute="trailing" constant="8" id="hTG-V3-qOD"/>
+                            <constraint firstItem="ktn-mw-ROf" firstAttribute="width" secondItem="LBG-ab-MxP" secondAttribute="width" constant="-9" id="uFZ-fR-dI5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="QR Generator" image="second" id="Z7h-1E-pvt"/>
+                    <connections>
+                        <outlet property="generateButton" destination="FWv-QX-Xb0" id="DdG-BU-lJC"/>
+                        <outlet property="qrImageView" destination="ktn-mw-ROf" id="Fg4-3R-HJF"/>
+                        <outlet property="stringTextField" destination="LBG-ab-MxP" id="hkw-Uj-t73"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
