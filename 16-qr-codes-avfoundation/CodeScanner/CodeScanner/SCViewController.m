@@ -58,6 +58,8 @@
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     // Have to add the output before setting metadata types
     [session addOutput:output];
+    // What different things can we register to recognise?
+    NSLog(@"%@", [output availableMetadataObjectTypes]);
     // We're only interested in QR Codes
     [output setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
     // This VC is the delegate. Please call us on the main queue
