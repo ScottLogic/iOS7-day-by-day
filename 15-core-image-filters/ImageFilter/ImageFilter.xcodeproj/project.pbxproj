@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F47170AE18041D1600CC084A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170AD18041D1600CC084A /* Foundation.framework */; };
+		F47170B018041D1600CC084A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170AF18041D1600CC084A /* CoreGraphics.framework */; };
+		F47170B218041D1600CC084A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170B118041D1600CC084A /* UIKit.framework */; };
+		F47170B818041D1600CC084A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F47170B618041D1600CC084A /* InfoPlist.strings */; };
+		F47170BA18041D1600CC084A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170B918041D1600CC084A /* main.m */; };
+		F47170BE18041D1600CC084A /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170BD18041D1600CC084A /* SCAppDelegate.m */; };
+		F47170C118041D1600CC084A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47170BF18041D1600CC084A /* Main.storyboard */; };
+		F47170C718041D1600CC084A /* SCQRGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */; };
+		F47170C918041D1600CC084A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47170C818041D1600CC084A /* Images.xcassets */; };
+		F47170D018041D1600CC084A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170CF18041D1600CC084A /* XCTest.framework */; };
+		F47170D118041D1600CC084A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170AD18041D1600CC084A /* Foundation.framework */; };
+		F47170D218041D1600CC084A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47170B118041D1600CC084A /* UIKit.framework */; };
+		F47170DA18041D1600CC084A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F47170D818041D1600CC084A /* InfoPlist.strings */; };
+		F47170DC18041D1600CC084A /* ImageFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170DB18041D1600CC084A /* ImageFilterTests.m */; };
+		F47170E7180445B800CC084A /* shinobi-badge-head@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47170E6180445B800CC084A /* shinobi-badge-head@2x.jpg */; };
+		F47170EA1804464500CC084A /* SCPhotoFiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47170E91804464500CC084A /* SCPhotoFiltersViewController.m */; };
+		F480C7F718044864000A630C /* SCLabelledImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F480C7F618044864000A630C /* SCLabelledImageCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F47170D318041D1600CC084A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F47170A218041D1600CC084A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F47170A918041D1600CC084A;
+			remoteInfo = ImageFilter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F47170AA18041D1600CC084A /* ImageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47170AD18041D1600CC084A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F47170AF18041D1600CC084A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F47170B118041D1600CC084A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F47170B518041D1600CC084A /* ImageFilter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageFilter-Info.plist"; sourceTree = "<group>"; };
+		F47170B718041D1600CC084A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F47170B918041D1600CC084A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F47170BB18041D1600CC084A /* ImageFilter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageFilter-Prefix.pch"; sourceTree = "<group>"; };
+		F47170BC18041D1600CC084A /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		F47170BD18041D1600CC084A /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		F47170C018041D1600CC084A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F47170C518041D1600CC084A /* SCQRGeneratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCQRGeneratorViewController.h; sourceTree = "<group>"; };
+		F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCQRGeneratorViewController.m; sourceTree = "<group>"; };
+		F47170C818041D1600CC084A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F47170CE18041D1600CC084A /* ImageFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47170CF18041D1600CC084A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F47170D718041D1600CC084A /* ImageFilterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageFilterTests-Info.plist"; sourceTree = "<group>"; };
+		F47170D918041D1600CC084A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F47170DB18041D1600CC084A /* ImageFilterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageFilterTests.m; sourceTree = "<group>"; };
+		F47170E6180445B800CC084A /* shinobi-badge-head@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shinobi-badge-head@2x.jpg"; sourceTree = "<group>"; };
+		F47170E81804464500CC084A /* SCPhotoFiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPhotoFiltersViewController.h; sourceTree = "<group>"; };
+		F47170E91804464500CC084A /* SCPhotoFiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPhotoFiltersViewController.m; sourceTree = "<group>"; };
+		F480C7F518044864000A630C /* SCLabelledImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLabelledImageCell.h; sourceTree = "<group>"; };
+		F480C7F618044864000A630C /* SCLabelledImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLabelledImageCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F47170A718041D1600CC084A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47170B018041D1600CC084A /* CoreGraphics.framework in Frameworks */,
+				F47170B218041D1600CC084A /* UIKit.framework in Frameworks */,
+				F47170AE18041D1600CC084A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47170CB18041D1600CC084A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47170D018041D1600CC084A /* XCTest.framework in Frameworks */,
+				F47170D218041D1600CC084A /* UIKit.framework in Frameworks */,
+				F47170D118041D1600CC084A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F47170A118041D1600CC084A = {
+			isa = PBXGroup;
+			children = (
+				F47170B318041D1600CC084A /* ImageFilter */,
+				F47170D518041D1600CC084A /* ImageFilterTests */,
+				F47170AC18041D1600CC084A /* Frameworks */,
+				F47170AB18041D1600CC084A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F47170AB18041D1600CC084A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F47170AA18041D1600CC084A /* ImageFilter.app */,
+				F47170CE18041D1600CC084A /* ImageFilterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F47170AC18041D1600CC084A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F47170AD18041D1600CC084A /* Foundation.framework */,
+				F47170AF18041D1600CC084A /* CoreGraphics.framework */,
+				F47170B118041D1600CC084A /* UIKit.framework */,
+				F47170CF18041D1600CC084A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F47170B318041D1600CC084A /* ImageFilter */ = {
+			isa = PBXGroup;
+			children = (
+				F480C7F418044828000A630C /* Collection View */,
+				F47170E518041E2100CC084A /* ViewControllers */,
+				F47170BC18041D1600CC084A /* SCAppDelegate.h */,
+				F47170BD18041D1600CC084A /* SCAppDelegate.m */,
+				F47170BF18041D1600CC084A /* Main.storyboard */,
+				F47170C818041D1600CC084A /* Images.xcassets */,
+				F47170B418041D1600CC084A /* Supporting Files */,
+			);
+			path = ImageFilter;
+			sourceTree = "<group>";
+		};
+		F47170B418041D1600CC084A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F47170B518041D1600CC084A /* ImageFilter-Info.plist */,
+				F47170B618041D1600CC084A /* InfoPlist.strings */,
+				F47170B918041D1600CC084A /* main.m */,
+				F47170BB18041D1600CC084A /* ImageFilter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F47170D518041D1600CC084A /* ImageFilterTests */ = {
+			isa = PBXGroup;
+			children = (
+				F47170DB18041D1600CC084A /* ImageFilterTests.m */,
+				F47170D618041D1600CC084A /* Supporting Files */,
+			);
+			path = ImageFilterTests;
+			sourceTree = "<group>";
+		};
+		F47170D618041D1600CC084A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F47170D718041D1600CC084A /* ImageFilterTests-Info.plist */,
+				F47170D818041D1600CC084A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F47170E518041E2100CC084A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F47170C518041D1600CC084A /* SCQRGeneratorViewController.h */,
+				F47170C618041D1600CC084A /* SCQRGeneratorViewController.m */,
+				F47170E81804464500CC084A /* SCPhotoFiltersViewController.h */,
+				F47170E91804464500CC084A /* SCPhotoFiltersViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F480C7F418044828000A630C /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				F47170E6180445B800CC084A /* shinobi-badge-head@2x.jpg */,
+				F480C7F518044864000A630C /* SCLabelledImageCell.h */,
+				F480C7F618044864000A630C /* SCLabelledImageCell.m */,
+			);
+			name = "Collection View";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F47170A918041D1600CC084A /* ImageFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F47170DF18041D1600CC084A /* Build configuration list for PBXNativeTarget "ImageFilter" */;
+			buildPhases = (
+				F47170A618041D1600CC084A /* Sources */,
+				F47170A718041D1600CC084A /* Frameworks */,
+				F47170A818041D1600CC084A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageFilter;
+			productName = ImageFilter;
+			productReference = F47170AA18041D1600CC084A /* ImageFilter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F47170CD18041D1600CC084A /* ImageFilterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F47170E218041D1600CC084A /* Build configuration list for PBXNativeTarget "ImageFilterTests" */;
+			buildPhases = (
+				F47170CA18041D1600CC084A /* Sources */,
+				F47170CB18041D1600CC084A /* Frameworks */,
+				F47170CC18041D1600CC084A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F47170D418041D1600CC084A /* PBXTargetDependency */,
+			);
+			name = ImageFilterTests;
+			productName = ImageFilterTests;
+			productReference = F47170CE18041D1600CC084A /* ImageFilterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F47170A218041D1600CC084A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Shinobi Controls";
+				TargetAttributes = {
+					F47170CD18041D1600CC084A = {
+						TestTargetID = F47170A918041D1600CC084A;
+					};
+				};
+			};
+			buildConfigurationList = F47170A518041D1600CC084A /* Build configuration list for PBXProject "ImageFilter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F47170A118041D1600CC084A;
+			productRefGroup = F47170AB18041D1600CC084A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F47170A918041D1600CC084A /* ImageFilter */,
+				F47170CD18041D1600CC084A /* ImageFilterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F47170A818041D1600CC084A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47170E7180445B800CC084A /* shinobi-badge-head@2x.jpg in Resources */,
+				F47170C918041D1600CC084A /* Images.xcassets in Resources */,
+				F47170B818041D1600CC084A /* InfoPlist.strings in Resources */,
+				F47170C118041D1600CC084A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47170CC18041D1600CC084A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47170DA18041D1600CC084A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F47170A618041D1600CC084A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47170C718041D1600CC084A /* SCQRGeneratorViewController.m in Sources */,
+				F47170EA1804464500CC084A /* SCPhotoFiltersViewController.m in Sources */,
+				F480C7F718044864000A630C /* SCLabelledImageCell.m in Sources */,
+				F47170BE18041D1600CC084A /* SCAppDelegate.m in Sources */,
+				F47170BA18041D1600CC084A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47170CA18041D1600CC084A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47170DC18041D1600CC084A /* ImageFilterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F47170D418041D1600CC084A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F47170A918041D1600CC084A /* ImageFilter */;
+			targetProxy = F47170D318041D1600CC084A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F47170B618041D1600CC084A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F47170B718041D1600CC084A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F47170BF18041D1600CC084A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F47170C018041D1600CC084A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F47170D818041D1600CC084A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F47170D918041D1600CC084A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F47170DD18041D1600CC084A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F47170DE18041D1600CC084A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F47170E018041D1600CC084A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageFilter/ImageFilter-Prefix.pch";
+				INFOPLIST_FILE = "ImageFilter/ImageFilter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F47170E118041D1600CC084A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageFilter/ImageFilter-Prefix.pch";
+				INFOPLIST_FILE = "ImageFilter/ImageFilter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F47170E318041D1600CC084A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ImageFilter.app/ImageFilter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageFilter/ImageFilter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ImageFilterTests/ImageFilterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F47170E418041D1600CC084A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ImageFilter.app/ImageFilter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageFilter/ImageFilter-Prefix.pch";
+				INFOPLIST_FILE = "ImageFilterTests/ImageFilterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F47170A518041D1600CC084A /* Build configuration list for PBXProject "ImageFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47170DD18041D1600CC084A /* Debug */,
+				F47170DE18041D1600CC084A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47170DF18041D1600CC084A /* Build configuration list for PBXNativeTarget "ImageFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47170E018041D1600CC084A /* Debug */,
+				F47170E118041D1600CC084A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47170E218041D1600CC084A /* Build configuration list for PBXNativeTarget "ImageFilterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47170E318041D1600CC084A /* Debug */,
+				F47170E418041D1600CC084A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F47170A218041D1600CC084A /* Project object */;
+}
