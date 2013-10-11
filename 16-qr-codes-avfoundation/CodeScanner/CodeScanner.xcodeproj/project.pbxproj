@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F402BCD7180550C200E1044F /* SCShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F402BCD6180550C200E1044F /* SCShapeView.m */; };
+		F480C80518045800000A630C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F480C80418045800000A630C /* Foundation.framework */; };
+		F480C80718045800000A630C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F480C80618045800000A630C /* CoreGraphics.framework */; };
+		F480C80918045800000A630C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F480C80818045800000A630C /* UIKit.framework */; };
+		F480C80F18045800000A630C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F480C80D18045800000A630C /* InfoPlist.strings */; };
+		F480C81118045800000A630C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F480C81018045800000A630C /* main.m */; };
+		F480C81518045800000A630C /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F480C81418045800000A630C /* SCAppDelegate.m */; };
+		F480C81818045800000A630C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F480C81618045800000A630C /* Main.storyboard */; };
+		F480C81B18045800000A630C /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F480C81A18045800000A630C /* SCViewController.m */; };
+		F480C81D18045800000A630C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F480C81C18045800000A630C /* Images.xcassets */; };
+		F480C82418045800000A630C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F480C82318045800000A630C /* XCTest.framework */; };
+		F480C82518045800000A630C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F480C80418045800000A630C /* Foundation.framework */; };
+		F480C82618045800000A630C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F480C80818045800000A630C /* UIKit.framework */; };
+		F480C82E18045800000A630C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F480C82C18045800000A630C /* InfoPlist.strings */; };
+		F480C83018045800000A630C /* CodeScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F480C82F18045800000A630C /* CodeScannerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F480C82718045800000A630C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F480C7F918045800000A630C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F480C80018045800000A630C;
+			remoteInfo = CodeScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F402BCD5180550C200E1044F /* SCShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCShapeView.h; sourceTree = "<group>"; };
+		F402BCD6180550C200E1044F /* SCShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCShapeView.m; sourceTree = "<group>"; };
+		F480C80118045800000A630C /* CodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F480C80418045800000A630C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F480C80618045800000A630C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F480C80818045800000A630C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F480C80C18045800000A630C /* CodeScanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeScanner-Info.plist"; sourceTree = "<group>"; };
+		F480C80E18045800000A630C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F480C81018045800000A630C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F480C81218045800000A630C /* CodeScanner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeScanner-Prefix.pch"; sourceTree = "<group>"; };
+		F480C81318045800000A630C /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		F480C81418045800000A630C /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		F480C81718045800000A630C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F480C81918045800000A630C /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		F480C81A18045800000A630C /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		F480C81C18045800000A630C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F480C82218045800000A630C /* CodeScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F480C82318045800000A630C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F480C82B18045800000A630C /* CodeScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeScannerTests-Info.plist"; sourceTree = "<group>"; };
+		F480C82D18045800000A630C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F480C82F18045800000A630C /* CodeScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeScannerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F480C7FE18045800000A630C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F480C80718045800000A630C /* CoreGraphics.framework in Frameworks */,
+				F480C80918045800000A630C /* UIKit.framework in Frameworks */,
+				F480C80518045800000A630C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F480C81F18045800000A630C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F480C82418045800000A630C /* XCTest.framework in Frameworks */,
+				F480C82618045800000A630C /* UIKit.framework in Frameworks */,
+				F480C82518045800000A630C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F402BCD8180550C700E1044F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F402BCD5180550C200E1044F /* SCShapeView.h */,
+				F402BCD6180550C200E1044F /* SCShapeView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F480C7F818045800000A630C = {
+			isa = PBXGroup;
+			children = (
+				F480C80A18045800000A630C /* CodeScanner */,
+				F480C82918045800000A630C /* CodeScannerTests */,
+				F480C80318045800000A630C /* Frameworks */,
+				F480C80218045800000A630C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F480C80218045800000A630C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F480C80118045800000A630C /* CodeScanner.app */,
+				F480C82218045800000A630C /* CodeScannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F480C80318045800000A630C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F480C80418045800000A630C /* Foundation.framework */,
+				F480C80618045800000A630C /* CoreGraphics.framework */,
+				F480C80818045800000A630C /* UIKit.framework */,
+				F480C82318045800000A630C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F480C80A18045800000A630C /* CodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				F402BCD8180550C700E1044F /* Views */,
+				F480C81318045800000A630C /* SCAppDelegate.h */,
+				F480C81418045800000A630C /* SCAppDelegate.m */,
+				F480C81618045800000A630C /* Main.storyboard */,
+				F480C81918045800000A630C /* SCViewController.h */,
+				F480C81A18045800000A630C /* SCViewController.m */,
+				F480C81C18045800000A630C /* Images.xcassets */,
+				F480C80B18045800000A630C /* Supporting Files */,
+			);
+			path = CodeScanner;
+			sourceTree = "<group>";
+		};
+		F480C80B18045800000A630C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F480C80C18045800000A630C /* CodeScanner-Info.plist */,
+				F480C80D18045800000A630C /* InfoPlist.strings */,
+				F480C81018045800000A630C /* main.m */,
+				F480C81218045800000A630C /* CodeScanner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F480C82918045800000A630C /* CodeScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F480C82F18045800000A630C /* CodeScannerTests.m */,
+				F480C82A18045800000A630C /* Supporting Files */,
+			);
+			path = CodeScannerTests;
+			sourceTree = "<group>";
+		};
+		F480C82A18045800000A630C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F480C82B18045800000A630C /* CodeScannerTests-Info.plist */,
+				F480C82C18045800000A630C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F480C80018045800000A630C /* CodeScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F480C83318045800000A630C /* Build configuration list for PBXNativeTarget "CodeScanner" */;
+			buildPhases = (
+				F480C7FD18045800000A630C /* Sources */,
+				F480C7FE18045800000A630C /* Frameworks */,
+				F480C7FF18045800000A630C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodeScanner;
+			productName = CodeScanner;
+			productReference = F480C80118045800000A630C /* CodeScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F480C82118045800000A630C /* CodeScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F480C83618045800000A630C /* Build configuration list for PBXNativeTarget "CodeScannerTests" */;
+			buildPhases = (
+				F480C81E18045800000A630C /* Sources */,
+				F480C81F18045800000A630C /* Frameworks */,
+				F480C82018045800000A630C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F480C82818045800000A630C /* PBXTargetDependency */,
+			);
+			name = CodeScannerTests;
+			productName = CodeScannerTests;
+			productReference = F480C82218045800000A630C /* CodeScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F480C7F918045800000A630C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Shinobi Controls";
+				TargetAttributes = {
+					F480C80018045800000A630C = {
+						DevelopmentTeam = XJ74287KY8;
+					};
+					F480C82118045800000A630C = {
+						TestTargetID = F480C80018045800000A630C;
+					};
+				};
+			};
+			buildConfigurationList = F480C7FC18045800000A630C /* Build configuration list for PBXProject "CodeScanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F480C7F818045800000A630C;
+			productRefGroup = F480C80218045800000A630C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F480C80018045800000A630C /* CodeScanner */,
+				F480C82118045800000A630C /* CodeScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F480C7FF18045800000A630C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F480C81D18045800000A630C /* Images.xcassets in Resources */,
+				F480C80F18045800000A630C /* InfoPlist.strings in Resources */,
+				F480C81818045800000A630C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F480C82018045800000A630C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F480C82E18045800000A630C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F480C7FD18045800000A630C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F480C81518045800000A630C /* SCAppDelegate.m in Sources */,
+				F480C81B18045800000A630C /* SCViewController.m in Sources */,
+				F402BCD7180550C200E1044F /* SCShapeView.m in Sources */,
+				F480C81118045800000A630C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F480C81E18045800000A630C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F480C83018045800000A630C /* CodeScannerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F480C82818045800000A630C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F480C80018045800000A630C /* CodeScanner */;
+			targetProxy = F480C82718045800000A630C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F480C80D18045800000A630C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F480C80E18045800000A630C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F480C81618045800000A630C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F480C81718045800000A630C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F480C82C18045800000A630C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F480C82D18045800000A630C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F480C83118045800000A630C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F480C83218045800000A630C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F480C83418045800000A630C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeScanner/CodeScanner-Prefix.pch";
+				INFOPLIST_FILE = "CodeScanner/CodeScanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F480C83518045800000A630C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeScanner/CodeScanner-Prefix.pch";
+				INFOPLIST_FILE = "CodeScanner/CodeScanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F480C83718045800000A630C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CodeScanner.app/CodeScanner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeScanner/CodeScanner-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CodeScannerTests/CodeScannerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F480C83818045800000A630C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CodeScanner.app/CodeScanner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeScanner/CodeScanner-Prefix.pch";
+				INFOPLIST_FILE = "CodeScannerTests/CodeScannerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F480C7FC18045800000A630C /* Build configuration list for PBXProject "CodeScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F480C83118045800000A630C /* Debug */,
+				F480C83218045800000A630C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F480C83318045800000A630C /* Build configuration list for PBXNativeTarget "CodeScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F480C83418045800000A630C /* Debug */,
+				F480C83518045800000A630C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F480C83618045800000A630C /* Build configuration list for PBXNativeTarget "CodeScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F480C83718045800000A630C /* Debug */,
+				F480C83818045800000A630C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F480C7F918045800000A630C /* Project object */;
+}
