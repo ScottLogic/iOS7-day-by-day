@@ -10,4 +10,13 @@
 
 @interface SCViewController : UIViewController
 
+- (IBAction)handleHidingButtonPressed:(id)sender;
+- (IBAction)handleStopButtonPressed:(id)sender;
+- (IBAction)handleSeekingButtonPressed:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *goButtons;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton;
+
 @end
