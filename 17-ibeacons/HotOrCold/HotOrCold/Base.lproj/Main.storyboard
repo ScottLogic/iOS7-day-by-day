@@ -56,6 +56,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UB-ZY-PhH">
+                                <rect key="frame" x="278" y="527" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -63,6 +69,8 @@
                             <constraint firstAttribute="centerY" secondItem="NvE-m1-1kh" secondAttribute="centerY" constant="-83" id="CdW-Ye-UTZ"/>
                             <constraint firstItem="NvE-m1-1kh" firstAttribute="top" secondItem="OsB-Fs-7RZ" secondAttribute="bottom" constant="8" id="F7i-C2-fdd"/>
                             <constraint firstAttribute="centerX" secondItem="NvE-m1-1kh" secondAttribute="centerX" constant="-0.5" id="SHm-hk-DAE"/>
+                            <constraint firstItem="f2U-cN-RBF" firstAttribute="top" secondItem="4UB-ZY-PhH" secondAttribute="bottom" constant="20" id="UC9-EO-gFX"/>
+                            <constraint firstAttribute="trailing" secondItem="4UB-ZY-PhH" secondAttribute="trailing" id="VZK-4S-JUV"/>
                             <constraint firstAttribute="centerX" secondItem="zoC-cz-oN0" secondAttribute="centerX" id="dhy-tn-fsA"/>
                             <constraint firstItem="1s7-qu-Mdq" firstAttribute="top" secondItem="zoC-cz-oN0" secondAttribute="bottom" constant="21" id="kOn-MT-Nyw"/>
                             <constraint firstAttribute="centerX" secondItem="OsB-Fs-7RZ" secondAttribute="centerX" id="kss-gU-vwy"/>
@@ -71,6 +79,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="signalStrengthLabel" destination="4UB-ZY-PhH" id="vBJ-eP-vyd"/>
                         <outlet property="statusLabel" destination="OsB-Fs-7RZ" id="lm2-Pn-Ri4"/>
                         <outlet property="stopButton" destination="NvE-m1-1kh" id="dO0-vb-1jp"/>
                         <outletCollection property="goButtons" destination="zoC-cz-oN0" id="vVV-fh-pca"/>

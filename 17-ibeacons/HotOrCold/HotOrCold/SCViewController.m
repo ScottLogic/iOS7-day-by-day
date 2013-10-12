@@ -29,6 +29,7 @@
     // Set current state
     [self setStatus:@""];
     [self setProcessActive:NO];
+    self.signalStrengthLabel.text = @"";
     // And create a UUID
     _beaconUUID = [[NSUUID alloc] initWithUUIDString:@"3B2DCB64-A300-4F62-8A11-F6E7A06E4BC0"];
     _cbPeripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
@@ -76,6 +77,7 @@
     [self setProcessActive:NO];
     self.view.backgroundColor = [UIColor whiteColor];
     self.statusLabel.textColor = [UIColor blackColor];
+    self.signalStrengthLabel.text = @"";
 }
 
 #pragma mark - CLLocationManagerDelegate methods
@@ -85,6 +87,8 @@
         // Let's just take the first beacon
         CLBeacon *beacon = [beacons firstObject];
         self.statusLabel.textColor = [UIColor whiteColor];
+        self.signalStrengthLabel.textColor = [UIColor whiteColor];
+        self.signalStrengthLabel.text = [NSString stringWithFormat:@"%ddB", beacon.rssi];
         switch (beacon.proximity) {
             case CLProximityUnknown:
                 self.view.backgroundColor = [UIColor blueColor];
