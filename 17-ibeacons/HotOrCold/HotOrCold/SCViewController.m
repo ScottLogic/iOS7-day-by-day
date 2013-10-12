@@ -10,9 +10,11 @@
 @import CoreBluetooth;
 @import CoreLocation;
 
-@interface SCViewController () <CBPeripheralManagerDelegate> {
+@interface SCViewController () <CBPeripheralManagerDelegate, CLLocationManagerDelegate> {
     CBPeripheralManager *_cbPeripheralManager;
     NSUUID *_beaconUUID;
+    CLBeaconRegion *_rangedRegion;
+    CLLocationManager *_clLocationManager;
 }
 
 @end
@@ -30,6 +32,9 @@
     // And create a UUID
     _beaconUUID = [[NSUUID alloc] initWithUUIDString:@"3B2DCB64-A300-4F62-8A11-F6E7A06E4BC0"];
     _cbPeripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
+    _clLocationManager = [CLLocationManager new];
+    _clLocationManager.delegate = self;
+    _rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:_beaconUUID identifier:@"com.shinobicontrols.HotOrCold"];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -46,9 +51,7 @@
     }
     
     // Now we construct a CLBeaconRegion to represent ourself
-    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:_beaconUUID
-                                            identifier:@"com.shinobicontrols.HotOrCold"];
-    NSDictionary *toBroadcast = [region peripheralDataWithMeasuredPower:@-60];
+    NSDictionary *toBroadcast = [_rangedRegion peripheralDataWithMeasuredPower:@-60];
     
     [_cbPeripheralManager startAdvertising:toBroadcast];
     
@@ -56,15 +59,57 @@
     [self setProcessActive:YES];
 }
 
+- (IBAction)handleSeekingButtonPressed:(id)sender {
+    [self setProcessActive:YES];
+    
+    [_clLocationManager startRangingBeaconsInRegion:_rangedRegion];
+    
+    
+}
+
 - (IBAction)handleStopButtonPressed:(id)sender {
     if (_cbPeripheralManager) {
         [_cbPeripheralManager stopAdvertising];
     }
+    [_clLocationManager stopRangingBeaconsInRegion:_rangedRegion];
     [self setStatus:@""];
     [self setProcessActive:NO];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.statusLabel.textColor = [UIColor blackColor];
 }
 
-- (IBAction)handleSeekingButtonPressed:(id)sender {
+#pragma mark - CLLocationManagerDelegate methods
+- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+{
+    if([region isEqual:_rangedRegion]) {
+        // Let's just take the first beacon
+        CLBeacon *beacon = [beacons firstObject];
+        self.statusLabel.textColor = [UIColor whiteColor];
+        switch (beacon.proximity) {
+            case CLProximityUnknown:
+                self.view.backgroundColor = [UIColor blueColor];
+                [self setStatus:@"Freezing!"];
+                break;
+                
+            case CLProximityFar:
+                self.view.backgroundColor = [UIColor blueColor];
+                [self setStatus:@"Cold!"];
+                break;
+                
+            case CLProximityImmediate:
+                self.view.backgroundColor = [UIColor purpleColor];
+                [self setStatus:@"Warmer"];
+                break;
+                
+            case CLProximityNear:
+                self.view.backgroundColor = [UIColor redColor];
+                [self setStatus:@"HOT!"];
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 #pragma mark - CBPeripheralManager delegate methods
