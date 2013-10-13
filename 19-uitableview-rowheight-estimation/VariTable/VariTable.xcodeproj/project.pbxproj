@@ -14,14 +14,15 @@
 		228DAA7A180AB9B4005241E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAA79180AB9B4005241E7 /* main.m */; };
 		228DAA7E180AB9B4005241E7 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAA7D180AB9B4005241E7 /* SCAppDelegate.m */; };
 		228DAA81180AB9B4005241E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228DAA7F180AB9B4005241E7 /* Main.storyboard */; };
-		228DAA84180AB9B4005241E7 /* SCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAA83180AB9B4005241E7 /* SCFirstViewController.m */; };
-		228DAA87180AB9B4005241E7 /* SCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAA86180AB9B4005241E7 /* SCSecondViewController.m */; };
 		228DAA89180AB9B4005241E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228DAA88180AB9B4005241E7 /* Images.xcassets */; };
 		228DAA90180AB9B5005241E7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DAA8F180AB9B5005241E7 /* XCTest.framework */; };
 		228DAA91180AB9B5005241E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DAA6D180AB9B4005241E7 /* Foundation.framework */; };
 		228DAA92180AB9B5005241E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DAA71180AB9B4005241E7 /* UIKit.framework */; };
 		228DAA9A180AB9B5005241E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 228DAA98180AB9B5005241E7 /* InfoPlist.strings */; };
 		228DAA9C180AB9B5005241E7 /* VariTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAA9B180AB9B5005241E7 /* VariTableTests.m */; };
+		228DAAA8180ABA73005241E7 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAAA7180ABA73005241E7 /* SCViewController.m */; };
+		228DAAAB180ABDA6005241E7 /* SCEstimatingTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAAAA180ABDA6005241E7 /* SCEstimatingTableViewDelegate.m */; };
+		228DAAAF180ABE0C005241E7 /* SCNonEstimatingTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAAAE180ABE0C005241E7 /* SCNonEstimatingTableViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +47,18 @@
 		228DAA7C180AB9B4005241E7 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
 		228DAA7D180AB9B4005241E7 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
 		228DAA80180AB9B4005241E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		228DAA82180AB9B4005241E7 /* SCFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCFirstViewController.h; sourceTree = "<group>"; };
-		228DAA83180AB9B4005241E7 /* SCFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCFirstViewController.m; sourceTree = "<group>"; };
-		228DAA85180AB9B4005241E7 /* SCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSecondViewController.h; sourceTree = "<group>"; };
-		228DAA86180AB9B4005241E7 /* SCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSecondViewController.m; sourceTree = "<group>"; };
 		228DAA88180AB9B4005241E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		228DAA8E180AB9B5005241E7 /* VariTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VariTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		228DAA8F180AB9B5005241E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		228DAA97180AB9B5005241E7 /* VariTableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VariTableTests-Info.plist"; sourceTree = "<group>"; };
 		228DAA99180AB9B5005241E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		228DAA9B180AB9B5005241E7 /* VariTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariTableTests.m; sourceTree = "<group>"; };
+		228DAAA6180ABA73005241E7 /* SCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		228DAAA7180ABA73005241E7 /* SCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		228DAAA9180ABDA6005241E7 /* SCEstimatingTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEstimatingTableViewDelegate.h; sourceTree = "<group>"; };
+		228DAAAA180ABDA6005241E7 /* SCEstimatingTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEstimatingTableViewDelegate.m; sourceTree = "<group>"; };
+		228DAAAD180ABE0C005241E7 /* SCNonEstimatingTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNonEstimatingTableViewDelegate.h; sourceTree = "<group>"; };
+		228DAAAE180ABE0C005241E7 /* SCNonEstimatingTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNonEstimatingTableViewDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +118,11 @@
 		228DAA73180AB9B4005241E7 /* VariTable */ = {
 			isa = PBXGroup;
 			children = (
+				228DAAAC180ABDAB005241E7 /* Delegates */,
+				228DAAA5180ABA57005241E7 /* ViewControllers */,
 				228DAA7C180AB9B4005241E7 /* SCAppDelegate.h */,
 				228DAA7D180AB9B4005241E7 /* SCAppDelegate.m */,
 				228DAA7F180AB9B4005241E7 /* Main.storyboard */,
-				228DAA82180AB9B4005241E7 /* SCFirstViewController.h */,
-				228DAA83180AB9B4005241E7 /* SCFirstViewController.m */,
-				228DAA85180AB9B4005241E7 /* SCSecondViewController.h */,
-				228DAA86180AB9B4005241E7 /* SCSecondViewController.m */,
 				228DAA88180AB9B4005241E7 /* Images.xcassets */,
 				228DAA74180AB9B4005241E7 /* Supporting Files */,
 			);
@@ -155,6 +156,26 @@
 				228DAA98180AB9B5005241E7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		228DAAA5180ABA57005241E7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				228DAAA6180ABA73005241E7 /* SCViewController.h */,
+				228DAAA7180ABA73005241E7 /* SCViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		228DAAAC180ABDAB005241E7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				228DAAA9180ABDA6005241E7 /* SCEstimatingTableViewDelegate.h */,
+				228DAAAA180ABDA6005241E7 /* SCEstimatingTableViewDelegate.m */,
+				228DAAAD180ABE0C005241E7 /* SCNonEstimatingTableViewDelegate.h */,
+				228DAAAE180ABE0C005241E7 /* SCNonEstimatingTableViewDelegate.m */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228DAA87180AB9B4005241E7 /* SCSecondViewController.m in Sources */,
-				228DAA84180AB9B4005241E7 /* SCFirstViewController.m in Sources */,
 				228DAA7E180AB9B4005241E7 /* SCAppDelegate.m in Sources */,
+				228DAAAF180ABE0C005241E7 /* SCNonEstimatingTableViewDelegate.m in Sources */,
+				228DAAA8180ABA73005241E7 /* SCViewController.m in Sources */,
 				228DAA7A180AB9B4005241E7 /* main.m in Sources */,
+				228DAAAB180ABDA6005241E7 /* SCEstimatingTableViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

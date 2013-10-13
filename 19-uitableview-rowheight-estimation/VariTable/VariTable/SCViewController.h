@@ -1,5 +1,5 @@
 //
-//  SCFirstViewController.h
+//  SCViewController.h
 //  VariTable
 //
 //  Created by Sam Davies on 13/10/2013.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCFirstViewController : UIViewController
+@interface SCViewController : UITableViewController
+
+@property (nonatomic, assign) BOOL enableEstimation;
 
 @end
