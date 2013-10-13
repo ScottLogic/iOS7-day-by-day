@@ -13,6 +13,8 @@
     AVCaptureVideoPreviewLayer *_previewLayer;
     AVCaptureStillImageOutput *_stillImageOutput;
     AVCaptureSession *_session;
+    CIDetector *_faceDetector;
+    CIContext *_ciContext;
 }
 
 @end
@@ -94,16 +96,25 @@
                 
                 NSData *jpegData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
                 
+                UIImage *smileyImage = [UIImage imageWithData:jpegData];
+                _previewLayer.hidden = YES;
+                [_session stopRunning];
+                self.imageView.hidden = NO;
+                self.imageView.image = smileyImage;
+                self.activityView.hidden = NO;
+                self.statusLabel.text = @"Processing";
+                self.statusLabel.hidden = NO;
+                
                 CIImage *image = [CIImage imageWithData:jpegData];
-                if([self imageContainsSmiles:image]) {
-                    _previewLayer.hidden = YES;
-                    [_session stopRunning];
-                    
-                    UIImage *smileyImage = [UIImage imageWithData:jpegData];
-                    self.imageView.hidden = NO;
-                    self.imageView.image = smileyImage;
+                [self imageContainsSmiles:image callback:^(BOOL happyFace) {
+                    if(happyFace) {
+                        self.statusLabel.text = @"Happy Face Found!";
+                    } else {
+                        self.statusLabel.text = @"Not a good photo...";
+                    }
+                    self.activityView.hidden = YES;
                     self.retakeButton.hidden = NO;
-                }
+                }];
             }];
         }
     }
@@ -113,13 +124,48 @@
 {
     _previewLayer.hidden = NO;
     self.imageView.hidden = YES;
+    self.statusLabel.hidden = YES;
+    self.activityView.hidden = YES;
     self.retakeButton.hidden = YES;
     [_session startRunning];
 }
 
-- (BOOL)imageContainsSmiles:(CIImage *)image
+- (void)imageContainsSmiles:(CIImage *)image callback:(void (^)(BOOL happyFace))callback
 {
-    return YES;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        if(!_ciContext) {
+            _ciContext = [CIContext contextWithOptions:nil];
+        }
+        
+        if(!_faceDetector) {
+            _faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:_ciContext options:nil];
+        }
+        
+        // Perform the detections
+        NSArray *features = [_faceDetector featuresInImage:image
+                                                   options:@{CIDetectorEyeBlink: @YES,
+                                                             CIDetectorSmile: @YES,
+                                                             CIDetectorImageOrientation: @5}];
+        NSLog(@"%d features", [features count]);
+        BOOL happyPicture = NO;
+        if([features count] > 0) {
+            happyPicture = YES;
+        }
+        for(CIFeature *feature in features) {
+            if ([feature isKindOfClass:[CIFaceFeature class]]) {
+                CIFaceFeature *faceFeature = (CIFaceFeature *)feature;
+                if(!faceFeature.hasSmile) {
+                    happyPicture = NO;
+                }
+                if(faceFeature.leftEyeClosed || faceFeature.rightEyeClosed) {
+                    happyPicture = NO;
+                }
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            callback(happyPicture);
+        });
+    });
 }
 
 @end

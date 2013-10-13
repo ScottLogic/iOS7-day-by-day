@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *retakeButton;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 - (IBAction)handleRestart:(id)sender;
 
