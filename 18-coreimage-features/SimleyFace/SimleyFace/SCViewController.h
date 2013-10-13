@@ -10,4 +10,9 @@
 
 @interface SCViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *retakeButton;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+- (IBAction)handleRestart:(id)sender;
+
 @end
