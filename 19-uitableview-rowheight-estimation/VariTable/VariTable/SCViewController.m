@@ -12,6 +12,7 @@
 
 @interface SCViewController () {
     id<UITableViewDelegate> _delegate;
+    NSDate *_loadStartTime;
 }
 
 @end
@@ -30,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _loadStartTime = [NSDate date];
+    
     if(self.enableEstimation) {
         _delegate = [[SCEstimatingTableViewDelegate alloc] initWithHeightBlock:^CGFloat(NSUInteger index) {
             return [self heightForRowAtIndex:index];
@@ -42,6 +45,13 @@
         }];
     }
     self.tableView.delegate = _delegate;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSDate *finishLoadTime = [NSDate date];
+    NSTimeInterval loadDuration = [finishLoadTime timeIntervalSinceDate:_loadStartTime];
+    NSLog(@"Total Load Time: %0.2f", loadDuration);
 }
 
 #pragma mark - Table view data source
