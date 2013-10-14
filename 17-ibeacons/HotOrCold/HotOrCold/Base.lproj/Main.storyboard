@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NJ8-A5-Ld1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FzP-yM-MtX">
+            <objects>
+                <viewController id="NJ8-A5-Ld1" customClass="SCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s3P-4E-CNu"/>
+                        <viewControllerLayoutGuide type="bottom" id="f2U-cN-RBF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fpB-4U-MtH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoC-cz-oN0">
+                                <rect key="frame" x="117" y="107" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Hiding!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleHidingButtonPressed:" destination="NJ8-A5-Ld1" eventType="touchUpInside" id="mgd-fd-gAa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvE-m1-1kh">
+                                <rect key="frame" x="142" y="352" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleStopButtonPressed:" destination="NJ8-A5-Ld1" eventType="touchUpInside" id="q2V-fM-bLu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-qu-Mdq">
+                                <rect key="frame" x="112" y="158" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Seeking!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleSeekingButtonPressed:" destination="NJ8-A5-Ld1" eventType="touchUpInside" id="F9f-Ww-PuB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsB-Fs-7RZ">
+                                <rect key="frame" x="99" y="224" width="122" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="oOS-PK-2vw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UB-ZY-PhH">
+                                <rect key="frame" x="278" y="527" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="1s7-qu-Mdq" secondAttribute="centerX" constant="-0.5" id="57n-4U-okh"/>
+                            <constraint firstAttribute="centerY" secondItem="NvE-m1-1kh" secondAttribute="centerY" constant="-83" id="CdW-Ye-UTZ"/>
+                            <constraint firstItem="NvE-m1-1kh" firstAttribute="top" secondItem="OsB-Fs-7RZ" secondAttribute="bottom" constant="8" id="F7i-C2-fdd"/>
+                            <constraint firstAttribute="centerX" secondItem="NvE-m1-1kh" secondAttribute="centerX" constant="-0.5" id="SHm-hk-DAE"/>
+                            <constraint firstItem="f2U-cN-RBF" firstAttribute="top" secondItem="4UB-ZY-PhH" secondAttribute="bottom" constant="20" id="UC9-EO-gFX"/>
+                            <constraint firstAttribute="trailing" secondItem="4UB-ZY-PhH" secondAttribute="trailing" id="VZK-4S-JUV"/>
+                            <constraint firstAttribute="centerX" secondItem="zoC-cz-oN0" secondAttribute="centerX" id="dhy-tn-fsA"/>
+                            <constraint firstItem="1s7-qu-Mdq" firstAttribute="top" secondItem="zoC-cz-oN0" secondAttribute="bottom" constant="21" id="kOn-MT-Nyw"/>
+                            <constraint firstAttribute="centerX" secondItem="OsB-Fs-7RZ" secondAttribute="centerX" id="kss-gU-vwy"/>
+                            <constraint firstItem="OsB-Fs-7RZ" firstAttribute="top" secondItem="1s7-qu-Mdq" secondAttribute="bottom" constant="36" id="mEY-Y5-fWu"/>
+                            <constraint firstAttribute="centerY" secondItem="OsB-Fs-7RZ" secondAttribute="centerY" id="yCv-kA-sOR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="signalStrengthLabel" destination="4UB-ZY-PhH" id="vBJ-eP-vyd"/>
+                        <outlet property="statusLabel" destination="OsB-Fs-7RZ" id="lm2-Pn-Ri4"/>
+                        <outlet property="stopButton" destination="NvE-m1-1kh" id="dO0-vb-1jp"/>
+                        <outletCollection property="goButtons" destination="zoC-cz-oN0" id="vVV-fh-pca"/>
+                        <outletCollection property="goButtons" destination="1s7-qu-Mdq" id="VHh-B6-lcd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhy-AA-jFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="102"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
