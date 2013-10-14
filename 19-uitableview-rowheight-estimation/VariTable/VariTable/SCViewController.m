@@ -49,9 +49,12 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    NSDate *finishLoadTime = [NSDate date];
-    NSTimeInterval loadDuration = [finishLoadTime timeIntervalSinceDate:_loadStartTime];
-    NSLog(@"Total Load Time: %0.2f", loadDuration);
+    if(_loadStartTime) {
+        NSDate *finishLoadTime = [NSDate date];
+        NSTimeInterval loadDuration = [finishLoadTime timeIntervalSinceDate:_loadStartTime];
+        NSLog(@"Total Load Time: %0.2f", loadDuration);
+    }
+    _loadStartTime = nil;
 }
 
 #pragma mark - Table view data source
