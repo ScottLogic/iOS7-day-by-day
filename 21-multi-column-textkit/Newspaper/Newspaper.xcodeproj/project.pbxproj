@@ -21,6 +21,7 @@
 		228DAB25180DEA30005241E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DAB07180DEA2F005241E7 /* UIKit.framework */; };
 		228DAB2D180DEA30005241E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 228DAB2B180DEA30005241E7 /* InfoPlist.strings */; };
 		228DAB2F180DEA30005241E7 /* NewspaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAB2E180DEA30005241E7 /* NewspaperTests.m */; };
+		228DAB39180DEDC3005241E7 /* content.txt in Resources */ = {isa = PBXBuildFile; fileRef = 228DAB38180DEDC3005241E7 /* content.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		228DAB2A180DEA30005241E7 /* NewspaperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewspaperTests-Info.plist"; sourceTree = "<group>"; };
 		228DAB2C180DEA30005241E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		228DAB2E180DEA30005241E7 /* NewspaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewspaperTests.m; sourceTree = "<group>"; };
+		228DAB38180DEDC3005241E7 /* content.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = content.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				228DAB19180DEA2F005241E7 /* SCViewController.m */,
 				228DAB1B180DEA2F005241E7 /* Images.xcassets */,
 				228DAB0A180DEA2F005241E7 /* Supporting Files */,
+				228DAB38180DEDC3005241E7 /* content.txt */,
 			);
 			path = Newspaper;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228DAB39180DEDC3005241E7 /* content.txt in Resources */,
 				228DAB1C180DEA2F005241E7 /* Images.xcassets in Resources */,
 				228DAB0E180DEA2F005241E7 /* InfoPlist.strings in Resources */,
 				228DAB17180DEA2F005241E7 /* Main.storyboard in Resources */,
