@@ -14,7 +14,7 @@
 		F41DA2BF180D45C6009A5076 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F41DA2BE180D45C6009A5076 /* main.m */; };
 		F41DA2C3180D45C6009A5076 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F41DA2C2180D45C6009A5076 /* SCAppDelegate.m */; };
 		F41DA2C6180D45C6009A5076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41DA2C4180D45C6009A5076 /* Main.storyboard */; };
-		F41DA2C9180D45C6009A5076 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41DA2C8180D45C6009A5076 /* SCViewController.m */; };
+		F41DA2C9180D45C6009A5076 /* SCScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41DA2C8180D45C6009A5076 /* SCScrollViewController.m */; };
 		F41DA2CB180D45C6009A5076 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41DA2CA180D45C6009A5076 /* Images.xcassets */; };
 		F41DA2D2180D45C6009A5076 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41DA2D1180D45C6009A5076 /* XCTest.framework */; };
 		F41DA2D3180D45C6009A5076 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41DA2B2180D45C6009A5076 /* Foundation.framework */; };
@@ -22,6 +22,7 @@
 		F41DA2DC180D45C6009A5076 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F41DA2DA180D45C6009A5076 /* InfoPlist.strings */; };
 		F41DA2DE180D45C6009A5076 /* ExtendedLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F41DA2DD180D45C6009A5076 /* ExtendedLayoutTests.m */; };
 		F41DA2E9180D5695009A5076 /* SCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41DA2E8180D5695009A5076 /* SCTableViewController.m */; };
+		F49D85C6180D65F00009A522 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49D85C5180D65F00009A522 /* SCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,8 @@
 		F41DA2C1180D45C6009A5076 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
 		F41DA2C2180D45C6009A5076 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
 		F41DA2C5180D45C6009A5076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F41DA2C7180D45C6009A5076 /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
-		F41DA2C8180D45C6009A5076 /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		F41DA2C7180D45C6009A5076 /* SCScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCScrollViewController.h; sourceTree = "<group>"; };
+		F41DA2C8180D45C6009A5076 /* SCScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCScrollViewController.m; sourceTree = "<group>"; };
 		F41DA2CA180D45C6009A5076 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F41DA2D0180D45C6009A5076 /* ExtendedLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtendedLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41DA2D1180D45C6009A5076 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,6 +57,8 @@
 		F41DA2DD180D45C6009A5076 /* ExtendedLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtendedLayoutTests.m; sourceTree = "<group>"; };
 		F41DA2E7180D5695009A5076 /* SCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewController.h; sourceTree = "<group>"; };
 		F41DA2E8180D5695009A5076 /* SCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewController.m; sourceTree = "<group>"; };
+		F49D85C4180D65F00009A522 /* SCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		F49D85C5180D65F00009A522 /* SCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +160,12 @@
 		F41DA2EA180D57E3009A5076 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F41DA2C7180D45C6009A5076 /* SCViewController.h */,
-				F41DA2C8180D45C6009A5076 /* SCViewController.m */,
+				F41DA2C7180D45C6009A5076 /* SCScrollViewController.h */,
+				F41DA2C8180D45C6009A5076 /* SCScrollViewController.m */,
 				F41DA2E7180D5695009A5076 /* SCTableViewController.h */,
 				F41DA2E8180D5695009A5076 /* SCTableViewController.m */,
+				F49D85C4180D65F00009A522 /* SCViewController.h */,
+				F49D85C5180D65F00009A522 /* SCViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -264,8 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41DA2C3180D45C6009A5076 /* SCAppDelegate.m in Sources */,
-				F41DA2C9180D45C6009A5076 /* SCViewController.m in Sources */,
+				F41DA2C9180D45C6009A5076 /* SCScrollViewController.m in Sources */,
 				F41DA2BF180D45C6009A5076 /* main.m in Sources */,
+				F49D85C6180D65F00009A522 /* SCViewController.m in Sources */,
 				F41DA2E9180D5695009A5076 /* SCTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +481,7 @@
 				F41DA2E3180D45C6009A5076 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F41DA2E4180D45C6009A5076 /* Build configuration list for PBXNativeTarget "ExtendedLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				F41DA2E6180D45C6009A5076 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

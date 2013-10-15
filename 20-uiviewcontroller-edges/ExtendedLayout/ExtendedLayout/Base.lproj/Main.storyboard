@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Scroll-->
+        <!--Scroll View Controller - Scroll-->
         <scene sceneID="qhB-aQ-uCh">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="DpU-MS-eoZ" customClass="SCViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="DpU-MS-eoZ" customClass="SCScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SUh-lW-4kV"/>
                         <viewControllerLayoutGuide type="bottom" id="H1m-Wh-fo8"/>
@@ -66,6 +66,41 @@
             </objects>
             <point key="canvasLocation" x="125" y="17"/>
         </scene>
+        <!--Navigation Controller - Nav/Simple-->
+        <scene sceneID="nrX-hh-hTJ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="2xF-cH-OtX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nav/Simple" id="I2F-xl-o9z"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LKN-aW-g27">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WJj-OX-vTt" kind="relationship" relationship="rootViewController" id="6pp-eu-Wl0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tvi-kt-EJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1447" y="768"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nw7-e7-Yey">
+            <objects>
+                <viewController id="WJj-OX-vTt" customClass="SCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vju-53-OL8"/>
+                        <viewControllerLayoutGuide type="bottom" id="hWK-tc-dZQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aHt-uF-AJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OPd-Oe-FT1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tp6-vq-yCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1000" y="758"/>
+        </scene>
         <!--Navigation Controller - Nav/Scroll-->
         <scene sceneID="I5u-07-aYc">
             <objects>
@@ -82,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="-389" y="770"/>
         </scene>
-        <!--View Controller-->
+        <!--Scroll View Controller-->
         <scene sceneID="2Qh-hV-kxA">
             <objects>
-                <viewController id="ijY-Va-BdK" customClass="SCViewController" sceneMemberID="viewController">
+                <viewController id="ijY-Va-BdK" customClass="SCScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Nm-h6-rXp"/>
                         <viewControllerLayoutGuide type="bottom" id="hvl-ja-Wbo"/>
@@ -168,7 +203,7 @@
         <scene sceneID="pNA-hK-jHO">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="qNo-Td-WFI" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Zyc-dw-GNF">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -179,6 +214,7 @@
                         <segue destination="9RB-7c-ldV" kind="relationship" relationship="viewControllers" id="nbg-qW-vMc"/>
                         <segue destination="fQo-Xo-m5z" kind="relationship" relationship="viewControllers" id="6Ft-8I-mvj"/>
                         <segue destination="hWq-XW-DjL" kind="relationship" relationship="viewControllers" id="T3W-Fl-QYT"/>
+                        <segue destination="2xF-cH-OtX" kind="relationship" relationship="viewControllers" id="GBL-ca-XIs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEk-qw-a08" userLabel="First Responder" sceneMemberID="firstResponder"/>
