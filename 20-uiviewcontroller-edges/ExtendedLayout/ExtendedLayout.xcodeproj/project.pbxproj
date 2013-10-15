@@ -21,6 +21,7 @@
 		F41DA2D4180D45C6009A5076 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41DA2B6180D45C6009A5076 /* UIKit.framework */; };
 		F41DA2DC180D45C6009A5076 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F41DA2DA180D45C6009A5076 /* InfoPlist.strings */; };
 		F41DA2DE180D45C6009A5076 /* ExtendedLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F41DA2DD180D45C6009A5076 /* ExtendedLayoutTests.m */; };
+		F41DA2E9180D5695009A5076 /* SCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41DA2E8180D5695009A5076 /* SCTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		F41DA2D9180D45C6009A5076 /* ExtendedLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExtendedLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		F41DA2DB180D45C6009A5076 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F41DA2DD180D45C6009A5076 /* ExtendedLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtendedLayoutTests.m; sourceTree = "<group>"; };
+		F41DA2E7180D5695009A5076 /* SCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewController.h; sourceTree = "<group>"; };
+		F41DA2E8180D5695009A5076 /* SCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,10 @@
 		F41DA2B8180D45C6009A5076 /* ExtendedLayout */ = {
 			isa = PBXGroup;
 			children = (
+				F41DA2EA180D57E3009A5076 /* ViewControllers */,
 				F41DA2C1180D45C6009A5076 /* SCAppDelegate.h */,
 				F41DA2C2180D45C6009A5076 /* SCAppDelegate.m */,
 				F41DA2C4180D45C6009A5076 /* Main.storyboard */,
-				F41DA2C7180D45C6009A5076 /* SCViewController.h */,
-				F41DA2C8180D45C6009A5076 /* SCViewController.m */,
 				F41DA2CA180D45C6009A5076 /* Images.xcassets */,
 				F41DA2B9180D45C6009A5076 /* Supporting Files */,
 			);
@@ -150,6 +152,17 @@
 				F41DA2DA180D45C6009A5076 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F41DA2EA180D57E3009A5076 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F41DA2C7180D45C6009A5076 /* SCViewController.h */,
+				F41DA2C8180D45C6009A5076 /* SCViewController.m */,
+				F41DA2E7180D5695009A5076 /* SCTableViewController.h */,
+				F41DA2E8180D5695009A5076 /* SCTableViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +266,7 @@
 				F41DA2C3180D45C6009A5076 /* SCAppDelegate.m in Sources */,
 				F41DA2C9180D45C6009A5076 /* SCViewController.m in Sources */,
 				F41DA2BF180D45C6009A5076 /* main.m in Sources */,
+				F41DA2E9180D5695009A5076 /* SCTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
