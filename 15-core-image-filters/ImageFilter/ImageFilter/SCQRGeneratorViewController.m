@@ -84,6 +84,11 @@
     // Tidy up
     UIGraphicsEndImageContext();
     CGImageRelease(cgImage);
-    return scaledImage;
+    // Need to set the image orientation correctly
+    UIImage *flippedImage = [UIImage imageWithCGImage:[scaledImage CGImage]
+                                                scale:scaledImage.scale
+                                          orientation:UIImageOrientationDownMirrored];
+
+    return flippedImage;
 }
 @end
