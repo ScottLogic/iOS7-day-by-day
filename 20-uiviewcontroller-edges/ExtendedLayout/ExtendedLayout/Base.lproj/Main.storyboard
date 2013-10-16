@@ -23,7 +23,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scroll" id="4sn-aO-G54"/>
+                    <tabBarItem key="tabBarItem" title="Scroll" image="tabimage" id="4sn-aO-G54"/>
                     <connections>
                         <outlet property="scrollView" destination="5Ng-Kr-Avb" id="MJP-qa-TKd"/>
                     </connections>
@@ -70,7 +70,7 @@
         <scene sceneID="nrX-hh-hTJ">
             <objects>
                 <navigationController definesPresentationContext="YES" id="2xF-cH-OtX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nav/Simple" id="I2F-xl-o9z"/>
+                    <tabBarItem key="tabBarItem" title="Nav/Simple" image="tabimage" id="I2F-xl-o9z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LKN-aW-g27">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -91,10 +91,11 @@
                         <viewControllerLayoutGuide type="bottom" id="hWK-tc-dZQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aHt-uF-AJ0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="OPd-Oe-FT1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tp6-vq-yCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,7 +106,7 @@
         <scene sceneID="I5u-07-aYc">
             <objects>
                 <navigationController definesPresentationContext="YES" id="hWq-XW-DjL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nav/Scroll" id="uSz-Ta-on9"/>
+                    <tabBarItem key="tabBarItem" title="Nav/Scroll" image="tabimage" id="uSz-Ta-on9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F3n-4T-1bC">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -177,7 +178,7 @@
                             <outlet property="delegate" destination="fQo-Xo-m5z" id="Qlg-2P-Rvi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Table" id="avA-4z-XCt"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="tabimage" id="avA-4z-XCt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xI-da-6TQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,7 +188,7 @@
         <scene sceneID="hio-Ra-aIB">
             <objects>
                 <navigationController definesPresentationContext="YES" id="9RB-7c-ldV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nav/Table" id="ylQ-eI-e29"/>
+                    <tabBarItem key="tabBarItem" title="Nav/Table" image="tabimage" id="ylQ-eI-e29"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8N6-cc-SDg">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -222,6 +223,13 @@
             <point key="canvasLocation" x="-1304" y="-372"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabimage" width="30" height="30"/>
+        <image name="tabimage" width="30" height="30"/>
+        <image name="tabimage" width="30" height="30"/>
+        <image name="tabimage" width="30" height="30"/>
+        <image name="tabimage" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
