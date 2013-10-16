@@ -20,9 +20,6 @@
 @interface SCViewController () {
     NSLayoutManager *_layoutManager;
     NSTextStorage *_textStorage;
-    NSMutableArray *_textContainers;
-    NSMutableArray *_textViews;
-    CGFloat _currentXOffset;
 }
 
 @end
@@ -34,7 +31,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    
     // Import the content into a text storage object
     NSURL *contentURL = [[NSBundle mainBundle] URLForResource:@"content" withExtension:@"txt"];
     _textStorage = [[NSTextStorage alloc] initWithFileURL:contentURL
@@ -45,10 +41,6 @@
     // Create a layout manager
     _layoutManager = [[NSLayoutManager alloc] init];
     [_textStorage addLayoutManager:_layoutManager];
-    
-    _textViews = [NSMutableArray new];
-    _currentXOffset = 0.0;
-    
     
     // Layout the text containers
     [self layoutTextContainers];
@@ -68,21 +60,24 @@
         
         NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:columnSize];
         [_layoutManager addTextContainer:textContainer];
-        [_textContainers addObject:textContainer];
         
         // And a text view to render it
-        UITextView *textView = [[UITextView alloc] initWithFrame:textViewFrame textContainer:textContainer];
+        UITextView *textView = [[UITextView alloc] initWithFrame:textViewFrame
+                                                   textContainer:textContainer];
         textView.scrollEnabled = NO;
-        
-        // And update some scrollview settings
-        currentXOffset += CGRectGetWidth(textViewFrame);
-        CGSize contentSize = CGSizeMake(currentXOffset, CGRectGetHeight(self.scrollView.bounds));
-        self.scrollView.contentSize = contentSize;
-        
         [self.scrollView addSubview:textView];
         
+        
+        // Increase the current offset
+        currentXOffset += CGRectGetWidth(textViewFrame);
+        
+        // And find the index of the glyph we've just rendered
         lastRenderedGlyph = NSMaxRange([_layoutManager glyphRangeForTextContainer:textContainer]);
     }
+    
+    // Need to update the scrollView size
+    CGSize contentSize = CGSizeMake(currentXOffset, CGRectGetHeight(self.scrollView.bounds));
+    self.scrollView.contentSize = contentSize;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
