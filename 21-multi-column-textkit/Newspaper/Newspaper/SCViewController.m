@@ -17,7 +17,7 @@
 
 #import "SCViewController.h"
 
-@interface SCViewController () <NSLayoutManagerDelegate> {
+@interface SCViewController () {
     NSLayoutManager *_layoutManager;
     NSTextStorage *_textStorage;
     NSMutableArray *_textContainers;
@@ -44,52 +44,50 @@
     
     // Create a layout manager
     _layoutManager = [[NSLayoutManager alloc] init];
-    _layoutManager.delegate = self;
     [_textStorage addLayoutManager:_layoutManager];
     
-    _textContainers = [NSMutableArray new];
     _textViews = [NSMutableArray new];
     _currentXOffset = 0.0;
     
     
-    // Prepare the first container
-    [self createNewTextContainer];
+    // Layout the text containers
+    [self layoutTextContainers];
     
+}
+
+- (void)layoutTextContainers
+{
+    NSUInteger lastRenderedGlyph = 0;
+    CGFloat currentXOffset = 0;
+    while (lastRenderedGlyph < _layoutManager.numberOfGlyphs) {
+        CGRect textViewFrame = CGRectMake(currentXOffset, 10,
+                                          CGRectGetWidth(self.view.bounds) / 2,
+                                          CGRectGetHeight(self.view.bounds) - 20);
+        CGSize columnSize = CGSizeMake(CGRectGetWidth(textViewFrame) - 20,
+                                       CGRectGetHeight(textViewFrame) - 10);
+        
+        NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:columnSize];
+        [_layoutManager addTextContainer:textContainer];
+        [_textContainers addObject:textContainer];
+        
+        // And a text view to render it
+        UITextView *textView = [[UITextView alloc] initWithFrame:textViewFrame textContainer:textContainer];
+        textView.scrollEnabled = NO;
+        
+        // And update some scrollview settings
+        currentXOffset += CGRectGetWidth(textViewFrame);
+        CGSize contentSize = CGSizeMake(currentXOffset, CGRectGetHeight(self.scrollView.bounds));
+        self.scrollView.contentSize = contentSize;
+        
+        [self.scrollView addSubview:textView];
+        
+        lastRenderedGlyph = NSMaxRange([_layoutManager glyphRangeForTextContainer:textContainer]);
+    }
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
-}
-
-- (void)createNewTextContainer
-{
-    CGSize columnSize = CGSizeMake(CGRectGetWidth(self.view.bounds) / 2, CGRectGetHeight(self.view.bounds));
-    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:columnSize];
-    [_layoutManager addTextContainer:textContainer];
-    [_textContainers addObject:textContainer];
-    
-    // And a text view to render it
-    CGRect textViewFrame = CGRectMake(_currentXOffset, 0, columnSize.width, columnSize.height);
-    UITextView *textView = [[UITextView alloc] initWithFrame:textViewFrame textContainer:textContainer];
-    textView.scrollEnabled = NO;
-    [self.scrollView addSubview:textView];
-    
-    // And update some scrollview settings
-    _currentXOffset += columnSize.width;
-    CGSize contentSize = CGSizeMake(_currentXOffset, CGRectGetHeight(self.scrollView.bounds));
-    self.scrollView.contentSize = contentSize;
-}
-
-
-#pragma mark - NSLayoutManagerDelegate Methods
-- (void)layoutManager:(NSLayoutManager *)layoutManager didCompleteLayoutForTextContainer:(NSTextContainer *)textContainer atEnd:(BOOL)layoutFinishedFlag
-{
-    NSLog(@"New column");
-    if (!layoutFinishedFlag) {
-        // We need to add some more containers
-        [self createNewTextContainer];
-    }
 }
 
 @end
