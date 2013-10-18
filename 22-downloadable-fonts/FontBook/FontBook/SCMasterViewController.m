@@ -7,25 +7,23 @@
 //
 
 #import "SCMasterViewController.h"
-
 #import "SCDetailViewController.h"
 
+@import CoreText;
+
 @interface SCMasterViewController () {
-    NSMutableArray *_objects;
+    NSArray *_fontList;
 }
 @end
 
 @implementation SCMasterViewController
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self requestDownloadableFontList];
 }
 
 
@@ -38,15 +36,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _fontList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    UIFontDescriptor *font = (UIFontDescriptor *)_fontList[indexPath.row];
+    cell.textLabel.text = [font objectForKey:UIFontDescriptorNameAttribute];
     return cell;
 }
 
@@ -55,6 +53,31 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     }
+}
+
+
+#pragma mark - Font-loading utility methods
+- (void)requestDownloadableFontList
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSDictionary *descriptorOptions = @{(id)kCTFontDownloadableAttribute : @YES};
+        CTFontDescriptorRef descriptor = CTFontDescriptorCreateWithAttributes((CFDictionaryRef)descriptorOptions);
+        CFArrayRef fontDescriptors = CTFontDescriptorCreateMatchingFontDescriptors(descriptor, NULL);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self fontListDownloadComplete:(NSArray *)CFBridgingRelease(fontDescriptors)];
+        });
+        
+        // Need to release the font descriptor
+        CFRelease(descriptor);
+    });
+    
+}
+
+- (void)fontListDownloadComplete:(NSArray *)fontList
+{
+    _fontList = fontList;
+    [self.tableView reloadData];
 }
 
 @end
