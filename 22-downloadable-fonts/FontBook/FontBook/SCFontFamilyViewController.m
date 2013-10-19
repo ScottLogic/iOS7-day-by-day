@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Families";
     
     [self requestDownloadableFontList];
 }
@@ -65,6 +66,7 @@
         NSString *fontFamilyName = [_fontList allKeys][indexPath.row];
         NSArray *fontList = _fontList[fontFamilyName];
         vc.fontList = fontList;
+        vc.title = fontFamilyName;
     }
 }
 
