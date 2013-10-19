@@ -11,4 +11,11 @@
 @interface SCDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sampleTextLabel;
+@property (weak, nonatomic) IBOutlet UIButton *downloadButton;
+@property (strong, nonatomic) UIFontDescriptor *fontDescriptor;
+@property (weak, nonatomic) IBOutlet UIProgressView *downloadProgressBar;
+
+- (IBAction)handleDownloadPressed:(id)sender;
+
 @end

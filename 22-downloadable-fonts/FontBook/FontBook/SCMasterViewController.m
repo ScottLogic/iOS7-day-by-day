@@ -52,6 +52,8 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        UIFontDescriptor *descriptor = _fontList[indexPath.row];
+        [segue.destinationViewController setFontDescriptor:descriptor];
     }
 }
 
