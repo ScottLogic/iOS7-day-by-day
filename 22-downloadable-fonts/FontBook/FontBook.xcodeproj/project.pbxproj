@@ -14,7 +14,7 @@
 		228DAB531811CECD005241E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAB521811CECD005241E7 /* main.m */; };
 		228DAB571811CECD005241E7 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAB561811CECD005241E7 /* SCAppDelegate.m */; };
 		228DAB5A1811CECD005241E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228DAB581811CECD005241E7 /* Main.storyboard */; };
-		228DAB5D1811CECD005241E7 /* SCMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAB5C1811CECD005241E7 /* SCMasterViewController.m */; };
+		228DAB5D1811CECD005241E7 /* SCFontFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAB5C1811CECD005241E7 /* SCFontFamilyViewController.m */; };
 		228DAB601811CECD005241E7 /* SCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAB5F1811CECD005241E7 /* SCDetailViewController.m */; };
 		228DAB621811CECD005241E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228DAB611811CECD005241E7 /* Images.xcassets */; };
 		228DAB691811CECE005241E7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DAB681811CECE005241E7 /* XCTest.framework */; };
@@ -22,6 +22,7 @@
 		228DAB6B1811CECE005241E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DAB4A1811CECD005241E7 /* UIKit.framework */; };
 		228DAB731811CECE005241E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 228DAB711811CECE005241E7 /* InfoPlist.strings */; };
 		228DAB751811CECE005241E7 /* FontBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAB741811CECE005241E7 /* FontBookTests.m */; };
+		228DAB8018127F34005241E7 /* SCFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DAB7F18127F34005241E7 /* SCFontViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,8 @@
 		228DAB551811CECD005241E7 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
 		228DAB561811CECD005241E7 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
 		228DAB591811CECD005241E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		228DAB5B1811CECD005241E7 /* SCMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCMasterViewController.h; sourceTree = "<group>"; };
-		228DAB5C1811CECD005241E7 /* SCMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCMasterViewController.m; sourceTree = "<group>"; };
+		228DAB5B1811CECD005241E7 /* SCFontFamilyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCFontFamilyViewController.h; sourceTree = "<group>"; };
+		228DAB5C1811CECD005241E7 /* SCFontFamilyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCFontFamilyViewController.m; sourceTree = "<group>"; };
 		228DAB5E1811CECD005241E7 /* SCDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDetailViewController.h; sourceTree = "<group>"; };
 		228DAB5F1811CECD005241E7 /* SCDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCDetailViewController.m; sourceTree = "<group>"; };
 		228DAB611811CECD005241E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -56,6 +57,8 @@
 		228DAB701811CECE005241E7 /* FontBookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FontBookTests-Info.plist"; sourceTree = "<group>"; };
 		228DAB721811CECE005241E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		228DAB741811CECE005241E7 /* FontBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontBookTests.m; sourceTree = "<group>"; };
+		228DAB7E18127F34005241E7 /* SCFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFontViewController.h; sourceTree = "<group>"; };
+		228DAB7F18127F34005241E7 /* SCFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFontViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +121,14 @@
 				228DAB551811CECD005241E7 /* SCAppDelegate.h */,
 				228DAB561811CECD005241E7 /* SCAppDelegate.m */,
 				228DAB581811CECD005241E7 /* Main.storyboard */,
-				228DAB5B1811CECD005241E7 /* SCMasterViewController.h */,
-				228DAB5C1811CECD005241E7 /* SCMasterViewController.m */,
+				228DAB5B1811CECD005241E7 /* SCFontFamilyViewController.h */,
+				228DAB5C1811CECD005241E7 /* SCFontFamilyViewController.m */,
 				228DAB5E1811CECD005241E7 /* SCDetailViewController.h */,
 				228DAB5F1811CECD005241E7 /* SCDetailViewController.m */,
 				228DAB611811CECD005241E7 /* Images.xcassets */,
 				228DAB4D1811CECD005241E7 /* Supporting Files */,
+				228DAB7E18127F34005241E7 /* SCFontViewController.h */,
+				228DAB7F18127F34005241E7 /* SCFontViewController.m */,
 			);
 			path = FontBook;
 			sourceTree = "<group>";
@@ -255,9 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228DAB5D1811CECD005241E7 /* SCMasterViewController.m in Sources */,
+				228DAB5D1811CECD005241E7 /* SCFontFamilyViewController.m in Sources */,
 				228DAB571811CECD005241E7 /* SCAppDelegate.m in Sources */,
 				228DAB531811CECD005241E7 /* main.m in Sources */,
+				228DAB8018127F34005241E7 /* SCFontViewController.m in Sources */,
 				228DAB601811CECD005241E7 /* SCDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +473,7 @@
 				228DAB7A1811CECE005241E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		228DAB7B1811CECE005241E7 /* Build configuration list for PBXNativeTarget "FontBookTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +482,7 @@
 				228DAB7D1811CECE005241E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

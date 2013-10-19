@@ -17,6 +17,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCMasterViewController : UITableViewController
+@interface SCFontFamilyViewController : UITableViewController
 
 @end

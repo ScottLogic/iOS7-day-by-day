@@ -14,17 +14,17 @@
  limitations under the License.
  */
 
-#import "SCMasterViewController.h"
-#import "SCDetailViewController.h"
+#import "SCFontFamilyViewController.h"
+#import "SCFontViewController.h"
 
 @import CoreText;
 
-@interface SCMasterViewController () {
-    NSArray *_fontList;
+@interface SCFontFamilyViewController () {
+    NSDictionary *_fontList;
 }
 @end
 
-@implementation SCMasterViewController
+@implementation SCFontFamilyViewController
 
 - (void)viewDidLoad
 {
@@ -44,24 +44,27 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _fontList.count;
+    return [[_fontList allKeys] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    UIFontDescriptor *font = (UIFontDescriptor *)_fontList[indexPath.row];
-    cell.textLabel.text = [font objectForKey:UIFontDescriptorNameAttribute];
+    
+    NSString *fontFamilyName = [_fontList allKeys][indexPath.row];
+    cell.textLabel.text = fontFamilyName;
     return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"ShowFamily"]) {
+        SCFontViewController *vc = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        UIFontDescriptor *descriptor = _fontList[indexPath.row];
-        [segue.destinationViewController setFontDescriptor:descriptor];
+        NSString *fontFamilyName = [_fontList allKeys][indexPath.row];
+        NSArray *fontList = _fontList[fontFamilyName];
+        vc.fontList = fontList;
     }
 }
 
@@ -86,7 +89,21 @@
 
 - (void)fontListDownloadComplete:(NSArray *)fontList
 {
-    _fontList = fontList;
+    // Need to reorganise array into dictionary
+    NSMutableDictionary *fontFamilies = [NSMutableDictionary new];
+    for(UIFontDescriptor *descriptor in fontList) {
+        NSString *fontFamilyName = [descriptor objectForKey:UIFontDescriptorFamilyAttribute];
+        NSMutableArray *fontDescriptors = [fontFamilies objectForKey:fontFamilyName];
+        if(!fontDescriptors) {
+            fontDescriptors = [NSMutableArray new];
+            [fontFamilies setObject:fontDescriptors forKey:fontFamilyName];
+        }
+        
+        [fontDescriptors addObject:descriptor];
+    }
+    
+    _fontList = [fontFamilies copy];
+    
     [self.tableView reloadData];
 }
 
