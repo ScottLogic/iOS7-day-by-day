@@ -26,12 +26,30 @@
                                     <action selector="handleFindPeersButton:" destination="6HR-lJ-gOo" eventType="touchUpInside" id="2tY-Zl-mni"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Peer Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84T-Kt-4Ok">
+                                <rect key="frame" x="20" y="30" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlj-LN-d3g">
+                                <rect key="frame" x="107" y="147" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Streaming">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleStartStreamingPressed:" destination="6HR-lJ-gOo" eventType="touchUpInside" id="cYP-Nl-8qn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Master" id="7na-kF-yVN"/>
                     <connections>
                         <outlet property="findPeersButton" destination="BOI-c9-ytG" id="FKT-Pw-t6Q"/>
+                        <outlet property="peerNameTextField" destination="84T-Kt-4Ok" id="6c3-uy-D2D"/>
+                        <outlet property="startStreamingButton" destination="dlj-LN-d3g" id="VQ5-l7-F2W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNH-UI-MzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
