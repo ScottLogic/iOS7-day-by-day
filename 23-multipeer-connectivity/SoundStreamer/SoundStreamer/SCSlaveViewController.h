@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *peerNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *startAdvertisingButton;
 - (IBAction)handleStartAdvertisingButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

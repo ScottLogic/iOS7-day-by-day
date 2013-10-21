@@ -51,7 +51,9 @@
 // Received data from remote peer
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
-    
+    UIImage *image = [UIImage imageWithData:data];
+    self.imageView.image = image;
+    self.imageView.contentScaleFactor = UIViewContentModeScaleAspectFill;
 }
 
 // Received a byte stream from remote peer

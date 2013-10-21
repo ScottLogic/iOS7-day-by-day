@@ -9,7 +9,7 @@
 #import "SCMasterViewController.h"
 @import MultipeerConnectivity;
 
-@interface SCMasterViewController () <MCBrowserViewControllerDelegate, MCSessionDelegate> {
+@interface SCMasterViewController () <MCBrowserViewControllerDelegate, MCSessionDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     MCPeerID *_peerID;
     MCSession *_session;
 }
@@ -41,7 +41,24 @@
 
 - (IBAction)handleStartStreamingPressed:(id)sender {
     NSLog(@"%@", [_session connectedPeers]);
+    UIImagePickerController *imagePicker = [UIImagePickerController new];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:NULL];
 }
+
+#pragma mark - UIImagePickerControllerDelegate methods
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *photo = info[UIImagePickerControllerOriginalImage];
+    UIImage *smallerPhoto = [self rescaleImage:photo toSize:CGSizeMake(800, 600)];
+    NSData *jpeg = UIImageJPEGRepresentation(smallerPhoto, 0.2);
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSError *error = nil;
+        [_session sendData:jpeg toPeers:[_session connectedPeers] withMode:MCSessionSendDataReliable error:&error];
+    }];
+}
+
 
 #pragma mark - MCBrowserViewControllerDelegate methods
 - (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
@@ -85,5 +102,16 @@
 - (void)session:(MCSession *)session didFinishReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID atURL:(NSURL *)localURL withError:(NSError *)error
 {
     
+}
+
+#pragma mark - utility methods
+- (UIImage*)rescaleImage:(UIImage*)image toSize:(CGSize)newSize
+{
+    UIGraphicsBeginImageContext( newSize );
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 @end

@@ -60,7 +60,7 @@
         <scene sceneID="umx-2a-FGz">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="k9Y-W1-Bi0" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ue1-kn-fh9">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -103,11 +103,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7m-rB-VpA">
+                                <rect key="frame" x="0.0" y="126" width="320" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Slave" id="IDM-JG-hs6"/>
                     <connections>
+                        <outlet property="imageView" destination="x7m-rB-VpA" id="JoI-vn-IDK"/>
                         <outlet property="peerNameTextField" destination="dqD-u6-gvB" id="tZf-WK-4Yp"/>
                         <outlet property="startAdvertisingButton" destination="U4c-jP-jxm" id="CCq-F2-w8d"/>
                     </connections>
