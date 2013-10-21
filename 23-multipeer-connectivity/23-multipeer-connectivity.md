@@ -82,7 +82,7 @@ we're going to dismiss the browser and enable a button if we were successful:
     - (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
     {
         [browserViewController dismissViewControllerAnimated:YES completion:^{
-            self.startStreamingButton.enabled = YES;
+            self.takePhotoButton.enabled = YES;
         }];
     }
 
@@ -93,7 +93,9 @@ to anything. We'll implement this in the next section, the pictures below show
 the connection process if we do have a device to connect to, and the connection
 is accepted:
 
-PICTURES
+![browse1](img/multipeer-browse1.png)
+![browse2](img/multipeer-browse2.png)
+![browse3](img/multipeer-browse3.png)
 
 
 ### Advertising availability
@@ -124,7 +126,7 @@ and the user taps on it, then the user with the advertising device will be
 presented with an alert allowing them to choose whether or not to make the 
 connection:
 
-PICTURE
+![permission](img/multipeer-permission.png)
 
 
 ### Sending Data
@@ -139,11 +141,55 @@ For example, we're going to take a photo with one device and then have it
 automagically appear on the screen of the other device. We'll use the `NSData`
 approach for this example, but the methodology is very similar for each of them.
 
+We use `UIImagePickerController` to take a simple photo
 
+    UIImagePickerController *imagePicker = [UIImagePickerController new];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:NULL];
 
+And implement the following delegate method to get the photo out as expected:
 
+    - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+    {
+        UIImage *photo = info[UIImagePickerControllerOriginalImage];
+        UIImage *smallerPhoto = [self rescaleImage:photo toSize:CGSizeMake(800, 600)];
+        NSData *jpeg = UIImageJPEGRepresentation(smallerPhoto, 0.2);
+        [self dismissViewControllerAnimated:YES completion:^{
+            NSError *error = nil;
+            [_session sendData:jpeg toPeers:[_session connectedPeers] withMode:MCSessionSendDataReliable error:&error];
+        }];
+    }
 
+The line of interest here is the call to `sendData:toPeers:withMode:error:` on
+the `MCSession` object. This can take an `NSData` object and send it to other
+peers in the network. Here we're selecting to send it to all the peers in the
+network. The mode allows you to select whether or not you want the data transferred
+reliably or not. If you select reliable then the messages will definitely arrive
+and will be in the correct order, but will have a higher time overhead. Using
+the unreliable mode means that some messages may be lost, but the delay will be 
+much smaller.
 
+To receive the data on the other device we just provide an appropriate
+implementation for the correct delegate method:
+
+    - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
+    {
+        UIImage *image = [UIImage imageWithData:data];
+        self.imageView.image = image;
+        self.imageView.contentScaleFactor = UIViewContentModeScaleAspectFill;
+    }
+
+Here we're simply creating a `UIImage` from the `NSData` object, and then setting
+it as the image for on a `UIImageView`. The following pictures show the photo
+being taken on one device, and then displayed on another:
+
+![Sending](img/multipeer-sending.png)
+![Received](img/multipeer-received.png)
+
+The streaming and resource APIs work in much the same way, although the resource
+API provides asynchronous progress updates, and is hence more suitable for large
+data transfers.
 
 ### Conclusion
 
