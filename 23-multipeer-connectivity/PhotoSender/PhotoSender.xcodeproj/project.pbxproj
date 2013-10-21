@@ -34,21 +34,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		228DAB8A1813C144005241E7 /* SoundStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		228DAB8A1813C144005241E7 /* PhotoSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228DAB8D1813C144005241E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		228DAB8F1813C144005241E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		228DAB911813C144005241E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		228DAB951813C144005241E7 /* SoundStreamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundStreamer-Info.plist"; sourceTree = "<group>"; };
+		228DAB951813C144005241E7 /* PhotoSender-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoSender-Info.plist"; sourceTree = "<group>"; };
 		228DAB971813C144005241E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		228DAB991813C144005241E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		228DAB9B1813C144005241E7 /* SoundStreamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundStreamer-Prefix.pch"; sourceTree = "<group>"; };
+		228DAB9B1813C144005241E7 /* PhotoSender-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoSender-Prefix.pch"; sourceTree = "<group>"; };
 		228DAB9C1813C144005241E7 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
 		228DAB9D1813C144005241E7 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
 		228DABA01813C144005241E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		228DABA21813C144005241E7 /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
 		228DABA31813C144005241E7 /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
 		228DABA51813C144005241E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		228DABAB1813C144005241E7 /* SoundStreamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundStreamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		228DABAB1813C144005241E7 /* PhotoSenderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoSenderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		228DABAC1813C144005241E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		228DABC31813C36F005241E7 /* SCMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMasterViewController.h; sourceTree = "<group>"; };
 		228DABC41813C36F005241E7 /* SCMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMasterViewController.m; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 		228DAB8B1813C144005241E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				228DAB8A1813C144005241E7 /* SoundStreamer.app */,
-				228DABAB1813C144005241E7 /* SoundStreamerTests.xctest */,
+				228DAB8A1813C144005241E7 /* PhotoSender.app */,
+				228DABAB1813C144005241E7 /* PhotoSenderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,17 +119,16 @@
 				228DABA51813C144005241E7 /* Images.xcassets */,
 				228DAB941813C144005241E7 /* Supporting Files */,
 			);
-			name = PhotoSender;
-			path = SoundStreamer;
+			path = PhotoSender;
 			sourceTree = "<group>";
 		};
 		228DAB941813C144005241E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				228DAB951813C144005241E7 /* SoundStreamer-Info.plist */,
+				228DAB951813C144005241E7 /* PhotoSender-Info.plist */,
 				228DAB961813C144005241E7 /* InfoPlist.strings */,
 				228DAB991813C144005241E7 /* main.m */,
-				228DAB9B1813C144005241E7 /* SoundStreamer-Prefix.pch */,
+				228DAB9B1813C144005241E7 /* PhotoSender-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		228DAB891813C144005241E7 /* SoundStreamer */ = {
+		228DAB891813C144005241E7 /* PhotoSender */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 228DABBC1813C144005241E7 /* Build configuration list for PBXNativeTarget "SoundStreamer" */;
+			buildConfigurationList = 228DABBC1813C144005241E7 /* Build configuration list for PBXNativeTarget "PhotoSender" */;
 			buildPhases = (
 				228DAB861813C144005241E7 /* Sources */,
 				228DAB871813C144005241E7 /* Frameworks */,
@@ -162,14 +161,14 @@
 			);
 			dependencies = (
 			);
-			name = SoundStreamer;
+			name = PhotoSender;
 			productName = SoundStreamer;
-			productReference = 228DAB8A1813C144005241E7 /* SoundStreamer.app */;
+			productReference = 228DAB8A1813C144005241E7 /* PhotoSender.app */;
 			productType = "com.apple.product-type.application";
 		};
-		228DABAA1813C144005241E7 /* SoundStreamerTests */ = {
+		228DABAA1813C144005241E7 /* PhotoSenderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 228DABBF1813C144005241E7 /* Build configuration list for PBXNativeTarget "SoundStreamerTests" */;
+			buildConfigurationList = 228DABBF1813C144005241E7 /* Build configuration list for PBXNativeTarget "PhotoSenderTests" */;
 			buildPhases = (
 				228DABA71813C144005241E7 /* Sources */,
 				228DABA81813C144005241E7 /* Frameworks */,
@@ -180,9 +179,9 @@
 			dependencies = (
 				228DABB11813C144005241E7 /* PBXTargetDependency */,
 			);
-			name = SoundStreamerTests;
+			name = PhotoSenderTests;
 			productName = SoundStreamerTests;
-			productReference = 228DABAB1813C144005241E7 /* SoundStreamerTests.xctest */;
+			productReference = 228DABAB1813C144005241E7 /* PhotoSenderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 228DAB851813C144005241E7 /* Build configuration list for PBXProject "SoundStreamer" */;
+			buildConfigurationList = 228DAB851813C144005241E7 /* Build configuration list for PBXProject "PhotoSender" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,8 +212,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				228DAB891813C144005241E7 /* SoundStreamer */,
-				228DABAA1813C144005241E7 /* SoundStreamerTests */,
+				228DAB891813C144005241E7 /* PhotoSender */,
+				228DABAA1813C144005241E7 /* PhotoSenderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,7 +263,7 @@
 /* Begin PBXTargetDependency section */
 		228DABB11813C144005241E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 228DAB891813C144005241E7 /* SoundStreamer */;
+			target = 228DAB891813C144005241E7 /* PhotoSender */;
 			targetProxy = 228DABB01813C144005241E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -367,9 +366,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SoundStreamer/SoundStreamer-Prefix.pch";
-				INFOPLIST_FILE = "SoundStreamer/SoundStreamer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "PhotoSender/PhotoSender-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/PhotoSender/PhotoSender-Info.plist";
+				PRODUCT_NAME = PhotoSender;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -380,9 +379,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SoundStreamer/SoundStreamer-Prefix.pch";
-				INFOPLIST_FILE = "SoundStreamer/SoundStreamer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "PhotoSender/PhotoSender-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/PhotoSender/PhotoSender-Info.plist";
+				PRODUCT_NAME = PhotoSender;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -404,7 +403,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SoundStreamerTests/SoundStreamerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PhotoSenderTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -423,7 +422,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SoundStreamer/SoundStreamer-Prefix.pch";
 				INFOPLIST_FILE = "SoundStreamerTests/SoundStreamerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PhotoSenderTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -432,7 +431,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		228DAB851813C144005241E7 /* Build configuration list for PBXProject "SoundStreamer" */ = {
+		228DAB851813C144005241E7 /* Build configuration list for PBXProject "PhotoSender" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228DABBA1813C144005241E7 /* Debug */,
@@ -441,7 +440,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		228DABBC1813C144005241E7 /* Build configuration list for PBXNativeTarget "SoundStreamer" */ = {
+		228DABBC1813C144005241E7 /* Build configuration list for PBXNativeTarget "PhotoSender" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228DABBD1813C144005241E7 /* Debug */,
@@ -450,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		228DABBF1813C144005241E7 /* Build configuration list for PBXNativeTarget "SoundStreamerTests" */ = {
+		228DABBF1813C144005241E7 /* Build configuration list for PBXNativeTarget "PhotoSenderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				228DABC01813C144005241E7 /* Debug */,
