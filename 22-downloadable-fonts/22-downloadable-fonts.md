@@ -12,6 +12,14 @@ fonts for non-roman alphabets, and a selection of fonts users are used to using
 on desktop applications. The font-downloading functionality has been available
 since iOS6, but in iOS7 there's a much larger list of available fonts.
 
+Downloaded fonts are stored somewhere on the system - as app developers we don't
+have access to where the fonts are stored. The font we require might well have
+already been downloaded at the request of another app, however, if this isn't the
+case we need to be ready for the situation where the user doens't have network
+connectivity and therefore our chosen font isn't available. Or when there is a
+delay downloading the requested font - do we switch the fonts out when they're
+available?
+
 Firstly we'll take a look at how to get a list of fonts, before then demonstrating
 how to download and use a specific font.
 
@@ -142,7 +150,72 @@ PICTURE
 
 ### Downloading a font
 
+The final stage of the app will display what the font looks like with some sample
+glyphs, if the font is available. Otherwise the user will have the opportunity
+to download the font.
 
+The download process is completely within the `handleDownloadPressed:` method, and
+the function we're interested in is `CTFontDescriptorMatchFontDescriptorsWithProgressHandler`.
+This takes a `CFArrayRef` of font descriptors and downloads the font if required.
+It takes a block as a parameter which provides updates of the user. This method
+returns immediately, and the operation is performed on a background queue. 
+
+    - (IBAction)handleDownloadPressed:(id)sender {
+        self.downloadProgressBar.hidden = NO;
+        CTFontDescriptorMatchFontDescriptorsWithProgressHandler((CFArrayRef)@[_fontDescriptor],
+                NULL,
+                ^bool(CTFontDescriptorMatchingState state, CFDictionaryRef progressParameter) {
+            double progressValue = [[(__bridge NSDictionary *)progressParameter objectForKey:(id)kCTFontDescriptorMatchingPercentage] doubleValue];
+            if (state == kCTFontDescriptorMatchingDidFinish) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.downloadProgressBar.hidden = YES;
+                    [self updateView];
+                });
+            } else {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.downloadProgressBar.progress = progressValue;
+                });
+            }
+            return (bool)YES;
+        });
+    }
+
+In the progress block, we extract the current progress percentage from the
+provided dictionary, and update the progress bar as appropriate. If the `state`
+parameter suggests that the download has been completed, we call `updateView`, 
+which is a method we have created to apply the font to the sample glyphs. Note
+that we have to ensure that the UI updates are performed on the main thread, as
+we usually do:
+
+    - (void)updateView
+    {
+        NSString *fontName = [self.fontDescriptor objectForKey:UIFontDescriptorNameAttribute];
+        self.title = fontName;
+        UIFont *font = [UIFont fontWithName:fontName size:26.f];
+        if(font && [font.fontName isEqualToString:fontName]) {
+            self.sampleTextLabel.font = font;
+            self.downloadButton.enabled = NO;
+            self.detailDescriptionLabel.text = @"Font available";
+        } else {
+            self.sampleTextLabel.font = [UIFont systemFontOfSize:font.pointSize];
+            self.downloadButton.enabled = YES;
+            self.detailDescriptionLabel.text = @"This font is not yet downloaded";
+        }
+    }
+
+Running the app up now will allow us to browse through the list of available fonts
+from Apple, and download each of them to try them out.
+
+PICTURES
 
 
 ### Conclusion
+
+Downloadable fonts are a handy feature which will allow you to customise the
+appearance of your app without having to license a font and bundle it with your
+app. However, it's important to ensure that you handle the case where the user
+doesn't have network connectivity - what should the fall-back font be, and does
+the UI work with both options.
+
+
+
