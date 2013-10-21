@@ -124,7 +124,8 @@ tableview datasource methods set appropriately, and `viewDidLoad`:
 we can run the app up and see that the first page of the navigation controller
 will look like this.
 
-PICTURE
+![font families](img/fonts-families1.png)
+![font families](img/fonts-families2.png)
 
 The next level of the navigation controller displays the fonts within a specific
 family, so to do that we create an `NSArray` property which contains a list of
@@ -146,7 +147,8 @@ controller:
 With appropriate datasource methods, the second level of the drill-down will
 look like this:
 
-PICTURE
+![fonts](img/fonts-fonts1.png)
+![fonts](img/fonts-fonts2.png)
 
 ### Downloading a font
 
@@ -206,8 +208,10 @@ we usually do:
 Running the app up now will allow us to browse through the list of available fonts
 from Apple, and download each of them to try them out.
 
-PICTURES
-
+![Pre Download](img/fonts-download1-pre.png)
+![Post Download](img/fonts-download1-post.png)
+![Post Download](img/fonts-download2-post.png)
+![Post Download](img/fonts-download3-posr.png)
 
 ### Conclusion
 
@@ -216,6 +220,4 @@ appearance of your app without having to license a font and bundle it with your
 app. However, it's important to ensure that you handle the case where the user
 doesn't have network connectivity - what should the fall-back font be, and does
 the UI work with both options.
-
-
 
