@@ -19,8 +19,6 @@
 		228DABAD1813C144005241E7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DABAC1813C144005241E7 /* XCTest.framework */; };
 		228DABAE1813C144005241E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DAB8D1813C144005241E7 /* Foundation.framework */; };
 		228DABAF1813C144005241E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228DAB911813C144005241E7 /* UIKit.framework */; };
-		228DABB71813C144005241E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 228DABB51813C144005241E7 /* InfoPlist.strings */; };
-		228DABB91813C144005241E7 /* SoundStreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DABB81813C144005241E7 /* SoundStreamerTests.m */; };
 		228DABC51813C36F005241E7 /* SCMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DABC41813C36F005241E7 /* SCMasterViewController.m */; };
 		228DABC81813C37B005241E7 /* SCSlaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DABC71813C37B005241E7 /* SCSlaveViewController.m */; };
 /* End PBXBuildFile section */
@@ -52,9 +50,6 @@
 		228DABA51813C144005241E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		228DABAB1813C144005241E7 /* SoundStreamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundStreamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		228DABAC1813C144005241E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		228DABB41813C144005241E7 /* SoundStreamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundStreamerTests-Info.plist"; sourceTree = "<group>"; };
-		228DABB61813C144005241E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		228DABB81813C144005241E7 /* SoundStreamerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundStreamerTests.m; sourceTree = "<group>"; };
 		228DABC31813C36F005241E7 /* SCMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMasterViewController.h; sourceTree = "<group>"; };
 		228DABC41813C36F005241E7 /* SCMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMasterViewController.m; sourceTree = "<group>"; };
 		228DABC61813C37B005241E7 /* SCSlaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSlaveViewController.h; sourceTree = "<group>"; };
@@ -88,8 +83,7 @@
 		228DAB811813C144005241E7 = {
 			isa = PBXGroup;
 			children = (
-				228DAB931813C144005241E7 /* SoundStreamer */,
-				228DABB21813C144005241E7 /* SoundStreamerTests */,
+				228DAB931813C144005241E7 /* PhotoSender */,
 				228DAB8C1813C144005241E7 /* Frameworks */,
 				228DAB8B1813C144005241E7 /* Products */,
 			);
@@ -115,7 +109,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		228DAB931813C144005241E7 /* SoundStreamer */ = {
+		228DAB931813C144005241E7 /* PhotoSender */ = {
 			isa = PBXGroup;
 			children = (
 				228DABC21813C2E9005241E7 /* ViewControllers */,
@@ -125,6 +119,7 @@
 				228DABA51813C144005241E7 /* Images.xcassets */,
 				228DAB941813C144005241E7 /* Supporting Files */,
 			);
+			name = PhotoSender;
 			path = SoundStreamer;
 			sourceTree = "<group>";
 		};
@@ -135,24 +130,6 @@
 				228DAB961813C144005241E7 /* InfoPlist.strings */,
 				228DAB991813C144005241E7 /* main.m */,
 				228DAB9B1813C144005241E7 /* SoundStreamer-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		228DABB21813C144005241E7 /* SoundStreamerTests */ = {
-			isa = PBXGroup;
-			children = (
-				228DABB81813C144005241E7 /* SoundStreamerTests.m */,
-				228DABB31813C144005241E7 /* Supporting Files */,
-			);
-			path = SoundStreamerTests;
-			sourceTree = "<group>";
-		};
-		228DABB31813C144005241E7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				228DABB41813C144005241E7 /* SoundStreamerTests-Info.plist */,
-				228DABB51813C144005241E7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -257,7 +234,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228DABB71813C144005241E7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228DABB91813C144005241E7 /* SoundStreamerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,14 +284,6 @@
 				228DABA01813C144005241E7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		228DABB51813C144005241E7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				228DABB61813C144005241E7 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -481,6 +448,7 @@
 				228DABBE1813C144005241E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		228DABBF1813C144005241E7 /* Build configuration list for PBXNativeTarget "SoundStreamerTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +457,7 @@
 				228DABC11813C144005241E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

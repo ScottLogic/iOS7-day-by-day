@@ -33,13 +33,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlj-LN-d3g">
-                                <rect key="frame" x="107" y="147" width="107" height="30"/>
+                                <rect key="frame" x="122" y="147" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Streaming">
+                                <state key="normal" title="Take Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="handleStartStreamingPressed:" destination="6HR-lJ-gOo" eventType="touchUpInside" id="cYP-Nl-8qn"/>
+                                    <action selector="handleTakePhotoButtonPressed:" destination="6HR-lJ-gOo" eventType="touchUpInside" id="iAb-Xt-feU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,7 +49,7 @@
                     <connections>
                         <outlet property="findPeersButton" destination="BOI-c9-ytG" id="FKT-Pw-t6Q"/>
                         <outlet property="peerNameTextField" destination="84T-Kt-4Ok" id="6c3-uy-D2D"/>
-                        <outlet property="startStreamingButton" destination="dlj-LN-d3g" id="VQ5-l7-F2W"/>
+                        <outlet property="takePhotoButton" destination="dlj-LN-d3g" id="ztf-Nq-xN6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNH-UI-MzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
