@@ -15,7 +15,7 @@ since iOS6, but in iOS7 there's a much larger list of available fonts.
 Downloaded fonts are stored somewhere on the system - as app developers we don't
 have access to where the fonts are stored. The font we require might well have
 already been downloaded at the request of another app, however, if this isn't the
-case we need to be ready for the situation where the user doens't have network
+case we need to be ready for the situation where the user doesn't have network
 connectivity and therefore our chosen font isn't available. Or when there is a
 delay downloading the requested font - do we switch the fonts out when they're
 available?
@@ -211,11 +211,11 @@ from Apple, and download each of them to try them out.
 ![Pre Download](img/fonts-download1-pre.png)
 ![Post Download](img/fonts-download1-post.png)
 ![Post Download](img/fonts-download2-post.png)
-![Post Download](img/fonts-download3-posr.png)
+![Post Download](img/fonts-download3-post.png)
 
 ### Conclusion
 
-Downloadable fonts are a handy feature which will allow you to customise the
+Downloadable fonts are a handy feature which will allow you to customize the
 appearance of your app without having to license a font and bundle it with your
 app. However, it's important to ensure that you handle the case where the user
 doesn't have network connectivity - what should the fall-back font be, and does
