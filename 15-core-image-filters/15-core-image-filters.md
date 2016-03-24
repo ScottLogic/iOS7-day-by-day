@@ -129,11 +129,18 @@ a new method which enables rescaling an image with interpolation disabled:
         // Render the CIImage into a CGImage
         CGImageRef cgImage = [[CIContext contextWithOptions:nil] createCGImage:image fromRect:image.extent];
         
+        CGFloat size = image.extent.size.width * scale;
+        
         // Now we'll rescale using CoreGraphics
-        UIGraphicsBeginImageContext(CGSizeMake(image.extent.size.width * scale, image.extent.size.width * scale));
+        UIGraphicsBeginImageContext(CGSizeMake(size, size));
         CGContextRef context = UIGraphicsGetCurrentContext();
         // We don't want to interpolate (since we've got a pixel-correct image)
         CGContextSetInterpolationQuality(context, kCGInterpolationNone);
+        
+        //make sure it's in the correct orientation
+        CGContextTranslateCTM(context, 0, size);
+        CGContextScaleCTM(context, 1.0, -1.0);
+        
         CGContextDrawImage(context, CGContextGetClipBoundingBox(context), cgImage);
         // Get the image out
         UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
